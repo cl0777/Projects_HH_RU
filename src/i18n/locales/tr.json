@@ -1,0 +1,48 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetler",
+    "contact": "İletişim",
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol",
+    "dashboard": "Kontrol Paneli",
+    "logout": "Çıkış Yap"
+  },
+  "hero": {
+    "title": "Platformumuza Hoş Geldiniz",
+    "subtitle": "İş ihtiyaçlarınız için en iyi çözüm",
+    "cta": "Başlayın",
+    "learnMore": "Daha Fazla Bilgi"
+  },
+  "auth": {
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol",
+    "email": "E-posta",
+    "password": "Şifre",
+    "confirmPassword": "Şifreyi Onayla",
+    "forgotPassword": "Şifrenizi mi unuttunuz?",
+    "noAccount": "Hesabınız yok mu?",
+    "hasAccount": "Zaten hesabınız var mı?",
+    "signUp": "Kayıt Ol",
+    "signIn": "Giriş Yap",
+    "logout": "Çıkış Yap"
+  },
+  "forms": {
+    "required": "Bu alan zorunludur",
+    "invalidEmail": "Lütfen geçerli bir e-posta adresi girin",
+    "passwordTooShort": "Şifre en az 6 karakter olmalıdır",
+    "passwordsDoNotMatch": "Şifreler eşleşmiyor"
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "success": "Başarılı!",
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "close": "Kapat",
+    "language": "Dil"
+  }
+}

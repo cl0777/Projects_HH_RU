@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Video Background Styles */
+.video-fallback {
+  display: none;
+}
+
+/* Show fallback when video is not supported or fails to load */
+video:not([src]) + .video-fallback,
+.no-video .video-fallback {
+  display: block;
+}
+
+/* Hide video on mobile for performance (optional) */
+@media (max-width: 768px) {
+  video {
+    display: none;
+  }
+  
+  .video-fallback {
+    display: block;
+  }
+}
+
+/* Smooth video transitions */
+video {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Ensure video covers the full area */
+video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,291 @@
+{
+  "nav": {
+    "home": "Baş sahypa",
+    "about": "Biz barada",
+    "services": "Hyzmatlar",
+    "contact": "Habarlaşmak",
+    "login": "Girmek",
+    "register": "Hasaba almak",
+    "dashboard": "Gözegçilik paneli",
+    "logout": "Çykmak",
+    "getQuote": "Teklif almak"
+  },
+  "hero": {
+    "title": "itl - Dünýä logistik üstünligi",
+    "subtitle": "Dünýä boýunça işewürlikleri ygtybarly, netijeli we howpsuz logistik çözgütler bilen baglanyşdyrýarys. Dünýä boýunça 10,000+ kompaniýa ynanýar.",
+    "subtitleMobile": "Dünýä boýunça 10,000+ kompaniýa ynanýan global logistik çözgütler.",
+    "cta": "Mugt teklif almak",
+    "learnMore": "Bizim hyzmatlar"
+  },
+  "features": {
+    "title": "Näme üçin itl saýlaýarlar?",
+    "subtitle": "Biz siziň üpjünçilik zynjyryňyzy optimizasiýa etmek we işewürligiňiziň ösüşini tizleşdirmek üçin giňişleýin logistik çözgütler berýäris",
+    "globalShipping": {
+      "title": "Global eltip bermek",
+      "description": "Hakyky wagtda yzarlama we eltip berme kepilligi bilen dünýä boýunça logistik çözgütler"
+    },
+    "secureTransport": {
+      "title": "Howpsuz transport",
+      "description": "Ähli iberişler üçin öňdebaryjy howpsuzlyk protokollary we sugurta gorag"
+    },
+    "support24": {
+      "title": "24/7 goldaw",
+      "description": "Gije-gündiz müşderi hyzmaty we logistik dolandyryş"
+    }
+  },
+  "testimonials": {
+    "title": "Müşderilerimiz näme diýýär",
+    "subtitle": "Diňe bizim sözümize ynanmaň",
+    "sarah": {
+      "name": "Sara Çen",
+      "role": "Üpjünçilik zynjyry direktory, GlobalTech",
+      "content": "itl bizim halkara eltip berme operasiýalarymyzy üýtgetdi. Olaryň yzarlama ulgamy aýratyn we eltip berme wagty hemişe wagtynda."
+    },
+    "michael": {
+      "name": "Mihail Rodriges",
+      "role": "Operasiýalar menedžeri, RetailPlus",
+      "content": "Işleýän iň ygtybarly logistik hyzmatdaşymyz. Olaryň 24/7 goldawy we hakyky wagtda täzeleme bize doly rahatlyk berýär."
+    },
+    "emma": {
+      "name": "Emma Tompson",
+      "role": "Baş direktor, EcoProducts",
+      "content": "Aýratyn hyzmat we bäsleşik bahalar. Olar bizim çylşyrymly eltip berme talabymyzy takyklyk we hünärmençilik bilen işleýärler."
+    }
+  },
+  "cta": {
+    "title": "Logistikanyzy optimizasiýa etmäge taýýnmy?",
+    "subtitle": "Müňlerçe kanagatlanan müşderi bilen birleşiň we hünärmen logistik çözgütlerimiz bilen üpjünçilik zynjyryňyzy optimizasiýa ediň",
+    "button": "Mugt teklif almak"
+  },
+  "footer": {
+    "company": "itl",
+    "about": "Biz barada",
+    "services": "Bizim hyzmatlar",
+    "contact": "Habarlaşmak",
+    "globalShipping": "Global eltip bermek",
+    "warehousing": "Ammar hyzmaty",
+    "tracking": "Paket yzarlama",
+    "help": "Kömek merkezi",
+    "customerSupport": "Müşderi goldawy",
+    "trackShipment": "Iberişi yzarlamak",
+    "privacy": "Gizlinlik syýasaty",
+    "terms": "Hyzmat şertleri",
+    "insurance": "Sugurta gorag",
+    "copyright": "© 2024 itl. Ähli hukuklar goragly. | Dünýä logistik üstünligi"
+  },
+  "about": {
+    "title": "itl barada",
+    "subtitle": "Global logistikada ygtybarly hyzmatdaşyňyz",
+    "mission": {
+      "title": "Bizim maksat",
+      "content1": "itl-da bizim maksadymyz logistik senagatyny rewolýusiýa etmek, dünýä boýunça söýsüz, netijeli we ygtybarly üpjünçilik zynjyry çözgütlerini bermekdir. Biz öňdebaryjy tehnologiýa we sadyk topary ulanmak arkaly siziň ýüküňiziň güwäni we wagtynda ýerine ýetirilýändigini üpjün etmek üçin söz berýäris.",
+      "content2": "Biz müşderilerimiz bilen güýçli, uzak möhletli hyzmatdaşlyk gatnaşyklary gurmaga, olaryň aýratyn zerurlyklaryny düşünmäge we göz öňünde tutulanlardan has ýokary hyzmatlary bermäge ynanýarys."
+    },
+    "story": {
+      "title": "Biziň başlangyjymyz"
+    },
+    "whyChoose": {
+      "title": "Näme üçin bizi saýlaýarlar?",
+      "globalReach": {
+        "title": "Global ýetirlik",
+        "description": "Ähli esasy söwda ýollaryny öz içine alýan giňişleýin tor."
+      },
+      "reliable": {
+        "title": "Ygtybarly we howpsuz",
+        "description": "Siziň iberişleriňiziň howpsuzlygyny we dolygyny üpjün etmek."
+      },
+      "innovative": {
+        "title": "Öňdebaryjy çözgütler",
+        "description": "Optimal logistik üçin tehnologiýa ulanmak."
+      },
+      "customerCentric": {
+        "title": "Müşderi merkezli",
+        "description": "Siziň zerurlyklaryňyza laýyklaşdyrylan sadyk goldaw."
+      }
+    },
+    "values": {
+      "title": "Bizim gymmatlyklarymyz",
+      "integrity": {
+        "title": "Dürüstlik",
+        "description": "Ähli operasiýalarymyzda iň ýokary ahlak standartlaryny saklamak."
+      },
+      "excellence": {
+        "title": "Üstünlik",
+        "description": "Her bir hyzmatda üstün hil we işjeňlik üçin göreşmek."
+      },
+      "innovation": {
+        "title": "Öňdebaryjylyk",
+        "description": "Logistikany gowulandyrmak we optimizasiýa etmek üçin täze usullar gözlemek."
+      }
+    },
+    "cta": {
+      "title": "itl bilen hyzmatdaş bolmaga taýýnmy?",
+      "subtitle": "Hakykatdanam sadyk logistik hyzmatdaşyňyň tapawudyny duýuň.",
+      "button": "Şu gün habarlaşyň"
+    }
+  },
+  "services": {
+    "title": "Bizim hyzmatlar",
+    "subtitle": "Işewürligiňiz üçin giňişleýin logistik çözgütler",
+    "freightForwarding": {
+      "title": "Global ýük ekspedisiýasy",
+      "description": "Howa, deňiz we ýer arkaly giňişleýin halkara eltip berme çözgütleri. Biz gümrük, resminamalar bilen dolanýarys we çäklerden wagtynda eltip berme üpjün edýäris."
+    },
+    "warehousing": {
+      "title": "Ammar hyzmaty we paýlaşdyryş",
+      "description": "Howpsuz saklamak, inwentar dolandyryş we müşderileriňize netijeli paýlaşdyryş üçin öňdebaryjy ammar obýektleri."
+    },
+    "customs": {
+      "title": "Gümrük hyzmaty",
+      "description": "Ähli gümrük proseduralarynyň hünärmen işlenmegi, siziň import we eksport operasiýalaryňyz üçin ylalaşyk we ýumşak rugsat berme üpjün etmek."
+    },
+    "roadTransport": {
+      "title": "Ýol transporty",
+      "description": "Doly ýük maşyny (FTL) we az ýük maşyny (LTL) iberişler üçin ygtybarly we tygşytly ýer transport hyzmatlary."
+    },
+    "airFreight": {
+      "title": "Howa ýük hyzmaty",
+      "description": "Şowsuz we wagtyňa duýgur iberişler üçin çalt we netijeli howa ýük hyzmatlary, dünýä boýunça esasy howa meýdanlaryny baglanyşdyrýar."
+    },
+    "oceanFreight": {
+      "title": "Deňiz ýük hyzmaty",
+      "description": "Doly konteýner ýükü (FCL) we az konteýner ýükü (LCL) iberişler üçin çeýeçek we tygşytly deňiz ýük wariantlary."
+    },
+    "howWeWork": {
+      "title": "Biz nähili işleýäris",
+      "subtitle": "Bizim optimizasiýa edilen prosesimiz",
+      "consultation": "Maslahat: Siziň logistik zerurlyklaryňyzy we kynçylyklaryňyzy düşünmek.",
+      "planning": "Meýilleşdiriş: Şahsy, netijeli we tygşytly çözgüt işläp düzmek.",
+      "execution": "Ýerine ýetiriş: Hakyky wagtda gözegçilik we habarlaşyk bilen gowşaksyz amala aşyryş.",
+      "delivery": "Eltip berme: Siziň harytlaryňyzyň howpsuz we wagtynda gelmegini üpjün etmek.",
+      "support": "Goldaw: Yzygiderli gowulandyrmak üçin dowamly kömek we optimizasiýa."
+    },
+    "cta": {
+      "title": "Şahsy logistik çözgüt almak",
+      "subtitle": "Şu gün biz bilen habarlaşyň, aýratyn talablaryňyzy çekeliň we mugt teklif almak.",
+      "button": "Teklif soramak",
+      "contactUs": "Biz bilen habarlaşyň"
+    }
+  },
+  "contact": {
+    "title": "Habarlaşmak",
+    "subtitle": "Bizim logistik hünärmenlerimiz bilen habarlaşyň. Biz siziň üpjünçilik zynjyryňyzy optimizasiýa etmekde kömek etmek üçin bu ýerde.",
+    "headquarters": "Baş ofis",
+    "phone": "Telefon",
+    "email": "Email",
+    "businessHours": "Iş sagatlary",
+    "sendMessage": "Bizä habar ibermek",
+    "messageSent": "Habar iberildi!",
+    "messageSentSubtitle": "24 sagat içinde siz bilen habarlaşarys.",
+    "findUs": "Bizi tapmak",
+    "quickContact": "Çalt habarlaşyk",
+    "emergencySupport": "24/7 tiz kömek",
+    "form": {
+      "fullName": "Doly ady",
+      "emailAddress": "Email salgy",
+      "company": "Kompaniýa",
+      "phoneNumber": "Telefon belgisi",
+      "subject": "Mowzuk",
+      "selectSubject": "Mowzuk saýlaň",
+      "requestQuote": "Teklif soramak",
+      "customerSupport": "Müşderi goldawy",
+      "partnership": "Hyzmatdaşlyk soragy",
+      "general": "Umumy sorag",
+      "message": "Habar",
+      "messagePlaceholder": "Bizä logistik zerurlyklaryňyz barada gürrüň ediň...",
+      "sendButton": "Habar ibermek"
+    }
+  },
+  "quote": {
+    "title": "Mugt teklif almak",
+    "subtitle": "Logistik zerurlyklaryňyz üçin derrew teklif almak. Çalt, takyk we düýbünden mugt.",
+    "steps": {
+      "contactInfo": "Habarlaşyk maglumatlary",
+      "shipmentDetails": "Iberiş jikme-jiklikleri",
+      "services": "Hyzmatlar"
+    },
+    "quoteRequested": "Teklif sorandy!",
+    "quoteRequestedSubtitle": "Soragyňyz üçin sag boluň. Bizim logistik hünärmenlerimiz talablaryňyzy gözden geçirer we 24 sagat içinde sizä şahsy teklif berer.",
+    "whatsNext": "Indi näme?",
+    "step1": "Biz siziň iberiş jikme-jiklikleriňizi gözden geçireris",
+    "step2": "Iň gowy ýol we baha hasaplary",
+    "step3": "Sizä email arkaly jikme-jik teklif ibereris",
+    "contactInfo": {
+      "title": "Habarlaşyk maglumatlary",
+      "fullName": "Doly ady",
+      "emailAddress": "Email salgy",
+      "phoneNumber": "Telefon belgisi",
+      "company": "Kompaniýa"
+    },
+    "shipmentDetails": {
+      "title": "Iberiş jikme-jiklikleri",
+      "origin": "Nireden",
+      "destination": "Nirä",
+      "cityCountry": "Şäher, Ýurt",
+      "weight": "Agram (kg)",
+      "shipmentType": "Iberiş görnüşi",
+      "selectType": "Görnüş saýlaň",
+      "document": "Resminama",
+      "package": "Paket",
+      "freight": "Ýük",
+      "hazardous": "Howply material",
+      "dimensions": "Ölçegler (sm)",
+      "length": "Uzynlyk",
+      "width": "Ini",
+      "height": "Beýiklik",
+      "declaredValue": "Bildirilen baha ($)",
+      "timeline": "Wagt çäkleri",
+      "selectTimeline": "Wagt çäklerini saýlaň",
+      "sameDay": "Şol gün",
+      "express": "1-2 gün",
+      "standard": "3-5 gün",
+      "economy": "1-2 hepde"
+    },
+    "additionalServices": {
+      "title": "Goşmaça hyzmatlar",
+      "selectServices": "Hyzmatlary saýlaň",
+      "expressDelivery": "Ekspress eltip berme",
+      "insuranceCoverage": "Sugurta gorag",
+      "packagingService": "Gaplama hyzmaty",
+      "customsClearance": "Gümrük rugsat berme",
+      "realTimeTracking": "Hakyky wagtda yzarlama",
+      "whiteGloveService": "Ak eljag hyzmaty",
+      "specialRequirements": "Aýratyn talablar",
+      "specialRequirementsPlaceholder": "Işleme, eltip berme buýruklary ýa-da goşmaça maglumatlar barada aýratyn talablar..."
+    },
+    "navigation": {
+      "previous": "Öňki",
+      "next": "Indiki",
+      "getQuote": "Teklif almak"
+    }
+  },
+  "auth": {
+    "login": "Hasaba girmek",
+    "register": "Täze hasap döretmek",
+    "email": "Email salgy",
+    "password": "Açarsöz",
+    "confirmPassword": "Açarsözi tassyklamak",
+    "signIn": "Girmek",
+    "signUp": "Hasaba almak",
+    "noAccount": "Hasabyňyz ýokmy?",
+    "hasAccount": "Eýýäm hasabyňyz barmy?",
+    "forgotPassword": "Açarsözi ýatdan çykardyňyzmy?"
+  },
+  "forms": {
+    "required": "Bu meýdan hökmany",
+    "invalidEmail": "Dogry email salgy giriziň",
+    "passwordTooShort": "Açarsöz azyndan 6 simwoldan ybarat bolmaly",
+    "passwordsDoNotMatch": "Açarsözler gabat gelmeýär"
+  },
+  "common": {
+    "loading": "Ýüklenýär...",
+    "error": "Ýalňyşlyk ýüze çykdy",
+    "success": "Üstünlik!",
+    "cancel": "Ýatyrmak",
+    "save": "Saklamak",
+    "delete": "Pozmak",
+    "edit": "Üýtgetmek",
+    "close": "Ýapmak",
+    "language": "Dil"
+  }
+}

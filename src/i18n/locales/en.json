@@ -1,0 +1,288 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "dashboard": "Dashboard",
+    "logout": "Logout",
+    "getQuote": "Get Quote"
+  },
+  "hero": {
+    "title": "itl - Global Logistics Excellence",
+    "subtitle": "Connecting businesses worldwide with reliable, efficient, and secure logistics solutions. Trusted by 10,000+ companies globally.",
+    "subtitleMobile": "Global logistics solutions trusted by 10,000+ companies worldwide.",
+    "cta": "Get Free Quote",
+    "learnMore": "Our Services"
+  },
+  "features": {
+    "title": "Why Choose itl?",
+    "subtitle": "We provide comprehensive logistics solutions to streamline your supply chain and accelerate your business growth",
+    "globalShipping": {
+      "title": "Global Shipping",
+      "description": "Worldwide logistics solutions with real-time tracking and delivery guarantees"
+    },
+    "secureTransport": {
+      "title": "Secure Transport",
+      "description": "Advanced security protocols and insurance coverage for all shipments"
+    },
+    "support24": {
+      "title": "24/7 Support",
+      "description": "Round-the-clock customer service and logistics management"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Don't just take our word for it",
+    "sarah": {
+      "name": "Sarah Chen",
+      "role": "Supply Chain Director, GlobalTech",
+      "content": "itl has transformed our international shipping operations. Their tracking system is exceptional and delivery times are consistently on schedule."
+    },
+    "michael": {
+      "name": "Michael Rodriguez",
+      "role": "Operations Manager, RetailPlus",
+      "content": "The most reliable logistics partner we've worked with. Their 24/7 support and real-time updates give us complete peace of mind."
+    },
+    "emma": {
+      "name": "Emma Thompson",
+      "role": "CEO, EcoProducts",
+      "content": "Outstanding service and competitive rates. They handle our complex shipping requirements with precision and professionalism."
+    }
+  },
+  "cta": {
+    "title": "Ready to Streamline Your Logistics?",
+    "subtitle": "Join thousands of satisfied customers and optimize your supply chain with our professional logistics solutions",
+    "button": "Get Free Quote"
+  },
+  "footer": {
+    "company": "itl",
+    "about": "About Us",
+    "services": "Our Services",
+    "contact": "Contact Us",
+    "globalShipping": "Global Shipping",
+    "warehousing": "Warehousing",
+    "tracking": "Package Tracking",
+    "help": "Help Center",
+    "customerSupport": "Customer Support",
+    "trackShipment": "Track Shipment",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "insurance": "Insurance Coverage",
+    "copyright": "© 2024 itl. All rights reserved. | Global Logistics Excellence"
+  },
+  "about": {
+    "title": "About itl",
+    "subtitle": "Your Trusted Partner in Global Logistics",
+    "mission": {
+      "title": "Our Mission",
+      "content1": "At itl, our mission is to revolutionize the logistics industry by providing seamless, efficient, and reliable supply chain solutions worldwide. We are committed to leveraging cutting-edge technology and a dedicated team to ensure your cargo reaches its destination safely and on time, every time.",
+      "content2": "We believe in building strong, lasting partnerships with our clients, understanding their unique needs, and delivering tailored services that exceed expectations."
+    },
+    "whyChoose": {
+      "title": "Why Choose Us?",
+      "globalReach": {
+        "title": "Global Reach",
+        "description": "Extensive network covering all major trade routes."
+      },
+      "reliable": {
+        "title": "Reliable & Secure",
+        "description": "Ensuring safety and integrity of your shipments."
+      },
+      "innovative": {
+        "title": "Innovative Solutions",
+        "description": "Leveraging technology for optimal logistics."
+      },
+      "customerCentric": {
+        "title": "Customer-Centric",
+        "description": "Dedicated support tailored to your needs."
+      }
+    },
+    "values": {
+      "title": "Our Values",
+      "integrity": {
+        "title": "Integrity",
+        "description": "Upholding the highest ethical standards in all our operations."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Striving for superior quality and performance in every service."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Continuously seeking new ways to improve and optimize logistics."
+      }
+    },
+    "cta": {
+      "title": "Ready to Partner with itl?",
+      "subtitle": "Experience the difference of a truly dedicated logistics partner.",
+      "button": "Contact Us Today"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive Logistics Solutions for Your Business",
+    "freightForwarding": {
+      "title": "Global Freight Forwarding",
+      "description": "Comprehensive international shipping solutions by air, sea, and land. We manage customs, documentation, and ensure timely delivery across borders."
+    },
+    "warehousing": {
+      "title": "Warehousing & Distribution",
+      "description": "State-of-the-art warehousing facilities for secure storage, inventory management, and efficient distribution to your customers."
+    },
+    "customs": {
+      "title": "Customs Brokerage",
+      "description": "Expert handling of all customs procedures, ensuring compliance and smooth clearance for your imports and exports."
+    },
+    "roadTransport": {
+      "title": "Road Transportation",
+      "description": "Reliable and cost-effective overland transport services for full truckload (FTL) and less than truckload (LTL) shipments."
+    },
+    "airFreight": {
+      "title": "Air Freight",
+      "description": "Fast and efficient air cargo services for urgent and time-sensitive shipments, connecting major airports worldwide."
+    },
+    "oceanFreight": {
+      "title": "Ocean Freight",
+      "description": "Flexible and economical sea freight options for full container load (FCL) and less than container load (LCL) shipments."
+    },
+    "howWeWork": {
+      "title": "How We Work",
+      "subtitle": "Our Streamlined Process",
+      "consultation": "Consultation: Understanding your logistics needs and challenges.",
+      "planning": "Planning: Developing a customized, efficient, and cost-effective solution.",
+      "execution": "Execution: Flawless implementation with real-time monitoring and communication.",
+      "delivery": "Delivery: Ensuring your goods arrive safely and on schedule.",
+      "support": "Support: Ongoing assistance and optimization for continuous improvement."
+    },
+    "cta": {
+      "title": "Get a Personalized Logistics Solution",
+      "subtitle": "Contact us today to discuss your specific requirements and receive a free quote.",
+      "button": "Request a Quote",
+      "contactUs": "Contact Us"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our logistics experts. We're here to help streamline your supply chain.",
+    "headquarters": "Headquarters",
+    "phone": "Phone",
+    "email": "Email",
+    "businessHours": "Business Hours",
+    "sendMessage": "Send us a Message",
+    "messageSent": "Message Sent!",
+    "messageSentSubtitle": "We'll get back to you within 24 hours.",
+    "findUs": "Find Us",
+    "quickContact": "Quick Contact",
+    "emergencySupport": "24/7 Emergency Support",
+    "form": {
+      "fullName": "Full Name",
+      "emailAddress": "Email Address",
+      "company": "Company",
+      "phoneNumber": "Phone Number",
+      "subject": "Subject",
+      "selectSubject": "Select a subject",
+      "requestQuote": "Request a Quote",
+      "customerSupport": "Customer Support",
+      "partnership": "Partnership Inquiry",
+      "general": "General Question",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your logistics needs...",
+      "sendButton": "Send Message"
+    }
+  },
+  "quote": {
+    "title": "Get a Free Quote",
+    "subtitle": "Get an instant quote for your logistics needs. Fast, accurate, and completely free.",
+    "steps": {
+      "contactInfo": "Contact Info",
+      "shipmentDetails": "Shipment Details",
+      "services": "Services"
+    },
+    "quoteRequested": "Quote Requested!",
+    "quoteRequestedSubtitle": "Thank you for your request. Our logistics experts will review your requirements and provide you with a customized quote within 24 hours.",
+    "whatsNext": "What's Next?",
+    "step1": "We'll review your shipment details",
+    "step2": "Calculate the best route and pricing",
+    "step3": "Send you a detailed quote via email",
+    "contactInfo": {
+      "title": "Contact Information",
+      "fullName": "Full Name",
+      "emailAddress": "Email Address",
+      "phoneNumber": "Phone Number",
+      "company": "Company"
+    },
+    "shipmentDetails": {
+      "title": "Shipment Details",
+      "origin": "Origin",
+      "destination": "Destination",
+      "cityCountry": "City, Country",
+      "weight": "Weight (kg)",
+      "shipmentType": "Shipment Type",
+      "selectType": "Select type",
+      "document": "Document",
+      "package": "Package",
+      "freight": "Freight",
+      "hazardous": "Hazardous Material",
+      "dimensions": "Dimensions (cm)",
+      "length": "Length",
+      "width": "Width",
+      "height": "Height",
+      "declaredValue": "Declared Value ($)",
+      "timeline": "Timeline",
+      "selectTimeline": "Select timeline",
+      "sameDay": "Same Day",
+      "express": "1-2 Days",
+      "standard": "3-5 Days",
+      "economy": "1-2 Weeks"
+    },
+    "additionalServices": {
+      "title": "Additional Services",
+      "selectServices": "Select Services",
+      "expressDelivery": "Express Delivery",
+      "insuranceCoverage": "Insurance Coverage",
+      "packagingService": "Packaging Service",
+      "customsClearance": "Customs Clearance",
+      "realTimeTracking": "Real-time Tracking",
+      "whiteGloveService": "White Glove Service",
+      "specialRequirements": "Special Requirements",
+      "specialRequirementsPlaceholder": "Any special handling requirements, delivery instructions, or additional information..."
+    },
+    "navigation": {
+      "previous": "Previous",
+      "next": "Next",
+      "getQuote": "Get Quote"
+    }
+  },
+  "auth": {
+    "login": "Sign In to Your Account",
+    "register": "Create a New Account",
+    "email": "Email address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "forgotPassword": "Forgot your password?"
+  },
+  "forms": {
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "passwordsDoNotMatch": "Passwords do not match"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "language": "Language"
+  }
+}
