@@ -44,5 +44,104 @@
     "edit": "Düzenle",
     "close": "Kapat",
     "language": "Dil"
+  },
+  "terminals": {
+    "hero": {
+      "title": "Terminal Ağımız",
+      "subtitle": "Sorunsuz lojistik operasyonlar için Türkmenistan genelinde stratejik konumlar",
+      "stat1": "5 Aktif Terminal",
+      "stat2": "7/24 Operasyon",
+      "stat3": "50,000+ m² Kapasite"
+    },
+    "search": {
+      "placeholder": "Şehir, adres veya hizmetlere göre terminal arayın..."
+    },
+    "services": "Mevcut Hizmetler",
+    "specializations": "Uzmanlıklar",
+    "gallery": "Terminal Fotoğrafları",
+    "viewDetails": "Detayları Görüntüle",
+    "contactInfo": "İletişim Bilgileri",
+    "address": "Adres",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "hours": "Çalışma Saatleri",
+    "capacity": "Tesis Kapasitesi",
+    "showMore": "Detayları görmek için tıklayın",
+    "showLess": "Gizlemek için tıklayın",
+    "serviceTypes": {
+      "freight": "Navlun Taşımacılığı",
+      "warehousing": "Depolama",
+      "customs": "Gümrük İşlemleri",
+      "air": "Hava Kargo",
+      "ocean": "Deniz Kargo",
+      "road": "Karayolu Taşımacılığı",
+      "security": "Güvenlik Hizmetleri"
+    },
+    "noResults": {
+      "title": "Terminal Bulunamadı",
+      "description": "Arama kriterlerinizi ayarlamayı deneyin"
+    },
+    "coverage": {
+      "title": "Ulusal Kapsama",
+      "subtitle": "Optimal lojistik verimliliği için stratejik olarak konumlandırılmış terminaller",
+      "mapPlaceholder": "İnteraktif Harita Yakında",
+      "activeTerminals": "Aktif Terminaller"
+    },
+    "cta": {
+      "title": "Lojistik Desteğe mi İhtiyacınız Var?",
+      "subtitle": "Terminal ve lojistik gereksinimlerinizi görüşmek için ekibimizle iletişime geçin",
+      "getQuote": "Teklif Alın",
+      "contact": "Bize Ulaşın"
+    },
+    "ashgabat": {
+      "name": "Aşkabat Merkez Terminali",
+      "city": "Aşkabat",
+      "address": "Arçabil Caddesi 56, Aşkabat 744000, Türkmenistan",
+      "hours": "7/24 Operasyon",
+      "capacity": "20,000 m² tesis",
+      "spec1": "Uluslararası kargo merkezi",
+      "spec2": "Sıcaklık kontrollü depolama",
+      "spec3": "Gelişmiş güvenlik sistemleri"
+    },
+    "turkmenbashi": {
+      "name": "Türkmenbaşı Liman Terminali",
+      "city": "Türkmenbaşı",
+      "address": "Liman Bölgesi, Türkmenbaşı 745000, Türkmenistan",
+      "hours": "7/24 Operasyon",
+      "capacity": "15,000 m² tesis",
+      "spec1": "Hazar Denizi limanına erişim",
+      "spec2": "Konteyner işleme",
+      "spec3": "Intermodal taşımacılık merkezi"
+    },
+    "mary": {
+      "name": "Mary Bölge Terminali",
+      "city": "Mary",
+      "address": "Sanayi Bölgesi, Mary 745400, Türkmenistan",
+      "hours": "Pzt-Cmt: 8:00 - 20:00",
+      "capacity": "8,000 m² tesis",
+      "spec1": "Tarım ürünleri uzmanı",
+      "spec2": "Sınır ötesi kamyon taşımacılığı",
+      "spec3": "Bölgesel dağıtım merkezi"
+    },
+    "turkmenabat": {
+      "name": "Türkmenabat Sınır Terminali",
+      "city": "Türkmenabat",
+      "address": "Sınır Geçiş Bölgesi, Türkmenabat 746000, Türkmenistan",
+      "hours": "7/24 Operasyon",
+      "capacity": "10,000 m² tesis",
+      "spec1": "Sınır geçiş kolaylığı",
+      "spec2": "Transit kargo işleme",
+      "spec3": "Çok modlu taşıma hizmetleri"
+    },
+    "dashoguz": {
+      "name": "Daşoguz Kuzey Terminali",
+      "city": "Daşoguz",
+      "address": "M37 Karayolu, Daşoguz 746800, Türkmenistan",
+      "hours": "Pzt-Cmt: 7:00 - 21:00",
+      "capacity": "7,000 m² tesis",
+      "spec1": "Kuzey bölge kapısı",
+      "spec2": "Pamuk ve tekstil lojistiği",
+      "spec3": "Ekspres teslimat hizmetleri"
+    }
   }
 }

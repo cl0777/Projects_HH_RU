@@ -105,6 +105,7 @@ const Navbar: React.FC = () => {
   const navItems = [
     { key: "home", path: "/" },
     { key: "about", path: "/about" },
+    { key: "terminals", path: "/terminals" },
     { key: "services", path: "/services" },
     { key: "contact", path: "/contact" },
   ];
@@ -154,7 +155,7 @@ const Navbar: React.FC = () => {
                 : "bg-gradient-to-r from-white/10 via-transparent to-white/10 animate-pulse"
             }`}
           ></div>
-          <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-0 left-0 w-full h-full ">
             <div
               className={`absolute top-2 left-4 w-2 h-2 rounded-full animate-bounce transition-colors duration-500 ${
                 isScrolled ? "bg-[#264D88]" : "bg-white/30"
@@ -203,18 +204,12 @@ const Navbar: React.FC = () => {
 
                 <div className="relative">
                   <span
-                    className={`text-3xl font-black transition-colors duration-500 ${
-                      isScrolled
-                        ? "text-white group-hover:text-[#1e3a8a] bg-gradient-to-r from-[#264D88] to-[#1e3a8a] bg-clip-text text-transparent"
-                        : "text-[#264D88] group-hover:text-gray-200"
-                    }`}
+                    className={`text-3xl font-black transition-colors duration-500 ${"text-[#264D88] group-hover:text-gray-200"}`}
                   >
-                    itl
+                    Halkara
                   </span>
                   <div
-                    className={`text-xs -mt-1 font-medium tracking-wider transition-colors duration-500 ${
-                      isScrolled ? "text-white/80" : "text-gray-600"
-                    }`}
+                    className={`text-xs -mt-1 font-medium tracking-wider transition-colors duration-500 ${"text-gray-600"}`}
                   >
                     Turkmen Logistics
                   </div>
@@ -237,7 +232,7 @@ const Navbar: React.FC = () => {
                 <Link
                   key={item.key}
                   to={item.path}
-                  className={`relative group px-6 py-3 font-semibold transition-all duration-500 rounded-xl overflow-hidden ${
+                  className={`relative group px-3 py-3 font-semibold transition-all duration-500 rounded-xl overflow-hidden ${
                     isOverWhiteBackground
                       ? "text-[#264D88] hover:text-[#1e3a8a]"
                       : "text-white hover:text-gray-200"
@@ -263,7 +258,7 @@ const Navbar: React.FC = () => {
 
                   {/* Text with Gradient Effect */}
                   <span
-                    className={`relative z-10 transition-all duration-300 ${
+                    className={` relative z-10 transition-all duration-300 ${
                       isOverWhiteBackground
                         ? "group-hover:bg-gradient-to-r group-hover:from-[#264D88] group-hover:to-[#1e3a8a] group-hover:bg-clip-text group-hover:text-transparent"
                         : "group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-200 group-hover:bg-clip-text group-hover:text-transparent"

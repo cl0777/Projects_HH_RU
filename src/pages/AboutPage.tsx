@@ -1,16 +1,98 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Truck, Globe, Shield, Users, Award, Clock } from "lucide-react";
+import { Globe, Shield, Users, Award } from "lucide-react";
+
+// Counter animation hook
+const useCountUp = (
+  end: number,
+  duration: number = 2000,
+  isVisible: boolean = false
+) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTime: number | null = null;
+    const startValue = 0;
+
+    const animate = (currentTime: number) => {
+      if (startTime === null) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+
+      const easeOutQuad = (t: number) => t * (2 - t);
+      const currentCount = Math.floor(
+        easeOutQuad(progress) * (end - startValue) + startValue
+      );
+
+      setCount(currentCount);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [end, duration, isVisible]);
+
+  return count;
+};
 
 const AboutPage: React.FC = () => {
   const { t } = useTranslation();
+  const [isVisible, setIsVisible] = useState(false);
+  const statsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => {
+      if (statsRef.current) {
+        observer.unobserve(statsRef.current);
+      }
+    };
+  }, []);
 
   const stats = [
-    { number: "10,000+", label: "Happy Customers" },
-    { number: "150+", label: "Countries Served" },
-    { number: "99.8%", label: "On-Time Delivery" },
-    { number: "24/7", label: "Customer Support" },
+    { value: 10000, suffix: "+", label: "Happy Customers" },
+    { value: 150, suffix: "+", label: "Countries Served" },
+    { value: 99.8, suffix: "%", label: "On-Time Delivery", decimals: 1 },
+    { value: 24, suffix: "/7", label: "Customer Support" },
   ];
+
+  // Counter Component
+  const StatCounter: React.FC<{
+    value: number;
+    suffix: string;
+    decimals?: number;
+  }> = ({ value, suffix, decimals = 0 }) => {
+    const count = useCountUp(value, 2000, isVisible);
+
+    const formatNumber = (num: number) => {
+      if (decimals > 0) {
+        return num.toFixed(decimals);
+      }
+      return num.toLocaleString();
+    };
+
+    return (
+      <span>
+        {formatNumber(count)}
+        {suffix}
+      </span>
+    );
+  };
 
   const values = [
     {
@@ -52,13 +134,25 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white" ref={statsRef}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div
+                key={index}
+                className="text-center transform transition-all duration-500 hover:scale-110"
+                style={{
+                  animation: isVisible
+                    ? `fadeIn 0.6s ease-out ${index * 0.1}s both`
+                    : "none",
+                }}
+              >
                 <div className="text-3xl md:text-4xl font-bold text-[#264D88] mb-2">
-                  {stat.number}
+                  <StatCounter
+                    value={stat.value}
+                    suffix={stat.suffix}
+                    decimals={stat.decimals}
+                  />
                 </div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>

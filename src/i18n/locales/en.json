@@ -5,20 +5,24 @@
     "services": "Services",
     "contact": "Contact",
     "login": "Login",
+    "terminals": "Terminals",
     "register": "Register",
     "dashboard": "Dashboard",
     "logout": "Logout",
-    "getQuote": "Get Quote"
+    "getQuote": "Get Quote",
+    "support": "info@halkara.com",
+    "email": "info@halkara.com",
+    "phone": "+993 65 555 55 55"
   },
   "hero": {
-    "title": "itl - Global Logistics Excellence",
+    "title": "Halkara Turkmen Logistics Global Logistics Excellence",
     "subtitle": "Connecting businesses worldwide with reliable, efficient, and secure logistics solutions. Trusted by 10,000+ companies globally.",
     "subtitleMobile": "Global logistics solutions trusted by 10,000+ companies worldwide.",
     "cta": "Get Free Quote",
     "learnMore": "Our Services"
   },
   "features": {
-    "title": "Why Choose itl?",
+    "title": "Why Choose Halkara Turkmen Logistics?",
     "subtitle": "We provide comprehensive logistics solutions to streamline your supply chain and accelerate your business growth",
     "globalShipping": {
       "title": "Global Shipping",
@@ -39,7 +43,7 @@
     "sarah": {
       "name": "Sarah Chen",
       "role": "Supply Chain Director, GlobalTech",
-      "content": "itl has transformed our international shipping operations. Their tracking system is exceptional and delivery times are consistently on schedule."
+      "content": "Halkara Turkmen Logistics has transformed our international shipping operations. Their tracking system is exceptional and delivery times are consistently on schedule."
     },
     "michael": {
       "name": "Michael Rodriguez",
@@ -58,7 +62,7 @@
     "button": "Get Free Quote"
   },
   "footer": {
-    "company": "itl",
+    "company": "Halkara Turkmen Logistics",
     "about": "About Us",
     "services": "Our Services",
     "contact": "Contact Us",
@@ -71,14 +75,14 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "insurance": "Insurance Coverage",
-    "copyright": "© 2024 itl. All rights reserved. | Global Logistics Excellence"
+    "copyright": "© 2025 Halkara Turkmen Logistics. All rights reserved. | Global Logistics Excellence"
   },
   "about": {
-    "title": "About itl",
+    "title": "About Halkara Turkmen Logistics",
     "subtitle": "Your Trusted Partner in Global Logistics",
     "mission": {
       "title": "Our Mission",
-      "content1": "At itl, our mission is to revolutionize the logistics industry by providing seamless, efficient, and reliable supply chain solutions worldwide. We are committed to leveraging cutting-edge technology and a dedicated team to ensure your cargo reaches its destination safely and on time, every time.",
+      "content1": "At Halkara Turkmen Logistics, our mission is to revolutionize the logistics industry by providing seamless, efficient, and reliable supply chain solutions worldwide. We are committed to leveraging cutting-edge technology and a dedicated team to ensure your cargo reaches its destination safely and on time, every time.",
       "content2": "We believe in building strong, lasting partnerships with our clients, understanding their unique needs, and delivering tailored services that exceed expectations."
     },
     "whyChoose": {
@@ -116,7 +120,7 @@
       }
     },
     "cta": {
-      "title": "Ready to Partner with itl?",
+      "title": "Ready to Partner with Halkara Turkmen Logistics?",
       "subtitle": "Experience the difference of a truly dedicated logistics partner.",
       "button": "Contact Us Today"
     }
@@ -139,10 +143,6 @@
     "roadTransport": {
       "title": "Road Transportation",
       "description": "Reliable and cost-effective overland transport services for full truckload (FTL) and less than truckload (LTL) shipments."
-    },
-    "airFreight": {
-      "title": "Air Freight",
-      "description": "Fast and efficient air cargo services for urgent and time-sensitive shipments, connecting major airports worldwide."
     },
     "oceanFreight": {
       "title": "Ocean Freight",
@@ -170,6 +170,17 @@
     "headquarters": "Headquarters",
     "phone": "Phone",
     "email": "Email",
+    "address": "Address",
+    "addressLine1": "Begler,744400",
+    "addressLine2": "G.Kulyýew, Aşgabat",
+    "addressCountry": "Turkmenistan",
+    "emailInfo": "info@halkara.com",
+    "emailSupport": "support@halkara.com",
+    "emailSales": "sales@halkara.com",
+    "phoneMain1": "+993 65 55 55 55",
+    "phoneMain2": "+993 65 55 55 54",
+    "phoneEmergency": "Emergency: +993 65 55 55 53",
+
     "businessHours": "Business Hours",
     "sendMessage": "Send us a Message",
     "messageSent": "Message Sent!",
@@ -284,5 +295,103 @@
     "edit": "Edit",
     "close": "Close",
     "language": "Language"
+  },
+  "terminals": {
+    "hero": {
+      "title": "Our Terminals Network",
+      "subtitle": "Strategic locations across Turkmenistan for seamless logistics operations",
+      "stat1": "5 Active Terminals",
+      "stat2": "24/7 Operations",
+      "stat3": "50,000+ sqm Capacity"
+    },
+    "search": {
+      "placeholder": "Search terminals by city, address, or services..."
+    },
+    "services": "Available Services",
+    "specializations": "Specializations",
+    "gallery": "Terminal Photos",
+    "viewDetails": "View Details",
+    "contactInfo": "Contact Information",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Operating Hours",
+    "capacity": "Facility Capacity",
+    "showMore": "Click to view details",
+    "showLess": "Click to hide details",
+    "serviceTypes": {
+      "freight": "Freight Forwarding",
+      "warehousing": "Warehousing",
+      "customs": "Customs Clearance",
+      "ocean": "Ocean Freight",
+      "road": "Road Transport",
+      "security": "Security Services"
+    },
+    "noResults": {
+      "title": "No Terminals Found",
+      "description": "Try adjusting your search criteria"
+    },
+    "coverage": {
+      "title": "National Coverage",
+      "subtitle": "Strategically positioned terminals for optimal logistics efficiency",
+      "mapPlaceholder": "Interactive Map Coming Soon",
+      "activeTerminals": "Active Terminals"
+    },
+    "cta": {
+      "title": "Need Logistics Support?",
+      "subtitle": "Contact our team to discuss your terminal and logistics requirements",
+      "getQuote": "Get a Quote",
+      "contact": "Contact Us"
+    },
+    "ashgabat": {
+      "name": "Ashgabat Central Terminal",
+      "city": "Ashgabat",
+      "address": "Archabil Avenue 56, Ashgabat 744000, Turkmenistan",
+      "hours": "24/7 Operations",
+      "capacity": "20,000 sqm facility",
+      "spec1": "International cargo hub",
+      "spec2": "Temperature-controlled storage",
+      "spec3": "Advanced security systems"
+    },
+    "turkmenbashi": {
+      "name": "Turkmenbashi Port Terminal",
+      "city": "Turkmenbashi",
+      "address": "Port Area, Turkmenbashi 745000, Turkmenistan",
+      "hours": "24/7 Operations",
+      "capacity": "15,000 sqm facility",
+      "spec1": "Caspian Sea port access",
+      "spec2": "Container handling",
+      "spec3": "Intermodal transport hub"
+    },
+    "mary": {
+      "name": "Mary Regional Terminal",
+      "city": "Mary",
+      "address": "Industrial Zone, Mary 745400, Turkmenistan",
+      "hours": "Mon-Sat: 8:00 AM - 8:00 PM",
+      "capacity": "8,000 sqm facility",
+      "spec1": "Agricultural products specialist",
+      "spec2": "Cross-border trucking",
+      "spec3": "Regional distribution center"
+    },
+    "turkmenabat": {
+      "name": "Turkmenabat Border Terminal",
+      "city": "Turkmenabat",
+      "address": "Border Crossing Zone, Turkmenabat 746000, Turkmenistan",
+      "hours": "24/7 Operations",
+      "capacity": "10,000 sqm facility",
+      "spec1": "Border crossing facilitation",
+      "spec2": "Transit cargo handling",
+      "spec3": "Multi-modal transport services"
+    },
+    "dashoguz": {
+      "name": "Dashoguz Northern Terminal",
+      "city": "Dashoguz",
+      "address": "Highway M37, Dashoguz 746800, Turkmenistan",
+      "hours": "Mon-Sat: 7:00 AM - 9:00 PM",
+      "capacity": "7,000 sqm facility",
+      "spec1": "Northern region gateway",
+      "spec2": "Cotton and textile logistics",
+      "spec3": "Express delivery services"
+    }
   }
 }

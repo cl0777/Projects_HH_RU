@@ -6,6 +6,7 @@
     "contact": "Habarlaşmak",
     "login": "Girmek",
     "register": "Hasaba almak",
+    "terminals": "Terminalar",
     "dashboard": "Gözegçilik paneli",
     "logout": "Çykmak",
     "getQuote": "Teklif almak"
@@ -287,5 +288,104 @@
     "edit": "Üýtgetmek",
     "close": "Ýapmak",
     "language": "Dil"
+  },
+  "terminals": {
+    "hero": {
+      "title": "Biziň terminal ulgamymyz",
+      "subtitle": "Logistika işlerini amatly ýerine ýetirmek üçin Türkmenistan boýunça strategiki ýerleşýän terminallar",
+      "stat1": "5 Işjeň terminal",
+      "stat2": "24/7 Iş tertimi",
+      "stat3": "50,000+ kw.m Güýji"
+    },
+    "search": {
+      "placeholder": "Terminallary şäher, salgy ýa-da hyzmatlar boýunça gözläň..."
+    },
+    "services": "Elýeterli hyzmatlar",
+    "specializations": "Ýöriteleşdirmeler",
+    "gallery": "Terminal suratlary",
+    "viewDetails": "Jikme-jiklikler",
+    "contactInfo": "Habarlaşmak maglumaty",
+    "address": "Salgy",
+    "phone": "Telefon",
+    "email": "E-poçta",
+    "hours": "Iş wagty",
+    "capacity": "Desganyň güýji",
+    "showMore": "Jikme-jiklikleri görmek üçin basyň",
+    "showLess": "Gizlemek üçin basyň",
+    "serviceTypes": {
+      "freight": "Ýük ekspedisiýasy",
+      "warehousing": "Ammar hyzmaty",
+      "customs": "Gümrük resmileşdirmesi",
+      "air": "Howa gatnawlary",
+      "ocean": "Deňiz gatnawlary",
+      "road": "Awtoulag gatnawlary",
+      "security": "Howpsuzlyk hyzmatlary"
+    },
+    "noResults": {
+      "title": "Terminal tapylmady",
+      "description": "Gözleg ölçeglerini üýtgetmegi synanyşyň"
+    },
+    "coverage": {
+      "title": "Milli Gerim",
+      "subtitle": "Logistikanyň optimal netijeliligi üçin strategiki ýerleşýän terminallar",
+      "mapPlaceholder": "Interaktiw karta gysga wagtyň içinde",
+      "activeTerminals": "Işjeň terminallar"
+    },
+    "cta": {
+      "title": "Logistika goldawy gerekmi?",
+      "subtitle": "Terminal we logistika talaplaryny ara alyp maslahatlaşmak üçin toparymyz bilen habarlaşyň",
+      "getQuote": "Baha alyň",
+      "contact": "Habarlaşyň"
+    },
+    "ashgabat": {
+      "name": "Aşgabat Merkezi Terminal",
+      "city": "Aşgabat",
+      "address": "Arçabil şaýoly 56, Aşgabat 744000, Türkmenistan",
+      "hours": "24/7 Iş tertimi",
+      "capacity": "20,000 kw.m desgasy",
+      "spec1": "Halkara ýük merkezi",
+      "spec2": "Temperatura gözegçiligi bilen saklanylýar",
+      "spec3": "Öňdebaryjy howpsuzlyk ulgamlary"
+    },
+    "turkmenbashi": {
+      "name": "Türkmenbaşy Port Terminaly",
+      "city": "Türkmenbaşy",
+      "address": "Port sebiti, Türkmenbaşy 745000, Türkmenistan",
+      "hours": "24/7 Iş tertimi",
+      "capacity": "15,000 kw.m desgasy",
+      "spec1": "Hazar deňzi portuna çykyş",
+      "spec2": "Konteyner işlemek",
+      "spec3": "Intermodal ulag merkezi"
+    },
+    "mary": {
+      "name": "Mary Sebit Terminaly",
+      "city": "Mary",
+      "address": "Senagat zolagy, Mary 745400, Türkmenistan",
+      "hours": "Duş-Şen: 8:00 - 20:00",
+      "capacity": "8,000 kw.m desgasy",
+      "spec1": "Oba hojalyk önümleriniň hünärmeni",
+      "spec2": "Araçäk awtoulag gatnawlary",
+      "spec3": "Sebit paýlaýyş merkezi"
+    },
+    "turkmenabat": {
+      "name": "Türkmenabat Serhet Terminaly",
+      "city": "Türkmenabat",
+      "address": "Serhet geçelge zolagy, Türkmenabat 746000, Türkmenistan",
+      "hours": "24/7 Iş tertimi",
+      "capacity": "10,000 kw.m desgasy",
+      "spec1": "Serhetden geçmäge ýardam bermek",
+      "spec2": "Tranzit ýükleri işlemek",
+      "spec3": "Köp görnüşli ulag hyzmatlary"
+    },
+    "dashoguz": {
+      "name": "Daşoguz Demirgazyk Terminaly",
+      "city": "Daşoguz",
+      "address": "M37 ýoly, Daşoguz 746800, Türkmenistan",
+      "hours": "Duş-Şen: 7:00 - 21:00",
+      "capacity": "7,000 kw.m desgasy",
+      "spec1": "Demirgazyk sebit derwezesi",
+      "spec2": "Pagta we dokma logistikasy",
+      "spec3": "Çalt eltip berme hyzmatlary"
+    }
   }
 }

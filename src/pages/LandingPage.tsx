@@ -1,10 +1,80 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { ArrowRight, Star, Truck, Shield, Clock } from "lucide-react";
+import {
+  ArrowRight,
+  Truck,
+  Shield,
+  Clock,
+  Globe,
+  Package,
+  Users,
+  TrendingUp,
+  Award,
+  CheckCircle,
+} from "lucide-react";
+
+// Counter animation hook
+const useCountUp = (
+  end: number,
+  duration: number = 2000,
+  isVisible: boolean = false
+) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTime: number | null = null;
+    const startValue = 0;
+
+    const animate = (currentTime: number) => {
+      if (startTime === null) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+
+      const easeOutQuad = (t: number) => t * (2 - t);
+      const currentCount = Math.floor(
+        easeOutQuad(progress) * (end - startValue) + startValue
+      );
+
+      setCount(currentCount);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [end, duration, isVisible]);
+
+  return count;
+};
 
 const LandingPage: React.FC = () => {
   const { t } = useTranslation();
+  const [isVisible, setIsVisible] = useState(false);
+  const statsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => {
+      if (statsRef.current) {
+        observer.unobserve(statsRef.current);
+      }
+    };
+  }, []);
   const features = [
     {
       icon: <Truck className="w-8 h-8 text-[#264D88]" />,
@@ -23,25 +93,101 @@ const LandingPage: React.FC = () => {
     },
   ];
 
-  const testimonials = [
+  // Counter Component
+  const StatCounter: React.FC<{
+    value: number;
+    suffix: string;
+    prefix?: string;
+  }> = ({ value, suffix, prefix = "" }) => {
+    const count = useCountUp(value, 2000, isVisible);
+
+    const formatNumber = (num: number) => {
+      if (num >= 1000000) {
+        return (num / 1000000).toFixed(1);
+      }
+      if (num >= 1000) {
+        return (num / 1000).toFixed(0);
+      }
+      return num.toString();
+    };
+
+    return (
+      <span>
+        {prefix}
+        {formatNumber(count)}
+        {suffix}
+      </span>
+    );
+  };
+
+  // NEW: Stats data
+  const stats = [
     {
-      name: t("testimonials.sarah.name"),
-      role: t("testimonials.sarah.role"),
-      content: t("testimonials.sarah.content"),
-      rating: 5,
+      icon: <Globe className="w-8 h-8" />,
+      value: 50,
+      suffix: "+",
+      label: "Countries Served",
     },
     {
-      name: t("testimonials.michael.name"),
-      role: t("testimonials.michael.role"),
-      content: t("testimonials.michael.content"),
-      rating: 5,
+      icon: <Package className="w-8 h-8" />,
+      value: 1000000,
+      suffix: "M+",
+      label: "Packages Delivered",
     },
     {
-      name: t("testimonials.emma.name"),
-      role: t("testimonials.emma.role"),
-      content: t("testimonials.emma.content"),
-      rating: 5,
+      icon: <Users className="w-8 h-8" />,
+      value: 10000,
+      suffix: "K+",
+      label: "Happy Clients",
     },
+    {
+      icon: <Award className="w-8 h-8" />,
+      value: 15,
+      suffix: "+",
+      label: "Years Experience",
+    },
+  ];
+
+  // NEW: Service highlights
+  const services = [
+    {
+      title: "Ocean Freight",
+      description: "Cost-effective sea freight for FCL and LCL shipments",
+      icon: "🚢",
+    },
+    {
+      title: "Road Transport",
+      description:
+        "Flexible overland transportation for FTL and LTL deliveries",
+      icon: "🚛",
+    },
+    {
+      title: "Warehousing",
+      description:
+        "Secure storage facilities with advanced inventory management",
+      icon: "📦",
+    },
+    {
+      title: "Customs Clearance",
+      description:
+        "Expert handling of all customs procedures and documentation",
+      icon: "📋",
+    },
+    {
+      title: "Supply Chain",
+      description: "End-to-end supply chain optimization and consulting",
+      icon: "🔄",
+    },
+  ];
+
+  // NEW: Why choose us points
+  const whyChooseUs = [
+    { text: "Real-time tracking for all shipments" },
+    { text: "Competitive pricing with no hidden fees" },
+    { text: "Insurance coverage on all cargo" },
+    { text: "Dedicated account managers" },
+    { text: "Global network of partners" },
+    { text: "Eco-friendly logistics solutions" },
   ];
 
   return (
@@ -126,7 +272,7 @@ const LandingPage: React.FC = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-4 sm:space-y-6 lg:space-y-8">
             {/* Main Heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight px-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl  lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight px-2">
               <span className="block bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
                 {t("hero.title")}
               </span>
@@ -172,6 +318,36 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
+      {/* NEW: Stats Section */}
+      <section
+        className="py-16 bg-gradient-to-br from-[#264D88] to-[#1e3a8a]"
+        ref={statsRef}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="text-center text-white transform transition-all duration-500 hover:scale-110"
+                style={{
+                  animation: isVisible
+                    ? `fadeIn 0.6s ease-out ${index * 0.1}s both`
+                    : "none",
+                }}
+              >
+                <div className="flex justify-center mb-3">{stat.icon}</div>
+                <div className="text-4xl md:text-5xl font-bold mb-2">
+                  <StatCounter value={stat.value} suffix={stat.suffix} />
+                </div>
+                <div className="text-blue-100 text-sm md:text-base">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section id="features" className="relative py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -201,38 +377,173 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 bg-gray-50">
+      {/* NEW: Comprehensive Services Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t("testimonials.title")}
+              Comprehensive Logistics Services
             </h2>
-            <p className="text-xl text-gray-600">
-              {t("testimonials.subtitle")}
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From ocean freight to warehousing, we offer complete logistics
+              solutions tailored to your business needs
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current"
-                    />
-                  ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+              >
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                <Link
+                  to="/services"
+                  className="text-[#264D88] font-semibold hover:underline inline-flex items-center"
+                >
+                  Learn more <ArrowRight className="ml-1 w-4 h-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Why Choose Us Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Why Businesses Trust Halkara Turkmen Logistics
+              </h2>
+              <p className="text-lg text-gray-600 mb-8">
+                We combine cutting-edge technology with personalized service to
+                deliver logistics solutions that drive your business forward.
+              </p>
+              <div className="space-y-4">
+                {whyChooseUs.map((item, index) => (
+                  <div key={index} className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700 text-lg">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+              <Link
+                to="/about"
+                className="mt-8 inline-flex items-center px-6 py-3 bg-[#264D88] text-white rounded-lg hover:bg-[#1e3a8a] transition-colors"
+              >
+                Learn More About Us <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </div>
+            <div className="relative">
+              <img
+                src="/images/shipping.jpg"
+                alt="Logistics Operations"
+                className="rounded-2xl shadow-2xl"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl">
+                <div className="flex items-center space-x-4">
+                  <TrendingUp className="w-12 h-12 text-green-500" />
+                  <div>
+                    <div className="text-3xl font-bold text-gray-900">
+                      99.8%
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      On-Time Delivery
+                    </div>
+                  </div>
                 </div>
-                <p className="text-gray-600 mb-4 italic">
-                  "{testimonial.content}"
-                </p>
-                <div>
-                  <p className="font-semibold text-gray-900">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: How It Works Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              How It Works
+            </h2>
+            <p className="text-xl text-gray-600">
+              Simple, streamlined process from quote to delivery
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                step: "01",
+                title: "Request Quote",
+                desc: "Fill out our simple form with your shipping details",
+              },
+              {
+                step: "02",
+                title: "Get Pricing",
+                desc: "Receive competitive rates within 24 hours",
+              },
+              {
+                step: "03",
+                title: "Book Shipment",
+                desc: "Confirm and schedule your logistics service",
+              },
+              {
+                step: "04",
+                title: "Track & Receive",
+                desc: "Monitor in real-time until safe delivery",
+              },
+            ].map((item, index) => (
+              <div key={index} className="text-center relative">
+                <div className="bg-[#264D88] text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  {item.step}
                 </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600">{item.desc}</p>
+                {index < 3 && (
+                  <ArrowRight className="hidden md:block absolute top-8 -right-4 text-gray-300 w-8 h-8" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Industry Focus Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Industries We Serve
+            </h2>
+            <p className="text-xl text-gray-600">
+              Specialized logistics solutions for diverse sectors
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              "E-Commerce",
+              "Manufacturing",
+              "Retail",
+              "Healthcare",
+              "Technology",
+              "Automotive",
+              "Food & Beverage",
+              "Textiles",
+            ].map((industry, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow"
+              >
+                <h3 className="font-semibold text-gray-900">{industry}</h3>
               </div>
             ))}
           </div>
@@ -259,98 +570,6 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">LogiFlow</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/about" className="hover:text-blue-400">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services" className="hover:text-blue-400">
-                    Our Services
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="hover:text-blue-400">
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">Services</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/shipping" className="hover:text-blue-400">
-                    Global Shipping
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/warehousing" className="hover:text-blue-400">
-                    Warehousing
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/tracking" className="hover:text-blue-400">
-                    Package Tracking
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">Support</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/help" className="hover:text-blue-400">
-                    Help Center
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="hover:text-blue-400">
-                    Customer Support
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/tracking" className="hover:text-blue-400">
-                    Track Shipment
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4">Legal</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/privacy" className="hover:text-blue-400">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/terms" className="hover:text-blue-400">
-                    Terms of Service
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/insurance" className="hover:text-blue-400">
-                    Insurance Coverage
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-gray-400">
-              © 2024 LogiFlow. All rights reserved. | Global Logistics
-              Excellence
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
