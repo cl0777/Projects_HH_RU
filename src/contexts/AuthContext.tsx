@@ -5,22 +5,50 @@ import React, {
   useEffect,
   type ReactNode,
 } from "react";
+import axios from "axios";
+import type { AxiosInstance } from "axios";
+
+const API_BASE_URL = "http://localhost:3030/api/v1/customers";
+const axiosClient: AxiosInstance = axios.create({
+  baseURL: API_BASE_URL,
+  withCredentials: true,
+  headers: {
+    // Keep headers simple; JSON will still trigger CORS preflight on cross-origin
+    "Content-Type": "application/json",
+  },
+});
 
 interface User {
   id: string;
   email: string;
   name?: string;
+  customerId?: number;
+  partyName?: string;
+  shortname?: string;
+  [key: string]: any;
+}
+
+interface RegisterData {
+  name: string;
+  email: string;
+  password: string;
+  customerId: number;
+  partyName: string;
+  shortname: string;
+  address1: string;
+  address2?: string;
+  address3?: string;
+  city: string;
+  country: string;
+  phone1: string;
+  phone2?: string;
 }
 
 interface AuthContextType {
   user: User | null;
   token: string | null;
   login: (email: string, password: string) => Promise<boolean>;
-  register: (
-    email: string,
-    password: string,
-    name?: string
-  ) => Promise<boolean>;
+  register: (data: RegisterData) => Promise<boolean>;
   logout: () => void;
   isLoading: boolean;
 }
@@ -59,91 +87,72 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
     try {
       setIsLoading(true);
 
-      // Simulate API call - replace with actual API endpoint
-      const response = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
+      const { data } = await axiosClient.post("/auth/login", {
+        email,
+        password,
       });
+      const accessToken: string | undefined = data?.accessToken;
+      const account = data?.account as
+        | { id?: number | string; name?: string; email?: string }
+        | undefined;
 
-      if (response.ok) {
-        const data = await response.json();
-        const { token: authToken, user: userData } = data;
-
-        setToken(authToken);
-        setUser(userData);
-        localStorage.setItem(TOKEN_KEY, authToken);
-        localStorage.setItem(USER_KEY, JSON.stringify(userData));
-        return true;
-      } else {
-        // For demo purposes, create a mock login
-        const mockToken = "mock_token_" + Date.now();
-        const mockUser: User = {
-          id: "1",
-          email,
-          name: email.split("@")[0],
-        };
-
-        setToken(mockToken);
-        setUser(mockUser);
-        localStorage.setItem(TOKEN_KEY, mockToken);
-        localStorage.setItem(USER_KEY, JSON.stringify(mockUser));
-        return true;
+      if (!accessToken || !account) {
+        throw new Error("Login failed");
       }
-    } catch (error) {
+
+      const mappedUser: User = {
+        id: String(account.id ?? ""),
+        email: account.email ?? email,
+        name: account.name,
+      };
+
+      setToken(accessToken);
+      setUser(mappedUser);
+      localStorage.setItem(TOKEN_KEY, accessToken);
+      localStorage.setItem(USER_KEY, JSON.stringify(mappedUser));
+      return true;
+    } catch (error: any) {
       console.error("Login error:", error);
-      return false;
+      const message =
+        error?.response?.data?.message || error?.message || "Login failed";
+      throw new Error(message);
     } finally {
       setIsLoading(false);
     }
   };
 
-  const register = async (
-    email: string,
-    password: string,
-    name?: string
-  ): Promise<boolean> => {
+  const register = async (data: RegisterData): Promise<boolean> => {
     try {
       setIsLoading(true);
 
-      // Simulate API call - replace with actual API endpoint
-      const response = await fetch("/api/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password, name }),
-      });
+      const response = await axiosClient.post("/auth/register", data);
+      const accessToken: string | undefined = response.data?.accessToken;
+      const account = response.data?.account as
+        | { id?: number | string; name?: string; email?: string }
+        | undefined;
 
-      if (response.ok) {
-        const data = await response.json();
-        const { token: authToken, user: userData } = data;
-
-        setToken(authToken);
-        setUser(userData);
-        localStorage.setItem(TOKEN_KEY, authToken);
-        localStorage.setItem(USER_KEY, JSON.stringify(userData));
-        return true;
-      } else {
-        // For demo purposes, create a mock registration
-        const mockToken = "mock_token_" + Date.now();
-        const mockUser: User = {
-          id: "1",
-          email,
-          name: name || email.split("@")[0],
-        };
-
-        setToken(mockToken);
-        setUser(mockUser);
-        localStorage.setItem(TOKEN_KEY, mockToken);
-        localStorage.setItem(USER_KEY, JSON.stringify(mockUser));
-        return true;
+      if (!accessToken || !account) {
+        throw new Error("Registration failed");
       }
-    } catch (error) {
+
+      const mappedUser: User = {
+        id: String(account.id ?? ""),
+        email: account.email ?? data.email,
+        name: account.name ?? data.name,
+      };
+
+      setToken(accessToken);
+      setUser(mappedUser);
+      localStorage.setItem(TOKEN_KEY, accessToken);
+      localStorage.setItem(USER_KEY, JSON.stringify(mappedUser));
+      return true;
+    } catch (error: any) {
       console.error("Registration error:", error);
-      return false;
+      const message =
+        error?.response?.data?.message ||
+        error?.message ||
+        "Registration failed";
+      throw new Error(message);
     } finally {
       setIsLoading(false);
     }

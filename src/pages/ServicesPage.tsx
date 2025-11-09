@@ -28,7 +28,7 @@ const ServicesPage: React.FC = () => {
         t("services.freightForwarding.features.roadTransport"),
         t("services.freightForwarding.features.expressDelivery"),
       ],
-      image: "shipping",
+      imagePath: "/images/shipping.jpg",
     },
     {
       icon: <Warehouse className="w-12 h-12 text-[#264D88]" />,
@@ -40,7 +40,7 @@ const ServicesPage: React.FC = () => {
         t("services.warehousing.features.pickPack"),
         t("services.warehousing.features.crossDocking"),
       ],
-      image: "warehouse",
+      imagePath: "/images/warehouse.svg",
     },
     {
       icon: <Package className="w-12 h-12 text-[#264D88]" />,
@@ -52,7 +52,7 @@ const ServicesPage: React.FC = () => {
         t("services.packageTracking.features.onlinePortal"),
         t("services.packageTracking.features.mobileApp"),
       ],
-      image: "tracking",
+      imagePath: "/images/tracking.svg",
     },
     {
       icon: <Shield className="w-12 h-12 text-[#264D88]" />,
@@ -64,7 +64,7 @@ const ServicesPage: React.FC = () => {
         t("services.secureTransport.features.chainOfCustody"),
         t("services.secureTransport.features.riskAssessment"),
       ],
-      image: "security",
+      imagePath: "/images/security.svg",
     },
     {
       icon: <Globe className="w-12 h-12 text-[#264D88]" />,
@@ -77,7 +77,7 @@ const ServicesPage: React.FC = () => {
         t("services.internationalLogistics.features.dutyManagement"),
       ],
 
-      image: "international",
+      imagePath: "/images/international.svg",
     },
     {
       icon: <Clock className="w-12 h-12 text-[#264D88]" />,
@@ -89,7 +89,7 @@ const ServicesPage: React.FC = () => {
         t("services.support24.features.emergencySupport"),
         t("services.support24.features.dedicatedManager"),
       ],
-      image: "support",
+      imagePath: "/images/support.svg",
     },
   ];
 
@@ -109,10 +109,10 @@ const ServicesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              t("services.title")
+              {t("services.title")}
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              t("services.subtitle")
+              {t("services.subtitle")}
             </p>
           </div>
         </div>
@@ -141,7 +141,7 @@ const ServicesPage: React.FC = () => {
 
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-3">
-                      t("services.keyFeatures")
+                      {t("services.keyFeatures")}
                     </h4>
                     <ul className="grid grid-cols-2 gap-2">
                       {service.features.map((feature, featureIndex) => (
@@ -168,7 +168,7 @@ const ServicesPage: React.FC = () => {
                 <div className="bg-gray-200 h-48 flex items-center justify-center">
                   <div className="text-center text-gray-500 w-full h-full">
                     <img
-                      src={`/images/${service.image}.jpg`}
+                      src={service.imagePath}
                       alt={service.title}
                       className="w-full h-full object-cover"
                     />

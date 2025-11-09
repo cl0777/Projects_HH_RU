@@ -10,19 +10,19 @@
     "dashboard": "Dashboard",
     "logout": "Logout",
     "getQuote": "Get Quote",
-    "support": "info@halkara.com",
-    "email": "info@halkara.com",
+    "support": "info@htl.com",
+    "email": "info@htl.com",
     "phone": "+993 65 555 55 55"
   },
   "hero": {
-    "title": "Halkara Turkmen Logistics Global Logistics Excellence",
-    "subtitle": "Connecting businesses worldwide with reliable, efficient, and secure logistics solutions. Trusted by 10,000+ companies globally.",
+    "title": "Halkara Turkmen Logistics Logistics Art",
+    "subtitle": "",
     "subtitleMobile": "Global logistics solutions trusted by 10,000+ companies worldwide.",
     "cta": "Get Free Quote",
     "learnMore": "Our Services"
   },
   "features": {
-    "title": "Why Choose Halkara Turkmen Logistics?",
+    "title": "Why Choose us?",
     "subtitle": "We provide comprehensive logistics solutions to streamline your supply chain and accelerate your business growth",
     "globalShipping": {
       "title": "Global Shipping",
@@ -62,10 +62,12 @@
     "button": "Get Free Quote"
   },
   "footer": {
-    "company": "Halkara Turkmen Logistics",
+    "company": "HTL",
     "about": "About Us",
     "services": "Our Services",
     "contact": "Contact Us",
+    "support": "Support",
+    "legal": "Legal",
     "globalShipping": "Global Shipping",
     "warehousing": "Warehousing",
     "tracking": "Package Tracking",
@@ -76,6 +78,55 @@
     "terms": "Terms of Service",
     "insurance": "Insurance Coverage",
     "copyright": "© 2025 Halkara Turkmen Logistics. All rights reserved. | Global Logistics Excellence"
+  },
+  "landing": {
+    "videoNotSupported": "Video background not supported",
+    "images": { "logisticsAlt": "Logistics Operations" },
+    "metrics": { "onTimeDelivery": "On-Time Delivery" },
+    "services": {
+      "title": "Comprehensive Logistics Services",
+      "subtitle": "From ocean freight to warehousing, we offer complete logistics solutions tailored to your business needs"
+    },
+    "stats": {
+      "countriesServed": "Countries Served",
+      "packagesDelivered": "Packages Delivered",
+      "happyClients": "Happy Clients",
+      "yearsExperience": "Years Experience"
+    },
+    "why": {
+      "title": "Why Businesses Trust Halkara Turkmen Logistics",
+      "subtitle": "We combine cutting-edge technology with personalized service to deliver logistics solutions that drive your business forward.",
+      "bullets": {
+        "tracking": "Real-time tracking for all shipments",
+        "pricing": "Competitive pricing with no hidden fees",
+        "insurance": "Insurance coverage on all cargo",
+        "accountManagers": "Dedicated account managers",
+        "globalNetwork": "Global network of partners",
+        "ecoFriendly": "Eco-friendly logistics solutions"
+      }
+    },
+    "how": {
+      "title": "How It Works",
+      "subtitle": "Simple, streamlined process from quote to delivery",
+      "steps": {
+        "requestQuote": {
+          "title": "Request Quote",
+          "desc": "Fill out our simple form with your shipping details"
+        },
+        "getPricing": {
+          "title": "Get Pricing",
+          "desc": "Receive competitive rates within 24 hours"
+        },
+        "bookShipment": {
+          "title": "Book Shipment",
+          "desc": "Confirm and schedule your logistics service"
+        },
+        "trackReceive": {
+          "title": "Track & Receive",
+          "desc": "Monitor in real-time until safe delivery"
+        }
+      }
+    }
   },
   "about": {
     "title": "About Halkara Turkmen Logistics",
@@ -106,6 +157,7 @@
     },
     "values": {
       "title": "Our Values",
+      "subtitle": "The principles that guide everything we do",
       "integrity": {
         "title": "Integrity",
         "description": "Upholding the highest ethical standards in all our operations."
@@ -119,6 +171,23 @@
         "description": "Continuously seeking new ways to improve and optimize logistics."
       }
     },
+    "story": {
+      "title": "Our Story",
+      "content1": "Founded with a vision to transform global logistics, Halkara Turkmen Logistics has grown from a local shipping company into a trusted international logistics partner. Our journey began with a simple belief: that logistics should be seamless, transparent, and reliable.",
+      "content2": "Over the years, we've expanded our network across continents, invested in cutting-edge technology, and built a team of dedicated professionals who share our commitment to excellence. Today, we serve thousands of businesses worldwide, helping them navigate the complexities of global trade.",
+      "content3": "Our success is built on the trust of our clients and the dedication of our team. We continue to innovate and adapt, ensuring that we remain at the forefront of the logistics industry while maintaining the personal touch that sets us apart.",
+      "imageAlt": "About Our Story"
+    },
+    "leadership": {
+      "title": "Our Leadership Team",
+      "subtitle": "Experienced professionals dedicated to your success"
+    },
+    "stats": {
+      "happyCustomers": "Happy Customers",
+      "countriesServed": "Countries Served",
+      "onTimeDelivery": "On-Time Delivery",
+      "customerSupport": "Customer Support"
+    },
     "cta": {
       "title": "Ready to Partner with Halkara Turkmen Logistics?",
       "subtitle": "Experience the difference of a truly dedicated logistics partner.",
@@ -128,13 +197,36 @@
   "services": {
     "title": "Our Services",
     "subtitle": "Comprehensive Logistics Solutions for Your Business",
+    "keyFeatures": "Key Features",
     "freightForwarding": {
       "title": "Global Freight Forwarding",
-      "description": "Comprehensive international shipping solutions by air, sea, and land. We manage customs, documentation, and ensure timely delivery across borders."
+      "description": "Comprehensive international shipping solutions by air, sea, and land. We manage customs, documentation, and ensure timely delivery across borders.",
+      "features": {
+        "airFreight": "Air freight options",
+        "seaFreight": "Sea freight (FCL/LCL)",
+        "roadTransport": "Road transport integration",
+        "expressDelivery": "Express delivery"
+      }
     },
     "warehousing": {
       "title": "Warehousing & Distribution",
-      "description": "State-of-the-art warehousing facilities for secure storage, inventory management, and efficient distribution to your customers."
+      "description": "State-of-the-art warehousing facilities for secure storage, inventory management, and efficient distribution to your customers.",
+      "features": {
+        "climateControl": "Climate-controlled storage",
+        "inventoryManagement": "Inventory management",
+        "pickPack": "Pick & pack operations",
+        "crossDocking": "Cross-docking"
+      }
+    },
+    "packageTracking": {
+      "title": "Package Tracking",
+      "description": "Track your shipments in real-time across the globe.",
+      "features": {
+        "realTimeUpdates": "Real-time updates",
+        "smsAlerts": "SMS/email alerts",
+        "onlinePortal": "Online tracking portal",
+        "mobileApp": "Mobile app support"
+      }
     },
     "customs": {
       "title": "Customs Brokerage",
@@ -147,6 +239,36 @@
     "oceanFreight": {
       "title": "Ocean Freight",
       "description": "Flexible and economical sea freight options for full container load (FCL) and less than container load (LCL) shipments."
+    },
+    "secureTransport": {
+      "title": "Secure Transport",
+      "description": "Advanced security protocols to keep your cargo safe.",
+      "features": {
+        "insuranceCoverage": "Insurance coverage",
+        "securityProtocols": "Security protocols",
+        "chainOfCustody": "Chain of custody",
+        "riskAssessment": "Risk assessment"
+      }
+    },
+    "internationalLogistics": {
+      "title": "International Logistics",
+      "description": "End-to-end cross-border logistics solutions.",
+      "features": {
+        "customsClearance": "Customs clearance",
+        "documentation": "Documentation",
+        "compliance": "Regulatory compliance",
+        "dutyManagement": "Duty and tax management"
+      }
+    },
+    "support24": {
+      "title": "24/7 Support",
+      "description": "Always-on support for your logistics operations.",
+      "features": {
+        "hotline": "Dedicated hotline",
+        "onlineChat": "Online chat",
+        "emergencySupport": "Emergency support",
+        "dedicatedManager": "Dedicated account manager"
+      }
     },
     "howWeWork": {
       "title": "How We Work",
@@ -164,6 +286,19 @@
       "contactUs": "Contact Us"
     }
   },
+  "industries": {
+    "ecommerceRetail": "E-Commerce & Retail",
+    "manufacturing": "Manufacturing",
+    "healthcarePharmaceuticals": "Healthcare & Pharmaceuticals",
+    "automotive": "Automotive",
+    "technology": "Technology",
+    "foodBeverage": "Food & Beverage",
+    "retail": "Retail",
+    "textiles": "Textiles"
+  },
+  "component": {
+    "getQuote": "Get Quote"
+  },
   "contact": {
     "title": "Contact Us",
     "subtitle": "Get in touch with our logistics experts. We're here to help streamline your supply chain.",
@@ -180,12 +315,17 @@
     "phoneMain1": "+993 65 55 55 55",
     "phoneMain2": "+993 65 55 55 54",
     "phoneEmergency": "Emergency: +993 65 55 55 53",
-
     "businessHours": "Business Hours",
+    "hoursWeekdays": "Monday - Friday: 8:00 AM - 6:00 PM",
+    "hoursSaturday": "Saturday: 9:00 AM - 4:00 PM",
+    "hoursSunday": "Sunday: Closed",
     "sendMessage": "Send us a Message",
     "messageSent": "Message Sent!",
     "messageSentSubtitle": "We'll get back to you within 24 hours.",
     "findUs": "Find Us",
+    "mapPlaceholder": "Interactive Map Placeholder",
+    "mapRecommended": "600x400px recommended",
+    "mapIntegration": "Google Maps or similar integration",
     "quickContact": "Quick Contact",
     "emergencySupport": "24/7 Emergency Support",
     "form": {
@@ -279,6 +419,93 @@
     "hasAccount": "Already have an account?",
     "forgotPassword": "Forgot your password?"
   },
+  "login": {
+    "subtitle": "Sign in to access your logistics dashboard",
+    "errors": {
+      "invalidCredentials": "Invalid email or password. Please try again."
+    }
+  },
+  "register": {
+    "subtitle": "Create your account to start managing your logistics",
+    "steps": {
+      "step1": "Account Information",
+      "step2": "Company Information",
+      "step3": "Address & Contact"
+    },
+    "fields": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "partyName": "Company Name",
+      "partyNamePlaceholder": "Enter your company name",
+      "shortname": "Company Short Name",
+      "shortnamePlaceholder": "Enter company abbreviation",
+      "address1": "Address Line 1",
+      "address1Placeholder": "Street address, P.O. box",
+      "address2": "Address Line 2",
+      "address2Placeholder": "Apartment, suite, unit, building, floor",
+      "address3": "Address Line 3",
+      "address3Placeholder": "Additional address information",
+      "city": "City",
+      "cityPlaceholder": "Enter city name",
+      "country": "Country",
+      "countryPlaceholder": "Enter country name",
+      "phone1": "Primary Phone",
+      "phone1Placeholder": "+1-234-567-8900",
+      "phone2": "Secondary Phone",
+      "phone2Placeholder": "+1-987-654-3210"
+    },
+    "validation": {
+      "nameRequired": "Full name is required",
+      "emailRequired": "Email is required",
+      "passwordRequired": "Password is required",
+      "partyNameRequired": "Company name is required",
+      "shortnameRequired": "Company short name is required",
+      "address1Required": "Address is required",
+      "cityRequired": "City is required",
+      "countryRequired": "Country is required",
+      "phone1Required": "Primary phone is required"
+    },
+    "errors": {
+      "registrationFailed": "Registration failed. Please try again.",
+      "genericError": "An error occurred. Please try again."
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome",
+    "subtitle": "Manage your shipments and track your logistics operations",
+    "stats": {
+      "activeShipments": "Active Shipments",
+      "pendingQuotes": "Pending Quotes",
+      "completedShipments": "Completed Shipments",
+      "totalShipments": "Total Shipments"
+    },
+    "profile": {
+      "title": "Customer Profile",
+      "noCompany": "No Company",
+      "noName": "No Name",
+      "contactPerson": "Contact Person"
+    },
+    "recentShipments": {
+      "title": "Recent Shipments",
+      "viewAll": "View All",
+      "shippedDate": "Shipped Date",
+      "estimatedDelivery": "Estimated Delivery"
+    },
+    "shipmentStatus": {
+      "pending": "Pending",
+      "inTransit": "In Transit",
+      "delivered": "Delivered"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "requestQuote": "Request Quote",
+      "getQuoteDesc": "Get a customized quote for your shipment",
+      "findTerminal": "Find Terminal",
+      "findTerminalDesc": "Locate our terminals near you",
+      "contactSupport": "Contact Support",
+      "contactSupportDesc": "Get help from our support team"
+    }
+  },
   "forms": {
     "required": "This field is required",
     "invalidEmail": "Please enter a valid email",
@@ -294,7 +521,9 @@
     "delete": "Delete",
     "edit": "Edit",
     "close": "Close",
-    "language": "Language"
+    "language": "Language",
+    "previous": "Previous",
+    "next": "Next"
   },
   "terminals": {
     "hero": {

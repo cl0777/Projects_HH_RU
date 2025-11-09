@@ -9,17 +9,23 @@
     "terminals": "Terminalar",
     "dashboard": "Gözegçilik paneli",
     "logout": "Çykmak",
-    "getQuote": "Teklif almak"
+    "getQuote": "Teklip almak",
+    "support": "info@htl.com",
+    "email": "info@htl.com",
+    "phone": "+993 65 555 55 55"
+  },
+  "component": {
+    "getQuote": "Baha almak"
   },
   "hero": {
-    "title": "itl - Dünýä logistik üstünligi",
-    "subtitle": "Dünýä boýunça işewürlikleri ygtybarly, netijeli we howpsuz logistik çözgütler bilen baglanyşdyrýarys. Dünýä boýunça 10,000+ kompaniýa ynanýar.",
+    "title": "HTL - Logistika sungaty",
+    "subtitle": "",
     "subtitleMobile": "Dünýä boýunça 10,000+ kompaniýa ynanýan global logistik çözgütler.",
     "cta": "Mugt teklif almak",
     "learnMore": "Bizim hyzmatlar"
   },
   "features": {
-    "title": "Näme üçin itl saýlaýarlar?",
+    "title": "Näme üçin htl saýlaýarlar?",
     "subtitle": "Biz siziň üpjünçilik zynjyryňyzy optimizasiýa etmek we işewürligiňiziň ösüşini tizleşdirmek üçin giňişleýin logistik çözgütler berýäris",
     "globalShipping": {
       "title": "Global eltip bermek",
@@ -40,7 +46,7 @@
     "sarah": {
       "name": "Sara Çen",
       "role": "Üpjünçilik zynjyry direktory, GlobalTech",
-      "content": "itl bizim halkara eltip berme operasiýalarymyzy üýtgetdi. Olaryň yzarlama ulgamy aýratyn we eltip berme wagty hemişe wagtynda."
+      "content": "htl bizim halkara eltip berme operasiýalarymyzy üýtgetdi. Olaryň yzarlama ulgamy aýratyn we eltip berme wagty hemişe wagtynda."
     },
     "michael": {
       "name": "Mihail Rodriges",
@@ -59,10 +65,12 @@
     "button": "Mugt teklif almak"
   },
   "footer": {
-    "company": "itl",
+    "company": "HTL",
     "about": "Biz barada",
     "services": "Bizim hyzmatlar",
     "contact": "Habarlaşmak",
+    "support": "Goldaw",
+    "legal": "Hukuk maglumatlary",
     "globalShipping": "Global eltip bermek",
     "warehousing": "Ammar hyzmaty",
     "tracking": "Paket yzarlama",
@@ -72,18 +80,75 @@
     "privacy": "Gizlinlik syýasaty",
     "terms": "Hyzmat şertleri",
     "insurance": "Sugurta gorag",
-    "copyright": "© 2024 itl. Ähli hukuklar goragly. | Dünýä logistik üstünligi"
+    "copyright": "© 2025 Halkara Turkmen Logistics. Ähli hukuklar goragly. | Dünýä logistik üstünligi"
+  },
+  "landing": {
+    "videoNotSupported": "Wideo fon goldanylmaýar",
+    "images": { "logisticsAlt": "Logistika amallary" },
+    "metrics": { "onTimeDelivery": "Wagtynda eltip berme" },
+    "services": {
+      "title": "Giňişleýin logistika hyzmatlary",
+      "subtitle": "Deňiz gatnawyndan ammar hyzmatyna çenli — siziň işiňize laýyk doly çözgütler"
+    },
+    "stats": {
+      "countriesServed": "Hyzmat berilýän ýurtlar",
+      "packagesDelivered": "Eltip berlen bukjalar",
+      "happyClients": "Kanagatly müşderiler",
+      "yearsExperience": "Ýyllyk tejribe"
+    },
+    "why": {
+      "title": "Näme üçin biznes HTL-e ynanýar",
+      "subtitle": "Biz öňdebaryjy tehnologiýany şahsy hyzmat bilen utgaşdyryp, işiňizi öňe sürýäris.",
+      "bullets": {
+        "tracking": "Ähli iberişler üçin hakyky wagtda yzarlama",
+        "pricing": "Gizlin tölegsiz bäsdeşlik bahalary",
+        "insurance": "Ähli ýükler üçin sugurta goragy",
+        "accountManagers": "Ýörite hasap dolandyryjylary",
+        "globalNetwork": "Bütin dünýä boýunça hyzmatdaşlar tory",
+        "ecoFriendly": "Ekologiýa üçin amatly logistika çözgütleri"
+      }
+    },
+    "how": {
+      "title": "Nähili işleýär",
+      "subtitle": "Teklipden ýetirmäge çenli ýönekeý we sazlaşykly proses",
+      "steps": {
+        "requestQuote": {
+          "title": "Teklip soramak",
+          "desc": "Iberiş jikme-jiklikleri bilen gysga formany dolduryň"
+        },
+        "getPricing": {
+          "title": "Bahany almak",
+          "desc": "24 sagadyň dowamynda bäsdeşlik nyrhlary"
+        },
+        "bookShipment": {
+          "title": "Iberişi bellige almak",
+          "desc": "Logistika hyzmatyny tassyklaň we meýilleşdiriň"
+        },
+        "trackReceive": {
+          "title": "Yzarlaň we alyň",
+          "desc": "Howpsuz bellenençä hakyky wagtda gözegçilik"
+        }
+      }
+    }
   },
   "about": {
-    "title": "itl barada",
+    "title": "htl barada",
     "subtitle": "Global logistikada ygtybarly hyzmatdaşyňyz",
     "mission": {
       "title": "Bizim maksat",
-      "content1": "itl-da bizim maksadymyz logistik senagatyny rewolýusiýa etmek, dünýä boýunça söýsüz, netijeli we ygtybarly üpjünçilik zynjyry çözgütlerini bermekdir. Biz öňdebaryjy tehnologiýa we sadyk topary ulanmak arkaly siziň ýüküňiziň güwäni we wagtynda ýerine ýetirilýändigini üpjün etmek üçin söz berýäris.",
+      "content1": "htl-da bizim maksadymyz logistik senagatyny rewolýusiýa etmek, dünýä boýunça söýsüz, netijeli we ygtybarly üpjünçilik zynjyry çözgütlerini bermekdir. Biz öňdebaryjy tehnologiýa we sadyk topary ulanmak arkaly siziň ýüküňiziň güwäni we wagtynda ýerine ýetirilýändigini üpjün etmek üçin söz berýäris.",
       "content2": "Biz müşderilerimiz bilen güýçli, uzak möhletli hyzmatdaşlyk gatnaşyklary gurmaga, olaryň aýratyn zerurlyklaryny düşünmäge we göz öňünde tutulanlardan has ýokary hyzmatlary bermäge ynanýarys."
     },
     "story": {
-      "title": "Biziň başlangyjymyz"
+      "title": "Biziň başlangyjymyz",
+      "content1": "Global logistikany üýtgetmek görnüşi bilen döredilen Halkara Turkmen Logistics, ýerli daşyjy kompaniýadan ygtybarly halkara logistik hyzmatdaşy bolup ösdi. Biziň ýolugryňyz ýönekeý ynanç bilen başlandy: logistika wezipesiz, açyk we ygtybarly bolmaly.",
+      "content2": "Ýyllar boýunça biz ädimizde kontinentler boýunça torumyzy giňeldik, öňdebaryjy tehnologiýalara goýum goýduk we biziň ajaýyplyga wezipesini paýlaşýan wezipeli hünärmenleriň toparyny gurdyk. Şu gün biz dünýä boýunça müňlerçe işewürlere hyzmat edýäris, olara global söwdanyň çylşyrymlylyklaryny ýöretmekde kömek edýäris.",
+      "content3": "Biziň üstünligimiz müşderilerimiziň ynamyna we biziň toparymyzyň wezipesine gurlan. Biz täzeden öňdebaryjylyk we uýgunlaşdyrmakda dowam edýäris, şuňa göz ýetirip, logistika pudagynda öňki hatarda galýanlygymyzy üpjün edýäris, şol bir wagtyň özünde bizi aýratyn edýän şahsyýet bilen saklanyp.",
+      "imageAlt": "Biziň başlangyjymyz hakda"
+    },
+    "leadership": {
+      "title": "Biziň ýolbaşçylyk toparymyz",
+      "subtitle": "Üstünligiňize bagly tejribeli hünärmenler"
     },
     "whyChoose": {
       "title": "Näme üçin bizi saýlaýarlar?",
@@ -106,6 +171,7 @@
     },
     "values": {
       "title": "Bizim gymmatlyklarymyz",
+      "subtitle": "Biziň hemme zadymyzy ýolbaşçy edýän principiýalar",
       "integrity": {
         "title": "Dürüstlik",
         "description": "Ähli operasiýalarymyzda iň ýokary ahlak standartlaryny saklamak."
@@ -119,8 +185,14 @@
         "description": "Logistikany gowulandyrmak we optimizasiýa etmek üçin täze usullar gözlemek."
       }
     },
+    "stats": {
+      "happyCustomers": "Kanagatly müşderiler",
+      "countriesServed": "Hyzmat berilýän ýurtlar",
+      "onTimeDelivery": "Wagtynda eltip berme",
+      "customerSupport": "Müşderi goldawy"
+    },
     "cta": {
-      "title": "itl bilen hyzmatdaş bolmaga taýýnmy?",
+      "title": "htl bilen hyzmatdaş bolmaga taýýnmy?",
       "subtitle": "Hakykatdanam sadyk logistik hyzmatdaşyňyň tapawudyny duýuň.",
       "button": "Şu gün habarlaşyň"
     }
@@ -128,9 +200,16 @@
   "services": {
     "title": "Bizim hyzmatlar",
     "subtitle": "Işewürligiňiz üçin giňişleýin logistik çözgütler",
+    "keyFeatures": "Esasy aýratynlyklar",
     "freightForwarding": {
       "title": "Global ýük ekspedisiýasy",
-      "description": "Howa, deňiz we ýer arkaly giňişleýin halkara eltip berme çözgütleri. Biz gümrük, resminamalar bilen dolanýarys we çäklerden wagtynda eltip berme üpjün edýäris."
+      "description": "Howa, deňiz we ýer arkaly giňişleýin halkara eltip berme çözgütleri. Biz gümrük, resminamalar bilen dolanýarys we çäklerden wagtynda eltip berme üpjün edýäris.",
+      "features": {
+        "airFreight": "Howa ýük mümkinçilikleri",
+        "seaFreight": "Deňiz ýük (FCL/LCL)",
+        "roadTransport": "Ýol ulaglary integrasiýasy",
+        "expressDelivery": "Ekspress eltip berme"
+      }
     },
     "warehousing": {
       "title": "Ammar hyzmaty we paýlaşdyryş",
@@ -174,11 +253,27 @@
     "headquarters": "Baş ofis",
     "phone": "Telefon",
     "email": "Email",
+    "address": "Salgy",
+    "addressLine1": "Begler,744400",
+    "addressLine2": "G.Kulyýew, Aşgabat",
+    "addressCountry": "Türkmenistan",
+    "emailInfo": "info@halkara.com",
+    "emailSupport": "support@halkara.com",
+    "emailSales": "sales@halkara.com",
+    "phoneMain1": "+993 65 55 55 55",
+    "phoneMain2": "+993 65 55 55 54",
+    "phoneEmergency": "Şowsuz kömek: +993 65 55 55 53",
     "businessHours": "Iş sagatlary",
+    "hoursWeekdays": "Duşenbe - Anna: 8:00 - 18:00",
+    "hoursSaturday": "Şenbe: 9:00 - 16:00",
+    "hoursSunday": "Ýekşenbe: Bagyş wagty",
     "sendMessage": "Bizä habar ibermek",
     "messageSent": "Habar iberildi!",
     "messageSentSubtitle": "24 sagat içinde siz bilen habarlaşarys.",
     "findUs": "Bizi tapmak",
+    "mapPlaceholder": "Interaktiw karta",
+    "mapRecommended": "600x400px maslahat berilýär",
+    "mapIntegration": "Google Maps integrasiýasy ýa-da şuňa meňzeş",
     "quickContact": "Çalt habarlaşyk",
     "emergencySupport": "24/7 tiz kömek",
     "form": {
@@ -272,6 +367,93 @@
     "hasAccount": "Eýýäm hasabyňyz barmy?",
     "forgotPassword": "Açarsözi ýatdan çykardyňyzmy?"
   },
+  "login": {
+    "subtitle": "Logistika paneliňize girmek üçin hasaba giriň",
+    "errors": {
+      "invalidCredentials": "Nädogry email ýa-da açarsöz. Täzeden synanyşyň."
+    }
+  },
+  "register": {
+    "subtitle": "Logistikany dolandyrmaga başlamak üçin hasap dörediň",
+    "steps": {
+      "step1": "Hesap maglumatlary",
+      "step2": "Kompaniýa maglumatlary",
+      "step3": "Salgy we aragatnaşyk"
+    },
+    "fields": {
+      "name": "Doly ady",
+      "namePlaceholder": "Doly adyňyzy giriziň",
+      "partyName": "Kompaniýa ady",
+      "partyNamePlaceholder": "Kompaniýaňyzyň adyny giriziň",
+      "shortname": "Kompaniýa gysga ady",
+      "shortnamePlaceholder": "Kompaniýa gysga adyny giriziň",
+      "address1": "Salgy setir 1",
+      "address1Placeholder": "Köçe, poçta gutulary",
+      "address2": "Salgy setir 2",
+      "address2Placeholder": "Kwartira, ofis, binýat, gat",
+      "address3": "Salgy setir 3",
+      "address3Placeholder": "Goşmaça salgy maglumatlary",
+      "city": "Şäher",
+      "cityPlaceholder": "Şäher adyny giriziň",
+      "country": "Ýurt",
+      "countryPlaceholder": "Ýurt adyny giriziň",
+      "phone1": "Esasy telefon",
+      "phone1Placeholder": "+993 65 55 55 55",
+      "phone2": "Goşmaça telefon",
+      "phone2Placeholder": "+993 65 55 55 54"
+    },
+    "validation": {
+      "nameRequired": "Doly ad hökmany",
+      "emailRequired": "Email hökmany",
+      "passwordRequired": "Açarsöz hökmany",
+      "partyNameRequired": "Kompaniýa ady hökmany",
+      "shortnameRequired": "Kompaniýa gysga ady hökmany",
+      "address1Required": "Salgy hökmany",
+      "cityRequired": "Şäher hökmany",
+      "countryRequired": "Ýurt hökmany",
+      "phone1Required": "Esasy telefon hökmany"
+    },
+    "errors": {
+      "registrationFailed": "Hasaba almak şowsuz boldy. Täzeden synanyşyň.",
+      "genericError": "Ýalňyşlyk ýüze çykdy. Täzeden synanyşyň."
+    }
+  },
+  "dashboard": {
+    "welcome": "Hoş geldiňiz",
+    "subtitle": "Ibermalaryňyzy dolandyryň we logistika operasiýalaryňyzy yzarlaň",
+    "stats": {
+      "activeShipments": "Işjeň ibermalar",
+      "pendingQuotes": "Garaşylýan teklifler",
+      "completedShipments": "Tamamlanan ibermalar",
+      "totalShipments": "Jemi ibermalar"
+    },
+    "profile": {
+      "title": "Müşderi profili",
+      "noCompany": "Kompaniýa ýok",
+      "noName": "Ad ýok",
+      "contactPerson": "Aragatnaşyk şahsy"
+    },
+    "recentShipments": {
+      "title": "Soňky ibermalar",
+      "viewAll": "Hemmesini görmek",
+      "shippedDate": "Iberilen sene",
+      "estimatedDelivery": "Çaklanylýan eltmek"
+    },
+    "shipmentStatus": {
+      "pending": "Garaşylýar",
+      "inTransit": "Ýolda",
+      "delivered": "Eltdi"
+    },
+    "quickActions": {
+      "title": "Çalt hereketler",
+      "requestQuote": "Teklip soramak",
+      "getQuoteDesc": "Ibermäge özelleşdirilen teklip alyň",
+      "findTerminal": "Terminal tapmak",
+      "findTerminalDesc": "Bizifiň terminallarymyzy tapyň",
+      "contactSupport": "Goldaw bilen aragatnaşyk",
+      "contactSupportDesc": "Goldaw toparymyzdan kömek alyň"
+    }
+  },
   "forms": {
     "required": "Bu meýdan hökmany",
     "invalidEmail": "Dogry email salgy giriziň",
@@ -287,7 +469,9 @@
     "delete": "Pozmak",
     "edit": "Üýtgetmek",
     "close": "Ýapmak",
-    "language": "Dil"
+    "language": "Dil",
+    "previous": "Öňki",
+    "next": "Indiki"
   },
   "terminals": {
     "hero": {

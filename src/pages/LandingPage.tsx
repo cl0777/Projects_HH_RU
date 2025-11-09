@@ -126,68 +126,65 @@ const LandingPage: React.FC = () => {
       icon: <Globe className="w-8 h-8" />,
       value: 50,
       suffix: "+",
-      label: "Countries Served",
+      label: t("landing.stats.countriesServed"),
     },
     {
       icon: <Package className="w-8 h-8" />,
       value: 1000000,
       suffix: "M+",
-      label: "Packages Delivered",
+      label: t("landing.stats.packagesDelivered"),
     },
     {
       icon: <Users className="w-8 h-8" />,
       value: 10000,
       suffix: "K+",
-      label: "Happy Clients",
+      label: t("landing.stats.happyClients"),
     },
     {
       icon: <Award className="w-8 h-8" />,
       value: 15,
       suffix: "+",
-      label: "Years Experience",
+      label: t("landing.stats.yearsExperience"),
     },
   ];
 
   // NEW: Service highlights
   const services = [
     {
-      title: "Ocean Freight",
-      description: "Cost-effective sea freight for FCL and LCL shipments",
+      title: t("services.oceanFreight.title"),
+      description: "",
       icon: "🚢",
     },
     {
-      title: "Road Transport",
-      description:
-        "Flexible overland transportation for FTL and LTL deliveries",
+      title: t("services.roadTransport.title"),
+      description: "",
       icon: "🚛",
     },
     {
-      title: "Warehousing",
-      description:
-        "Secure storage facilities with advanced inventory management",
+      title: t("services.warehousing.title"),
+      description: "",
       icon: "📦",
     },
     {
-      title: "Customs Clearance",
-      description:
-        "Expert handling of all customs procedures and documentation",
+      title: t("services.customs.title"),
+      description: "",
       icon: "📋",
     },
     {
-      title: "Supply Chain",
-      description: "End-to-end supply chain optimization and consulting",
-      icon: "🔄",
+      title: t("services.airFreight.title"),
+      description: "",
+      icon: "✈️",
     },
   ];
 
   // NEW: Why choose us points
   const whyChooseUs = [
-    { text: "Real-time tracking for all shipments" },
-    { text: "Competitive pricing with no hidden fees" },
-    { text: "Insurance coverage on all cargo" },
-    { text: "Dedicated account managers" },
-    { text: "Global network of partners" },
-    { text: "Eco-friendly logistics solutions" },
+    { text: t("landing.why.bullets.tracking") },
+    { text: t("landing.why.bullets.pricing") },
+    { text: t("landing.why.bullets.insurance") },
+    { text: t("landing.why.bullets.accountManagers") },
+    { text: t("landing.why.bullets.globalNetwork") },
+    { text: t("landing.why.bullets.ecoFriendly") },
   ];
 
   return (
@@ -203,13 +200,13 @@ const LandingPage: React.FC = () => {
             playsInline
             preload="metadata"
             className="w-full h-full object-cover"
-            poster="/images/logistics-hero-poster.jpg"
+            poster="/images/logistics-hero-poster.svg"
           >
             <source src="/videos/logistics-hero.webm" type="video/webm" />
             {/* Fallback for browsers that don't support video */}
             <div className="w-full h-full bg-gradient-to-br from-[#264D88] to-[#1e3a8a] flex items-center justify-center">
               <p className="text-white/50 text-sm">
-                Video background not supported
+                {t("landing.videoNotSupported")}
               </p>
             </div>
           </video>
@@ -382,11 +379,10 @@ const LandingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive Logistics Services
+              {t("landing.services.title")}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From ocean freight to warehousing, we offer complete logistics
-              solutions tailored to your business needs
+              {t("landing.services.subtitle")}
             </p>
           </div>
 
@@ -401,12 +397,12 @@ const LandingPage: React.FC = () => {
                   {service.title}
                 </h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                <Link
+                {/* <Link
                   to="/services"
                   className="text-[#264D88] font-semibold hover:underline inline-flex items-center"
                 >
-                  Learn more <ArrowRight className="ml-1 w-4 h-4" />
-                </Link>
+                  {t("hero.learnMore")} <ArrowRight className="ml-1 w-4 h-4" />
+                </Link> */}
               </div>
             ))}
           </div>
@@ -419,11 +415,10 @@ const LandingPage: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Why Businesses Trust Halkara Turkmen Logistics
+                {t("landing.why.title")}
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                We combine cutting-edge technology with personalized service to
-                deliver logistics solutions that drive your business forward.
+                {t("landing.why.subtitle")}
               </p>
               <div className="space-y-4">
                 {whyChooseUs.map((item, index) => (
@@ -437,13 +432,13 @@ const LandingPage: React.FC = () => {
                 to="/about"
                 className="mt-8 inline-flex items-center px-6 py-3 bg-[#264D88] text-white rounded-lg hover:bg-[#1e3a8a] transition-colors"
               >
-                Learn More About Us <ArrowRight className="ml-2 w-5 h-5" />
+                {t("about.cta.button")} <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </div>
             <div className="relative">
               <img
                 src="/images/shipping.jpg"
-                alt="Logistics Operations"
+                alt={t("landing.images.logisticsAlt")}
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl">
@@ -454,7 +449,7 @@ const LandingPage: React.FC = () => {
                       99.8%
                     </div>
                     <div className="text-sm text-gray-600">
-                      On-Time Delivery
+                      {t("landing.metrics.onTimeDelivery")}
                     </div>
                   </div>
                 </div>
@@ -469,34 +464,32 @@ const LandingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              How It Works
+              {t("landing.how.title")}
             </h2>
-            <p className="text-xl text-gray-600">
-              Simple, streamlined process from quote to delivery
-            </p>
+            <p className="text-xl text-gray-600">{t("landing.how.subtitle")}</p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
                 step: "01",
-                title: "Request Quote",
-                desc: "Fill out our simple form with your shipping details",
+                title: t("landing.how.steps.requestQuote.title"),
+                desc: t("landing.how.steps.requestQuote.desc"),
               },
               {
                 step: "02",
-                title: "Get Pricing",
-                desc: "Receive competitive rates within 24 hours",
+                title: t("landing.how.steps.getPricing.title"),
+                desc: t("landing.how.steps.getPricing.desc"),
               },
               {
                 step: "03",
-                title: "Book Shipment",
-                desc: "Confirm and schedule your logistics service",
+                title: t("landing.how.steps.bookShipment.title"),
+                desc: t("landing.how.steps.bookShipment.desc"),
               },
               {
                 step: "04",
-                title: "Track & Receive",
-                desc: "Monitor in real-time until safe delivery",
+                title: t("landing.how.steps.trackReceive.title"),
+                desc: t("landing.how.steps.trackReceive.desc"),
               },
             ].map((item, index) => (
               <div key={index} className="text-center relative">
@@ -521,23 +514,23 @@ const LandingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Industries We Serve
+              {t("services.industriesWeServe")}
             </h2>
             <p className="text-xl text-gray-600">
-              Specialized logistics solutions for diverse sectors
+              {t("services.industriesWeServeSubtitle")}
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              "E-Commerce",
-              "Manufacturing",
-              "Retail",
-              "Healthcare",
-              "Technology",
-              "Automotive",
-              "Food & Beverage",
-              "Textiles",
+              t("industries.ecommerceRetail"),
+              t("industries.manufacturing"),
+              t("industries.retail"),
+              t("industries.healthcarePharmaceuticals"),
+              t("industries.technology"),
+              t("industries.automotive"),
+              t("industries.foodBeverage"),
+              t("industries.textiles"),
             ].map((industry, index) => (
               <div
                 key={index}

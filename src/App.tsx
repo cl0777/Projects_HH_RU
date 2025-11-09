@@ -13,6 +13,7 @@ import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import QuotePage from "./pages/QuotePage";
+import OrdersPage from "./pages/OrdersPage";
 import TerminalsPage from "./pages/TerminalsPage";
 import "./i18n";
 import LoginPage from "./pages/LoginPage";
@@ -31,9 +32,31 @@ function App() {
               <Route path="/" element={<LandingPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/services" element={<ServicesPage />} />
-              <Route path="/terminals" element={<TerminalsPage />} />
+              <Route
+                path="/terminals"
+                element={
+                  <ProtectedRoute>
+                    <TerminalsPage />
+                  </ProtectedRoute>
+                }
+              />
               <Route path="/contact" element={<ContactPage />} />
-              <Route path="/quote" element={<QuotePage />} />
+              <Route
+                path="/quote"
+                element={
+                  <ProtectedRoute>
+                    <QuotePage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/orders"
+                element={
+                  <ProtectedRoute>
+                    <OrdersPage />
+                  </ProtectedRoute>
+                }
+              />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route

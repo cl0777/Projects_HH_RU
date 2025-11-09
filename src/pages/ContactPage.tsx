@@ -55,9 +55,9 @@ const ContactPage: React.FC = () => {
       icon: <Mail className="w-6 h-6 text-[#264D88]" />,
       title: t("contact.email"),
       details: [
-        t("contact.emailInfo", "info@itl.com"),
-        t("contact.emailSupport", "support@itl.com"),
-        t("contact.emailSales", "sales@itl.com"),
+        t("contact.emailInfo", "info@htl.com"),
+        t("contact.emailSupport", "support@htl.com"),
+        t("contact.emailSales", "sales@htl.com"),
       ],
     },
     {
@@ -304,7 +304,7 @@ const ContactPage: React.FC = () => {
                   <div className="flex items-center space-x-3">
                     <Mail className="w-4 h-4 text-[#264D88]" />
                     <span className="text-gray-600">
-                      {t("contact.emailInfo", "info@itl.com")}
+                      {t("contact.emailInfo", "info@htl.com")}
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">

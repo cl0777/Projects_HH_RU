@@ -5,28 +5,450 @@
     "services": "Hizmetler",
     "contact": "İletişim",
     "login": "Giriş Yap",
+    "terminals": "Terminaller",
     "register": "Kayıt Ol",
     "dashboard": "Kontrol Paneli",
-    "logout": "Çıkış Yap"
+    "logout": "Çıkış Yap",
+    "getQuote": "Teklif Al",
+    "support": "info@halkara.com",
+    "email": "info@halkara.com",
+    "phone": "+993 65 555 55 55"
+  },
+  "component": {
+    "getQuote": "Teklif Al"
   },
   "hero": {
-    "title": "Platformumuza Hoş Geldiniz",
-    "subtitle": "İş ihtiyaçlarınız için en iyi çözüm",
-    "cta": "Başlayın",
-    "learnMore": "Daha Fazla Bilgi"
+    "title": "Halkara Türkmen Lojistik Lojistika Sanatı",
+    "subtitle": "",
+    "subtitleMobile": "Dünya çapında 10.000+ şirket tarafından güvenilen küresel lojistik çözümleri.",
+    "cta": "Ücretsiz Teklif Al",
+    "learnMore": "Hizmetlerimiz"
+  },
+  "features": {
+    "title": "Neden Halkara Türkmen Lojistik'i Seçmelisiniz?",
+    "subtitle": "Tedarik zincirinizi optimize etmek ve iş büyümenizi hızlandırmak için kapsamlı lojistik çözümler sunuyoruz",
+    "globalShipping": {
+      "title": "Küresel Teslimat",
+      "description": "Gerçek zamanlı takip ve teslimat garantileri ile dünya çapında lojistik çözümler"
+    },
+    "secureTransport": {
+      "title": "Güvenli Taşıma",
+      "description": "Tüm gönderiler için gelişmiş güvenlik protokolleri ve sigorta kapsamı"
+    },
+    "support24": {
+      "title": "7/24 Destek",
+      "description": "Kesintisiz müşteri hizmetleri ve lojistik yönetimi"
+    }
+  },
+  "testimonials": {
+    "title": "Müşterilerimiz Ne Diyor",
+    "subtitle": "Sadece sözümüze güvenmeyin",
+    "sarah": {
+      "name": "Sarah Chen",
+      "role": "Tedarik Zinciri Direktörü, GlobalTech",
+      "content": "Halkara Türkmen Lojistik uluslararası sevkiyat operasyonlarımızı dönüştürdü. Takip sistemleri olağanüstü ve teslimat süreleri tutarlı bir şekilde zamanında."
+    },
+    "michael": {
+      "name": "Michael Rodriguez",
+      "role": "Operasyonlar Müdürü, RetailPlus",
+      "content": "Birlikte çalıştığımız en güvenilir lojistik ortağı. 7/24 desteği ve gerçek zamanlı güncellemeler bize tam bir huzur veriyor."
+    },
+    "emma": {
+      "name": "Emma Thompson",
+      "role": "CEO, EcoProducts",
+      "content": "Olağanüstü hizmet ve rekabetçi fiyatlar. Karmaşık sevkiyat gereksinimlerimizi hassasiyet ve profesyonellikle ele alıyorlar."
+    }
+  },
+  "cta": {
+    "title": "Lojistiğinizi Optimize Etmeye Hazır mısınız?",
+    "subtitle": "Binlerce memnun müşteriye katılın ve profesyonel lojistik çözümlerimizle tedarik zincirinizi optimize edin",
+    "button": "Ücretsiz Teklif Al"
+  },
+  "footer": {
+    "company": "HTL",
+    "about": "Hakkımızda",
+    "services": "Hizmetlerimiz",
+    "contact": "İletişime Geçin",
+    "support": "Destek",
+    "legal": "Yasal",
+    "globalShipping": "Küresel Teslimat",
+    "warehousing": "Depolama",
+    "tracking": "Paket Takibi",
+    "help": "Yardım Merkezi",
+    "customerSupport": "Müşteri Desteği",
+    "trackShipment": "Sevkiyatı Takip Et",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Hizmet Şartları",
+    "insurance": "Sigorta Kapsamı",
+    "copyright": "© 2025 Halkara Türkmen Lojistik. Tüm hakları saklıdır. | Küresel Lojistik Mükemmelliği"
+  },
+  "landing": {
+    "videoNotSupported": "Video arka plan desteklenmiyor",
+    "images": { "logisticsAlt": "Lojistik Operasyonları" },
+    "metrics": { "onTimeDelivery": "Zamanında Teslimat" },
+    "services": {
+      "title": "Kapsamlı Lojistik Hizmetler",
+      "subtitle": "Deniz taşımacılığından depolamaya, işinize özel eksiksiz lojistik çözümler"
+    },
+    "stats": {
+      "countriesServed": "Hizmet Verilen Ülkeler",
+      "packagesDelivered": "Teslim Edilen Paketler",
+      "happyClients": "Mutlu Müşteriler",
+      "yearsExperience": "Yıllık Deneyim"
+    },
+    "why": {
+      "title": "İşletmeler Neden Halkara Türkmen Lojistik'e Güvenir",
+      "subtitle": "İşinizi ileri taşıyan lojistik çözümleri için ileri teknolojiyi kişiselleştirilmiş hizmetle birleştiriyoruz.",
+      "bullets": {
+        "tracking": "Tüm sevkiyatlar için gerçek zamanlı takip",
+        "pricing": "Gizli ücret olmadan rekabetçi fiyatlar",
+        "insurance": "Tüm kargolar için sigorta kapsamı",
+        "accountManagers": "Özel hesap yöneticileri",
+        "globalNetwork": "Küresel iş ortakları ağı",
+        "ecoFriendly": "Çevre dostu lojistik çözümleri"
+      }
+    },
+    "how": {
+      "title": "Nasıl Çalışır",
+      "subtitle": "Tekliften teslimata basit ve akıcı süreç",
+      "steps": {
+        "requestQuote": {
+          "title": "Teklif İste",
+          "desc": "Sevkiyat detaylarınızla kısa formu doldurun"
+        },
+        "getPricing": {
+          "title": "Fiyat Al",
+          "desc": "24 saat içinde rekabetçi fiyatları alın"
+        },
+        "bookShipment": {
+          "title": "Sevkiyatı Planla",
+          "desc": "Lojistik hizmetinizi onaylayın ve planlayın"
+        },
+        "trackReceive": {
+          "title": "Takip Et ve Teslim Al",
+          "desc": "Güvenli teslimata kadar gerçek zamanlı izleme"
+        }
+      }
+    }
+  },
+  "about": {
+    "title": "Halkara Türkmen Lojistik Hakkında",
+    "subtitle": "Küresel lojistikte güvenilir ortakınız",
+    "mission": {
+      "title": "Misyonumuz",
+      "content1": "Halkara Türkmen Lojistik'te misyonumuz, dünya çapında sorunsuz, verimli ve güvenilir tedarik zinciri çözümleri sunarak lojistik endüstrisinde devrim yapmaktır. En son teknoloji ve adanmış bir ekip kullanarak yükünüzün her seferinde güvenli ve zamanında hedefine ulaşmasını sağlamaya kararlıyız.",
+      "content2": "Müşterilerimizle güçlü, kalıcı ortaklıklar kurmak, benzersiz ihtiyaçlarını anlamak ve beklentileri aşan özel hizmetler sunmak konusunda inanıyoruz."
+    },
+    "whyChoose": {
+      "title": "Neden Bizi Seçmelisiniz?",
+      "globalReach": {
+        "title": "Küresel Erişim",
+        "description": "Tüm ana ticaret yollarını kapsayan geniş ağ."
+      },
+      "reliable": {
+        "title": "Güvenilir ve Güvenli",
+        "description": "Gönderilerinizin güvenliğini ve bütünlüğünü sağlamak."
+      },
+      "innovative": {
+        "title": "Yenilikçi Çözümler",
+        "description": "Optimal lojistik için teknoloji kullanmak."
+      },
+      "customerCentric": {
+        "title": "Müşteri Odaklı",
+        "description": "İhtiyaçlarınıza özel adanmış destek."
+      }
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "subtitle": "Yaptığımız her şeyi yönlendiren ilkeler",
+      "integrity": {
+        "title": "Dürüstlük",
+        "description": "Tüm operasyonlarımızda en yüksek etik standartları sürdürmek."
+      },
+      "excellence": {
+        "title": "Mükemmellik",
+        "description": "Her hizmette üstün kalite ve performans için çalışmak."
+      },
+      "innovation": {
+        "title": "Yenilik",
+        "description": "Lojistiği iyileştirmek ve optimize etmek için sürekli yeni yollar aramak."
+      }
+    },
+    "story": {
+      "title": "Hikayemiz",
+      "content1": "Global lojistiği dönüştürmek vizyonuyla kurulan Halkara Turkmen Logistics, yerel bir nakliye şirketinden güvenilir uluslararası lojistik ortağına dönüştü. Yolculuğumuz basit bir inançla başladı: lojistik sorunsuz, şeffaf ve güvenilir olmalı.",
+      "content2": "Yıllar boyunca kıtalar arası ağımızı genişlettik, en son teknolojiye yatırım yaptık ve mükemmelliğe bağlılığımızı paylaşan adanmış profesyonellerden oluşan bir ekip kurduk. Bugün dünya çapında binlerce işletmeye hizmet veriyoruz ve onların küresel ticaretin karmaşıklıklarında yol almalarına yardımcı oluyoruz.",
+      "content3": "Başarımız müşterilerimizin güvenine ve ekibimizin bağlılığına dayanmaktadır. Lojistik sektörünün ön saflarında kalırken bizi farklı kılan kişisel dokunuşu koruyarak sürekli yenilik ve uyum sağlamaya devam ediyoruz.",
+      "imageAlt": "Hikayemiz Hakkında"
+    },
+    "leadership": {
+      "title": "Liderlik Ekibimiz",
+      "subtitle": "Başarınıza adanmış deneyimli profesyoneller"
+    },
+    "stats": {
+      "happyCustomers": "Mutlu Müşteriler",
+      "countriesServed": "Hizmet Verilen Ülkeler",
+      "onTimeDelivery": "Zamanında Teslimat",
+      "customerSupport": "Müşteri Desteği"
+    },
+    "cta": {
+      "title": "Halkara Türkmen Lojistik ile ortak olmaya hazır mısınız?",
+      "subtitle": "Gerçekten adanmış bir lojistik ortağının farkını yaşayın.",
+      "button": "Bugün İletişime Geçin"
+    }
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "İşletmeniz için kapsamlı lojistik çözümler",
+    "keyFeatures": "Öne Çıkan Özellikler",
+    "freightForwarding": {
+      "title": "Küresel Navlun Taşımacılığı",
+      "description": "Hava, deniz ve kara ile kapsamlı uluslararası sevkiyat çözümleri. Gümrük, belgeleri yönetiyor ve sınırlar boyunca zamanında teslim sağlıyoruz.",
+      "features": {
+        "airFreight": "Hava kargo seçenekleri",
+        "seaFreight": "Deniz kargo (FCL/LCL)",
+        "roadTransport": "Karayolu entegrasyonu",
+        "expressDelivery": "Ekspres teslimat"
+      }
+    },
+    "warehousing": {
+      "title": "Depolama ve Dağıtım",
+      "description": "Güvenli depolama, envanter yönetimi ve müşterilerinize verimli dağıtım için modern depolama tesisleri."
+    },
+    "customs": {
+      "title": "Gümrük Brokerliği",
+      "description": "Tüm gümrük prosedürlerinin uzman işlemi, ithalat ve ihracat işlemleriniz için uyumluluk ve sorunsuz temizlik sağlama."
+    },
+    "roadTransport": {
+      "title": "Karayolu Taşımacılığı",
+      "description": "Tam kamyon yükü (FTL) ve kısmi kamyon yükü (LTL) gönderileri için güvenilir ve uygun maliyetli kara taşıma hizmetleri."
+    },
+    "oceanFreight": {
+      "title": "Deniz Taşımacılığı",
+      "description": "Tam konteyner yükü (FCL) ve kısmi konteyner yükü (LCL) gönderileri için esnek ve ekonomik deniz taşımacılığı seçenekleri."
+    },
+    "howWeWork": {
+      "title": "Nasıl Çalışıyoruz",
+      "subtitle": "Akıcı Sürecimiz",
+      "consultation": "Danışmanlık: Lojistik ihtiyaçlarınızı ve zorluklarınızı anlama.",
+      "planning": "Planlama: Özelleştirilmiş, verimli ve uygun maliyetli bir çözüm geliştirme.",
+      "execution": "Uygulama: Gerçek zamanlı izleme ve iletişim ile kusursuz implementasyon.",
+      "delivery": "Teslimat: Mallarınızın güvenli ve zamanında gelmesini sağlama.",
+      "support": "Destek: Sürekli iyileştirme için devam eden yardım ve optimizasyon."
+    },
+    "cta": {
+      "title": "Kişiselleştirilmiş Lojistik Çözümü Alın",
+      "subtitle": "Spesifik gereksinimlerinizi görüşmek ve ücretsiz teklif almak için bugün bizimle iletişime geçin.",
+      "button": "Teklif İsteyin",
+      "contactUs": "İletişime Geçin"
+    }
+  },
+  "contact": {
+    "title": "İletişime Geçin",
+    "subtitle": "Lojistik uzmanlarımızla iletişime geçin. Tedarik zincirinizi optimize etmenize yardımcı olmak için buradayız.",
+    "headquarters": "Genel Merkez",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "address": "Adres",
+    "addressLine1": "Begler,744400",
+    "addressLine2": "G.Kulyýew, Aşgabat",
+    "addressCountry": "Türkmenistan",
+    "emailInfo": "info@halkara.com",
+    "emailSupport": "support@halkara.com",
+    "emailSales": "sales@halkara.com",
+    "phoneMain1": "+993 65 55 55 55",
+    "phoneMain2": "+993 65 55 55 54",
+    "phoneEmergency": "Acil Durum: +993 65 55 55 53",
+    "businessHours": "Çalışma Saatleri",
+    "hoursWeekdays": "Pazartesi - Cuma: 8:00 - 18:00",
+    "hoursSaturday": "Cumartesi: 9:00 - 16:00",
+    "hoursSunday": "Pazar: Kapalı",
+    "sendMessage": "Bize Mesaj Gönderin",
+    "messageSent": "Mesaj Gönderildi!",
+    "messageSentSubtitle": "24 saat içinde size geri döneceğiz.",
+    "findUs": "Bizi Bulun",
+    "mapPlaceholder": "İnteraktif Harita Yer Tutucu",
+    "mapRecommended": "600x400px önerilir",
+    "mapIntegration": "Google Maps veya benzeri entegrasyon",
+    "quickContact": "Hızlı İletişim",
+    "emergencySupport": "7/24 Acil Destek",
+    "form": {
+      "fullName": "Ad Soyad",
+      "emailAddress": "E-posta Adresi",
+      "company": "Şirket",
+      "phoneNumber": "Telefon Numarası",
+      "subject": "Konu",
+      "selectSubject": "Bir konu seçin",
+      "requestQuote": "Teklif İste",
+      "customerSupport": "Müşteri Desteği",
+      "partnership": "Ortaklık İnceleme",
+      "general": "Genel Soru",
+      "message": "Mesaj",
+      "messagePlaceholder": "Lojistik ihtiyaçlarınız hakkında bize bilgi verin...",
+      "sendButton": "Mesaj Gönder"
+    }
+  },
+  "quote": {
+    "title": "Ücretsiz Teklif Alın",
+    "subtitle": "Lojistik ihtiyaçlarınız için anlık teklif alın. Hızlı, doğru ve tamamen ücretsiz.",
+    "steps": {
+      "contactInfo": "İletişim Bilgileri",
+      "shipmentDetails": "Sevkiyat Detayları",
+      "services": "Hizmetler"
+    },
+    "quoteRequested": "Teklif İstendi!",
+    "quoteRequestedSubtitle": "İsteğiniz için teşekkürler. Lojistik uzmanlarımız gereksinimlerinizi inceleyecek ve 24 saat içinde size özelleştirilmiş bir teklif sunacak.",
+    "whatsNext": "Sırada Ne Var?",
+    "step1": "Sevkiyat detaylarınızı inceleyeceğiz",
+    "step2": "En iyi rota ve fiyatlandırmayı hesaplayacağız",
+    "step3": "Size e-posta ile detaylı bir teklif göndereceğiz",
+    "contactInfo": {
+      "title": "İletişim Bilgileri",
+      "fullName": "Ad Soyad",
+      "emailAddress": "E-posta Adresi",
+      "phoneNumber": "Telefon Numarası",
+      "company": "Şirket"
+    },
+    "shipmentDetails": {
+      "title": "Sevkiyat Detayları",
+      "origin": "Çıkış Yeri",
+      "destination": "Varış Yeri",
+      "cityCountry": "Şehir, Ülke",
+      "weight": "Ağırlık (kg)",
+      "shipmentType": "Sevkiyat Türü",
+      "selectType": "Tür seçin",
+      "document": "Belge",
+      "package": "Paket",
+      "freight": "Yük",
+      "hazardous": "Tehlikeli Malzeme",
+      "dimensions": "Boyutlar (cm)",
+      "length": "Uzunluk",
+      "width": "Genişlik",
+      "height": "Yükseklik",
+      "declaredValue": "Beyan Edilen Değer ($)",
+      "timeline": "Zaman Çizelgesi",
+      "selectTimeline": "Zaman çizelgesi seçin",
+      "sameDay": "Aynı Gün",
+      "express": "1-2 Gün",
+      "standard": "3-5 Gün",
+      "economy": "1-2 Hafta"
+    },
+    "additionalServices": {
+      "title": "Ek Hizmetler",
+      "selectServices": "Hizmetler Seçin",
+      "expressDelivery": "Ekspres Teslimat",
+      "insuranceCoverage": "Sigorta Kapsamı",
+      "packagingService": "Paketleme Hizmeti",
+      "customsClearance": "Gümrük Temizleme",
+      "realTimeTracking": "Gerçek Zamanlı Takip",
+      "whiteGloveService": "White Glove Hizmeti",
+      "specialRequirements": "Özel Gereksinimler",
+      "specialRequirementsPlaceholder": "Herhangi bir özel işleme gereksinimleri, teslimat talimatları veya ek bilgiler..."
+    },
+    "navigation": {
+      "previous": "Önceki",
+      "next": "Sonraki",
+      "getQuote": "Teklif Al"
+    }
   },
   "auth": {
-    "login": "Giriş Yap",
-    "register": "Kayıt Ol",
-    "email": "E-posta",
+    "login": "Hesabınıza Giriş Yapın",
+    "register": "Yeni Hesap Oluşturun",
+    "email": "E-posta adresi",
     "password": "Şifre",
     "confirmPassword": "Şifreyi Onayla",
-    "forgotPassword": "Şifrenizi mi unuttunuz?",
+    "signIn": "Giriş Yap",
+    "signUp": "Kayıt Ol",
     "noAccount": "Hesabınız yok mu?",
     "hasAccount": "Zaten hesabınız var mı?",
-    "signUp": "Kayıt Ol",
-    "signIn": "Giriş Yap",
-    "logout": "Çıkış Yap"
+    "forgotPassword": "Şifrenizi mi unuttunuz?"
+  },
+  "login": {
+    "subtitle": "Lojistik panonuzu erişmek için giriş yapın",
+    "errors": {
+      "invalidCredentials": "Geçersiz e-posta veya şifre. Lütfen tekrar deneyin."
+    }
+  },
+  "register": {
+    "subtitle": "Lojistiğinizi yönetmeye başlamak için hesabınızı oluşturun",
+    "steps": {
+      "step1": "Hesap Bilgileri",
+      "step2": "Şirket Bilgileri",
+      "step3": "Adres ve İletişim"
+    },
+    "fields": {
+      "name": "Tam Ad",
+      "namePlaceholder": "Tam adınızı girin",
+      "partyName": "Şirket Adı",
+      "partyNamePlaceholder": "Şirket adınızı girin",
+      "shortname": "Şirket Kısa Adı",
+      "shortnamePlaceholder": "Şirket kısaltmasını girin",
+      "address1": "Adres Satırı 1",
+      "address1Placeholder": "Sokak adresi, P.O. kutusu",
+      "address2": "Adres Satırı 2",
+      "address2Placeholder": "Daire, ofis, birim, bina, kat",
+      "address3": "Adres Satırı 3",
+      "address3Placeholder": "Ek adres bilgileri",
+      "city": "Şehir",
+      "cityPlaceholder": "Şehir adını girin",
+      "country": "Ülke",
+      "countryPlaceholder": "Ülke adını girin",
+      "phone1": "Birincil Telefon",
+      "phone1Placeholder": "+993 65 55 55 55",
+      "phone2": "İkincil Telefon",
+      "phone2Placeholder": "+993 65 55 55 54"
+    },
+    "validation": {
+      "nameRequired": "Tam ad gerekli",
+      "emailRequired": "E-posta gerekli",
+      "passwordRequired": "Şifre gerekli",
+      "partyNameRequired": "Şirket adı gerekli",
+      "shortnameRequired": "Şirket kısa adı gerekli",
+      "address1Required": "Adres gerekli",
+      "cityRequired": "Şehir gerekli",
+      "countryRequired": "Ülke gerekli",
+      "phone1Required": "Birincil telefon gerekli"
+    },
+    "errors": {
+      "registrationFailed": "Kayıt başarısız oldu. Lütfen tekrar deneyin.",
+      "genericError": "Bir hata oluştu. Lütfen tekrar deneyin."
+    }
+  },
+  "dashboard": {
+    "welcome": "Hoş Geldiniz",
+    "subtitle": "Sevkiyatlarınızı yönetin ve lojistik operasyonlarınızı takip edin",
+    "stats": {
+      "activeShipments": "Aktif Sevkiyatlar",
+      "pendingQuotes": "Bekleyen Teklifler",
+      "completedShipments": "Tamamlanan Sevkiyatlar",
+      "totalShipments": "Toplam Sevkiyatlar"
+    },
+    "profile": {
+      "title": "Müşteri Profili",
+      "noCompany": "Şirket Yok",
+      "noName": "İsim Yok",
+      "contactPerson": "İletişim Kişisi"
+    },
+    "recentShipments": {
+      "title": "Son Sevkiyatlar",
+      "viewAll": "Tümünü Gör",
+      "shippedDate": "Gönderim Tarihi",
+      "estimatedDelivery": "Tahmini Teslimat"
+    },
+    "shipmentStatus": {
+      "pending": "Beklemede",
+      "inTransit": "Yolda",
+      "delivered": "Teslim Edildi"
+    },
+    "quickActions": {
+      "title": "Hızlı İşlemler",
+      "requestQuote": "Teklif İste",
+      "getQuoteDesc": "Sevkiyatınız için özelleştirilmiş teklif alın",
+      "findTerminal": "Terminal Bul",
+      "findTerminalDesc": "Yakınınızdaki terminallerimizi bulun",
+      "contactSupport": "Destek ile İletişime Geç",
+      "contactSupportDesc": "Destek ekibimizden yardım alın"
+    }
   },
   "forms": {
     "required": "Bu alan zorunludur",
@@ -43,7 +465,9 @@
     "delete": "Sil",
     "edit": "Düzenle",
     "close": "Kapat",
-    "language": "Dil"
+    "language": "Dil",
+    "previous": "Önceki",
+    "next": "Sonraki"
   },
   "terminals": {
     "hero": {
@@ -51,7 +475,7 @@
       "subtitle": "Sorunsuz lojistik operasyonlar için Türkmenistan genelinde stratejik konumlar",
       "stat1": "5 Aktif Terminal",
       "stat2": "7/24 Operasyon",
-      "stat3": "50,000+ m² Kapasite"
+      "stat3": "50.000+ m² Kapasite"
     },
     "search": {
       "placeholder": "Şehir, adres veya hizmetlere göre terminal arayın..."
@@ -98,7 +522,7 @@
       "city": "Aşkabat",
       "address": "Arçabil Caddesi 56, Aşkabat 744000, Türkmenistan",
       "hours": "7/24 Operasyon",
-      "capacity": "20,000 m² tesis",
+      "capacity": "20.000 m² tesis",
       "spec1": "Uluslararası kargo merkezi",
       "spec2": "Sıcaklık kontrollü depolama",
       "spec3": "Gelişmiş güvenlik sistemleri"
@@ -108,7 +532,7 @@
       "city": "Türkmenbaşı",
       "address": "Liman Bölgesi, Türkmenbaşı 745000, Türkmenistan",
       "hours": "7/24 Operasyon",
-      "capacity": "15,000 m² tesis",
+      "capacity": "15.000 m² tesis",
       "spec1": "Hazar Denizi limanına erişim",
       "spec2": "Konteyner işleme",
       "spec3": "Intermodal taşımacılık merkezi"
@@ -118,7 +542,7 @@
       "city": "Mary",
       "address": "Sanayi Bölgesi, Mary 745400, Türkmenistan",
       "hours": "Pzt-Cmt: 8:00 - 20:00",
-      "capacity": "8,000 m² tesis",
+      "capacity": "8.000 m² tesis",
       "spec1": "Tarım ürünleri uzmanı",
       "spec2": "Sınır ötesi kamyon taşımacılığı",
       "spec3": "Bölgesel dağıtım merkezi"
@@ -128,7 +552,7 @@
       "city": "Türkmenabat",
       "address": "Sınır Geçiş Bölgesi, Türkmenabat 746000, Türkmenistan",
       "hours": "7/24 Operasyon",
-      "capacity": "10,000 m² tesis",
+      "capacity": "10.000 m² tesis",
       "spec1": "Sınır geçiş kolaylığı",
       "spec2": "Transit kargo işleme",
       "spec3": "Çok modlu taşıma hizmetleri"
@@ -138,7 +562,7 @@
       "city": "Daşoguz",
       "address": "M37 Karayolu, Daşoguz 746800, Türkmenistan",
       "hours": "Pzt-Cmt: 7:00 - 21:00",
-      "capacity": "7,000 m² tesis",
+      "capacity": "7.000 m² tesis",
       "spec1": "Kuzey bölge kapısı",
       "spec2": "Pamuk ve tekstil lojistiği",
       "spec3": "Ekspres teslimat hizmetleri"

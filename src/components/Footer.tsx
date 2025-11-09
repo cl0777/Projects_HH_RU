@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">LogiFlow</h3>
+              <h3 className="text-xl font-bold mb-4">{t("footer.company")}</h3>
               <ul className="space-y-2">
                 <li>
                   <Link to="/about" className="hover:text-blue-400">

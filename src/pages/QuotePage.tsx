@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import axios from "axios";
+import { useAuth } from "../contexts/AuthContext";
 import { useTranslation } from "react-i18next";
 import {
   Truck,
@@ -11,32 +13,26 @@ import {
 
 const QuotePage: React.FC = () => {
   const { t } = useTranslation();
+  const { token } = useAuth();
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
-    // Step 1: Contact Information
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-
-    // Step 2: Shipment Details
-    origin: "",
-    destination: "",
-    weight: "",
-    dimensions: {
-      length: "",
-      width: "",
-      height: "",
-    },
+    // Shipment Details mapped to backend schema
+    originCity: "",
+    originCountry: "",
+    destinationCity: "",
+    destinationCountry: "",
+    weightKg: "",
+    lengthCm: "",
+    widthCm: "",
+    heightCm: "",
     shipmentType: "",
-    value: "",
-
-    // Step 3: Additional Services
-    services: [] as string[],
-    specialRequirements: "",
+    declaredValueUsd: "",
+    description: "",
+    totalAmount: 0,
     timeline: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -44,21 +40,10 @@ const QuotePage: React.FC = () => {
     >
   ) => {
     const { name, value } = e.target;
-    if (name.startsWith("dimensions.")) {
-      const dimension = name.split(".")[1];
-      setFormData((prev) => ({
-        ...prev,
-        dimensions: {
-          ...prev.dimensions,
-          [dimension]: value,
-        },
-      }));
-    } else {
-      setFormData((prev) => ({
-        ...prev,
-        [name]: value,
-      }));
-    }
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   const handleServiceChange = (service: string) => {
@@ -82,9 +67,36 @@ const QuotePage: React.FC = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setError("");
+    try {
+      const payload = {
+        originCity: formData.originCity,
+        originCountry: formData.originCountry,
+        destinationCity: formData.destinationCity,
+        destinationCountry: formData.destinationCountry,
+        weightKg: Number(formData.weightKg) || 0,
+        shipmentType: formData.shipmentType,
+        lengthCm: Number(formData.lengthCm) || 0,
+        widthCm: Number(formData.widthCm) || 0,
+        heightCm: Number(formData.heightCm) || 0,
+        declaredValueUsd: Number(formData.declaredValueUsd) || 0,
+        description: formData.description,
+        totalAmount: 0,
+        timeline: formData.timeline,
+      };
+
+      await axios.post("http://localhost:3030/api/v1/orders", payload, {
+        headers: { Authorization: `Bearer ${token}` },
+        withCredentials: true,
+      });
+      setIsSubmitted(true);
+    } catch (err: any) {
+      setError(
+        err?.response?.data?.message || err?.message || "Failed to submit quote"
+      );
+    }
   };
 
   const services = [
@@ -165,7 +177,7 @@ const QuotePage: React.FC = () => {
       <section className="py-8 bg-white border-b">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center space-x-8">
-            {[1, 2, 3].map((step) => (
+            {[1, 2].map((step) => (
               <div key={step} className="flex items-center">
                 <div
                   className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold ${
@@ -182,12 +194,10 @@ const QuotePage: React.FC = () => {
                   }`}
                 >
                   {step === 1
-                    ? t("quote.steps.contactInfo")
-                    : step === 2
                     ? t("quote.steps.shipmentDetails")
                     : t("quote.steps.services")}
                 </span>
-                {step < 3 && (
+                {step < 2 && (
                   <div
                     className={`w-8 h-0.5 ml-4 ${
                       step < currentStep ? "bg-[#264D88]" : "bg-gray-200"
@@ -207,62 +217,178 @@ const QuotePage: React.FC = () => {
             onSubmit={handleSubmit}
             className="bg-white rounded-xl shadow-lg p-8"
           >
-            {/* Step 1: Contact Information */}
+            {/* Step 1: Shipment Details */}
             {currentStep === 1 && (
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  Contact Information
+                  Shipment Details
                 </h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent"
-                    />
+                <div className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Origin City *
+                      </label>
+                      <input
+                        type="text"
+                        name="originCity"
+                        required
+                        value={formData.originCity}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Origin Country *
+                      </label>
+                      <input
+                        type="text"
+                        name="originCountry"
+                        required
+                        value={formData.originCountry}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent"
+                      />
+                    </div>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent"
-                    />
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Destination City *
+                      </label>
+                      <input
+                        type="text"
+                        name="destinationCity"
+                        required
+                        value={formData.destinationCity}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Destination Country *
+                      </label>
+                      <input
+                        type="text"
+                        name="destinationCountry"
+                        required
+                        value={formData.destinationCountry}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent"
+                      />
+                    </div>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      required
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent"
-                    />
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Weight (kg) *
+                      </label>
+                      <input
+                        type="number"
+                        name="weightKg"
+                        required
+                        value={formData.weightKg}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Shipment Type *
+                      </label>
+                      <select
+                        name="shipmentType"
+                        required
+                        value={formData.shipmentType}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent"
+                      >
+                        <option value="">Select type</option>
+                        <option value="air">Air</option>
+                        <option value="sea">Sea</option>
+                        <option value="road">Road</option>
+                        <option value="express">Express</option>
+                      </select>
+                    </div>
                   </div>
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Company
+                      Dimensions (cm)
                     </label>
-                    <input
-                      type="text"
-                      name="company"
-                      value={formData.company}
+                    <div className="grid grid-cols-3 gap-4">
+                      <input
+                        type="number"
+                        name="lengthCm"
+                        value={formData.lengthCm}
+                        onChange={handleInputChange}
+                        placeholder="Length"
+                        className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent"
+                      />
+                      <input
+                        type="number"
+                        name="widthCm"
+                        value={formData.widthCm}
+                        onChange={handleInputChange}
+                        placeholder="Width"
+                        className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent"
+                      />
+                      <input
+                        type="number"
+                        name="heightCm"
+                        value={formData.heightCm}
+                        onChange={handleInputChange}
+                        placeholder="Height"
+                        className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Declared Value (USD)
+                      </label>
+                      <input
+                        type="number"
+                        name="declaredValueUsd"
+                        value={formData.declaredValueUsd}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Timeline
+                      </label>
+                      <select
+                        name="timeline"
+                        value={formData.timeline}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent"
+                      >
+                        <option value="">Select timeline</option>
+                        <option value="Express">Express</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Economy">Economy</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Description
+                    </label>
+                    <textarea
+                      name="description"
+                      value={formData.description}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent"
+                      rows={3}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#264D88] focus:border-transparent resize-none"
                     />
                   </div>
                 </div>
@@ -408,8 +534,8 @@ const QuotePage: React.FC = () => {
               </div>
             )}
 
-            {/* Step 3: Additional Services */}
-            {currentStep === 3 && (
+            {/* Step 2: Additional Services */}
+            {currentStep === 2 && (
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
                   Additional Services
@@ -469,7 +595,7 @@ const QuotePage: React.FC = () => {
                 Previous
               </button>
 
-              {currentStep < 3 ? (
+              {currentStep < 2 ? (
                 <button
                   type="button"
                   onClick={nextStep}

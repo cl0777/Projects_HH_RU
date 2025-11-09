@@ -65,10 +65,15 @@ const AboutPage: React.FC = () => {
   }, []);
 
   const stats = [
-    { value: 10000, suffix: "+", label: "Happy Customers" },
-    { value: 150, suffix: "+", label: "Countries Served" },
-    { value: 99.8, suffix: "%", label: "On-Time Delivery", decimals: 1 },
-    { value: 24, suffix: "/7", label: "Customer Support" },
+    { value: 10000, suffix: "+", label: t("about.stats.happyCustomers") },
+    { value: 150, suffix: "+", label: t("about.stats.countriesServed") },
+    {
+      value: 99.8,
+      suffix: "%",
+      label: t("about.stats.onTimeDelivery"),
+      decimals: 1,
+    },
+    { value: 24, suffix: "/7", label: t("about.stats.customerSupport") },
   ];
 
   // Counter Component
@@ -182,8 +187,8 @@ const AboutPage: React.FC = () => {
             <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
               <div className="text-center text-gray-500 w-full h-full">
                 <img
-                  src="/images/about-story.jpg"
-                  alt="About Story"
+                  src="/images/about-story.svg"
+                  alt={t("about.story.imageAlt")}
                   className="w-full h-full object-cover"
                 />
               </div>

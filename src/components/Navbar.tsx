@@ -206,13 +206,8 @@ const Navbar: React.FC = () => {
                   <span
                     className={`text-3xl font-black transition-colors duration-500 ${"text-[#264D88] group-hover:text-gray-200"}`}
                   >
-                    Halkara
+                    {t("footer.company")}
                   </span>
-                  <div
-                    className={`text-xs -mt-1 font-medium tracking-wider transition-colors duration-500 ${"text-gray-600"}`}
-                  >
-                    Turkmen Logistics
-                  </div>
 
                   {/* Underline Animation */}
                   <div
