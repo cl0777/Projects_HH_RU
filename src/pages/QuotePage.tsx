@@ -10,6 +10,7 @@ import {
   CheckCircle,
   ArrowRight,
 } from "lucide-react";
+import { getApiUrl } from "../config/api";
 
 const QuotePage: React.FC = () => {
   const { t } = useTranslation();
@@ -87,7 +88,7 @@ const QuotePage: React.FC = () => {
         timeline: formData.timeline,
       };
 
-      await axios.post("http://localhost:3030/api/v1/orders", payload, {
+      await axios.post(getApiUrl("orders"), payload, {
         headers: { Authorization: `Bearer ${token}` },
         withCredentials: true,
       });

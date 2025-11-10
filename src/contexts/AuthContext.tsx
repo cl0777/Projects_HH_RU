@@ -7,10 +7,10 @@ import React, {
 } from "react";
 import axios from "axios";
 import type { AxiosInstance } from "axios";
+import { getApiUrl } from "../config/api";
 
-const API_BASE_URL = "http://localhost:3030/api/v1/customers";
 const axiosClient: AxiosInstance = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: getApiUrl("customers"),
   withCredentials: true,
   headers: {
     // Keep headers simple; JSON will still trigger CORS preflight on cross-origin
