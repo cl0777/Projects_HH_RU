@@ -10,9 +10,9 @@
     "dashboard": "Gözegçilik paneli",
     "logout": "Çykmak",
     "getQuote": "Teklip almak",
-    "support": "info@htl.com",
-    "email": "info@htl.com",
-    "phone": "+993 65 555 55 55"
+    "support": "info@htl-tm.com",
+    "email": "info@htl-tm.com",
+    "phone": "+99364108586"
   },
   "component": {
     "getQuote": "Baha almak"
@@ -25,7 +25,7 @@
     "learnMore": "Bizim hyzmatlar"
   },
   "features": {
-    "title": "Näme üçin htl saýlaýarlar?",
+    "title": "Näme üçin HTL saýlaýarlar?",
     "subtitle": "Biz siziň üpjünçilik zynjyryňyzy optimizasiýa etmek we işewürligiňiziň ösüşini tizleşdirmek üçin giňişleýin logistik çözgütler berýäris",
     "globalShipping": {
       "title": "Global eltip bermek",
@@ -46,7 +46,7 @@
     "sarah": {
       "name": "Sara Çen",
       "role": "Üpjünçilik zynjyry direktory, GlobalTech",
-      "content": "htl bizim halkara eltip berme operasiýalarymyzy üýtgetdi. Olaryň yzarlama ulgamy aýratyn we eltip berme wagty hemişe wagtynda."
+      "content": "HTL bizim halkara eltip berme operasiýalarymyzy üýtgetdi. Olaryň yzarlama ulgamy aýratyn we eltip berme wagty hemişe wagtynda."
     },
     "michael": {
       "name": "Mihail Rodriges",
@@ -132,11 +132,11 @@
     }
   },
   "about": {
-    "title": "htl barada",
+    "title": "HTL barada",
     "subtitle": "Global logistikada ygtybarly hyzmatdaşyňyz",
     "mission": {
       "title": "Bizim maksat",
-      "content1": "htl-da bizim maksadymyz logistik senagatyny rewolýusiýa etmek, dünýä boýunça söýsüz, netijeli we ygtybarly üpjünçilik zynjyry çözgütlerini bermekdir. Biz öňdebaryjy tehnologiýa we sadyk topary ulanmak arkaly siziň ýüküňiziň güwäni we wagtynda ýerine ýetirilýändigini üpjün etmek üçin söz berýäris.",
+      "content1": "HTL-da bizim maksadymyz logistik senagatyny rewolýusiýa etmek, dünýä boýunça söýsüz, netijeli we ygtybarly üpjünçilik zynjyry çözgütlerini bermekdir. Biz öňdebaryjy tehnologiýa we sadyk topary ulanmak arkaly siziň ýüküňiziň güwäni we wagtynda ýerine ýetirilýändigini üpjün etmek üçin söz berýäris.",
       "content2": "Biz müşderilerimiz bilen güýçli, uzak möhletli hyzmatdaşlyk gatnaşyklary gurmaga, olaryň aýratyn zerurlyklaryny düşünmäge we göz öňünde tutulanlardan has ýokary hyzmatlary bermäge ynanýarys."
     },
     "story": {
@@ -183,6 +183,10 @@
       "innovation": {
         "title": "Öňdebaryjylyk",
         "description": "Logistikany gowulandyrmak we optimizasiýa etmek üçin täze usullar gözlemek."
+      },
+      "customerCentric": {
+        "title": "Müşderi merkezli",
+        "description": "Ilki bilen diňleýäris, soňra her bir müşderiniň maksatlaryna laýyk çözgütler düzýäris."
       }
     },
     "stats": {
@@ -192,7 +196,7 @@
       "customerSupport": "Müşderi goldawy"
     },
     "cta": {
-      "title": "htl bilen hyzmatdaş bolmaga taýýnmy?",
+      "title": "HTL bilen hyzmatdaş bolmaga taýýnmy?",
       "subtitle": "Hakykatdanam sadyk logistik hyzmatdaşyňyň tapawudyny duýuň.",
       "button": "Şu gün habarlaşyň"
     }
@@ -213,7 +217,23 @@
     },
     "warehousing": {
       "title": "Ammar hyzmaty we paýlaşdyryş",
-      "description": "Howpsuz saklamak, inwentar dolandyryş we müşderileriňize netijeli paýlaşdyryş üçin öňdebaryjy ammar obýektleri."
+      "description": "Howpsuz saklamak, inwentar dolandyryş we müşderileriňize netijeli paýlaşdyryş üçin öňdebaryjy ammar obýektleri.",
+      "features": {
+        "climateControl": "Iklim dolandyrylan ammarlarda saklama",
+        "inventoryManagement": "Inwentar dolandyryşy",
+        "pickPack": "Ýygnamak we gaplamak amallary",
+        "crossDocking": "Çalşyp ýüklemek (cross-docking)"
+      }
+    },
+    "packageTracking": {
+      "title": "Bukjany yzarlamak",
+      "description": "Iberýän bukjalaryňyzy bütin dünýä boýunça hakyky wagtda yzarlap biliň.",
+      "features": {
+        "realTimeUpdates": "Hakyky wagt täzelenmeleri",
+        "smsAlerts": "SMS/e-poçta duýduryşlary",
+        "onlinePortal": "Onlaýn yzarlama portaly",
+        "mobileApp": "Mobil programma goldawy"
+      }
     },
     "customs": {
       "title": "Gümrük hyzmaty",
@@ -231,14 +251,57 @@
       "title": "Deňiz ýük hyzmaty",
       "description": "Doly konteýner ýükü (FCL) we az konteýner ýükü (LCL) iberişler üçin çeýeçek we tygşytly deňiz ýük wariantlary."
     },
-    "howWeWork": {
-      "title": "Biz nähili işleýäris",
-      "subtitle": "Bizim optimizasiýa edilen prosesimiz",
-      "consultation": "Maslahat: Siziň logistik zerurlyklaryňyzy we kynçylyklaryňyzy düşünmek.",
-      "planning": "Meýilleşdiriş: Şahsy, netijeli we tygşytly çözgüt işläp düzmek.",
-      "execution": "Ýerine ýetiriş: Hakyky wagtda gözegçilik we habarlaşyk bilen gowşaksyz amala aşyryş.",
-      "delivery": "Eltip berme: Siziň harytlaryňyzyň howpsuz we wagtynda gelmegini üpjün etmek.",
-      "support": "Goldaw: Yzygiderli gowulandyrmak üçin dowamly kömek we optimizasiýa."
+    "secureTransport": {
+      "title": "Howpsuz transport",
+      "description": "Ýüküňizi goramak üçin öňdebaryjy howpsuzlyk çäreleri.",
+      "features": {
+        "insuranceCoverage": "Ätiýaçlandyryş goragy",
+        "securityProtocols": "Howpsuzlyk protokollary",
+        "chainOfCustody": "Emanýetiň zynjyry",
+        "riskAssessment": "Howp seljermesi"
+      }
+    },
+    "internationalLogistics": {
+      "title": "Halkara logistika",
+      "description": "Serhetara logistika üçin uçdan-uça çözgütler.",
+      "features": {
+        "customsClearance": "Gümrükden geçiriş",
+        "documentation": "Resminamalaýyş",
+        "compliance": "Kadalaşdyryş talaplaryna laýyklyk",
+        "dutyManagement": "Paý we salgyt dolandyryşy"
+      }
+    },
+    "support24": {
+      "title": "24/7 Goldaw",
+      "description": "Logistiki amallaryňyz üçin hemişe işjeň goldaw.",
+      "features": {
+        "hotline": "Ýörite telefon ýazgysy",
+        "onlineChat": "Onlaýn söhbetdeşlik",
+        "emergencySupport": "Tiz kömek hyzmaty",
+        "dedicatedManager": "Ýöriteleşdirilen menejer"
+      }
+    },
+    "industriesWeServe": "Hyzmat edýän pudaklarymyz",
+    "industriesWeServeSubtitle": "Önümçilikden söwda we tehnologiýa çenli dürli ugurlar üçin ýörite logistik çözgütler.",
+    "howWeWork": "Biz nähili işleýäris",
+    "howWeWorkSubtitle": "Ýüküňizi bökdençsiz alyp geçmek üçin dört ädimli ýönekeý proses.",
+    "howWeWorkSteps": {
+      "step1": {
+        "title": "Anyklama we maslahat",
+        "description": "Üpjünçilik zynjyry maksatlaryňyzy, ýük aýratynlyklaryny we kadalaşdyryş talaplaryny seljerýäris."
+      },
+      "step2": {
+        "title": "Çözgüt taýýarlamak",
+        "description": "Hünärmenlerimiz ugry, bahany we hyzmat paketini iň tygşytly görnüşde düzýär."
+      },
+      "step3": {
+        "title": "Utgaşdyrylan ýerine ýetiriliş",
+        "description": "Toparymyz ulaglary, resminamalary we hakyky wagtda gözegçiligiň ähli tapgyryny dolandyrýar."
+      },
+      "step4": {
+        "title": "Netijeleri seljermek",
+        "description": "Analitika berýäris, pikir alyşýarys we yzygiderli gowulandyrmak üçin amallary täzeleýäris."
+      }
     },
     "cta": {
       "title": "Şahsy logistik çözgüt almak",
@@ -246,6 +309,16 @@
       "button": "Teklif soramak",
       "contactUs": "Biz bilen habarlaşyň"
     }
+  },
+  "industries": {
+    "ecommerceRetail": "Elektron söwda we bölek satuw",
+    "manufacturing": "Önümçilik",
+    "healthcarePharmaceuticals": "Saglygy goraýyş we derman senagaty",
+    "automotive": "Awtomobil senagaty",
+    "technology": "Tehnologiýa",
+    "foodBeverage": "Azyk we içgi",
+    "retail": "Bölek satuw",
+    "textiles": "Dokma senagaty"
   },
   "contact": {
     "title": "Habarlaşmak",
@@ -257,12 +330,12 @@
     "addressLine1": "Begler,744400",
     "addressLine2": "G.Kulyýew, Aşgabat",
     "addressCountry": "Türkmenistan",
-    "emailInfo": "info@halkara.com",
-    "emailSupport": "support@halkara.com",
-    "emailSales": "sales@halkara.com",
-    "phoneMain1": "+993 65 55 55 55",
-    "phoneMain2": "+993 65 55 55 54",
-    "phoneEmergency": "Şowsuz kömek: +993 65 55 55 53",
+    "emailInfo": "info@htl-tm.com",
+    "emailSupport": "md@htl-tm.com",
+    "emailSales": "sales@htl-tm.com",
+    "phoneMain1": "+99364108586",
+    "phoneMain2": "+99371713777",
+    "phoneEmergency": "Şowsuz kömek: +99364949363",
     "businessHours": "Iş sagatlary",
     "hoursWeekdays": "Duşenbe - Anna: 8:00 - 18:00",
     "hoursSaturday": "Şenbe: 9:00 - 16:00",
@@ -398,9 +471,9 @@
       "country": "Ýurt",
       "countryPlaceholder": "Ýurt adyny giriziň",
       "phone1": "Esasy telefon",
-      "phone1Placeholder": "+993 65 55 55 55",
+      "phone1Placeholder": "+99364108586",
       "phone2": "Goşmaça telefon",
-      "phone2Placeholder": "+993 65 55 55 54"
+      "phone2Placeholder": "+99371713777"
     },
     "validation": {
       "nameRequired": "Doly ad hökmany",
@@ -521,55 +594,40 @@
       "getQuote": "Baha alyň",
       "contact": "Habarlaşyň"
     },
+    "limitedAccess": {
+      "title": "Terminal barada doly maglumat açmak üçin ulgama giriň.",
+      "preview": "Häzirki wagtda diňe gysgaça maglumat görkezdik. Hyzmatlary, ýöriteleşmeleri we doly maglumatlary görmek üçin ulgama giriň.",
+      "button": "Dowam etmek üçin giriň"
+    },
     "ashgabat": {
-      "name": "Aşgabat Merkezi Terminal",
-      "city": "Aşgabat",
-      "address": "Arçabil şaýoly 56, Aşgabat 744000, Türkmenistan",
-      "hours": "24/7 Iş tertimi",
-      "capacity": "20,000 kw.m desgasy",
+      "name": "Artyk Terminal",
+      "city": "Ahal",
+      "address": "Artyk Terminal,Ahal welaýat, Turkmenistan",
+      "hours": "24/7 Iş wagty",
+      "capacity": "20,000 kw.m meýdany",
       "spec1": "Halkara ýük merkezi",
       "spec2": "Temperatura gözegçiligi bilen saklanylýar",
       "spec3": "Öňdebaryjy howpsuzlyk ulgamlary"
     },
     "turkmenbashi": {
-      "name": "Türkmenbaşy Port Terminaly",
-      "city": "Türkmenbaşy",
-      "address": "Port sebiti, Türkmenbaşy 745000, Türkmenistan",
-      "hours": "24/7 Iş tertimi",
-      "capacity": "15,000 kw.m desgasy",
-      "spec1": "Hazar deňzi portuna çykyş",
-      "spec2": "Konteyner işlemek",
-      "spec3": "Intermodal ulag merkezi"
-    },
-    "mary": {
-      "name": "Mary Sebit Terminaly",
+      "name": "Sarahs Terminal",
       "city": "Mary",
-      "address": "Senagat zolagy, Mary 745400, Türkmenistan",
-      "hours": "Duş-Şen: 8:00 - 20:00",
-      "capacity": "8,000 kw.m desgasy",
-      "spec1": "Oba hojalyk önümleriniň hünärmeni",
-      "spec2": "Araçäk awtoulag gatnawlary",
+      "address": "Sarahs Terminal,Mary welaýat, Turkmenistan",
+      "hours": "24/7 Iş wagty",
+      "capacity": "15,000 kw.m meýdany",
+      "spec1": "Oba hojalygy önümleri boýunça hünärmen",
+      "spec2": "Serhetara ýük daşamak",
       "spec3": "Sebit paýlaýyş merkezi"
     },
-    "turkmenabat": {
-      "name": "Türkmenabat Serhet Terminaly",
-      "city": "Türkmenabat",
-      "address": "Serhet geçelge zolagy, Türkmenabat 746000, Türkmenistan",
-      "hours": "24/7 Iş tertimi",
-      "capacity": "10,000 kw.m desgasy",
-      "spec1": "Serhetden geçmäge ýardam bermek",
+    "mary": {
+      "name": "Etrek Terminal",
+      "city": "Mary",
+      "address": "Etrek Terminal,Balka welaýat, Turkmenistan",
+      "hours": "24/7 Iş wagty",
+      "capacity": "8,000 kw.m meýdany",
+      "spec1": "Serhetara ýük geçelge",
       "spec2": "Tranzit ýükleri işlemek",
       "spec3": "Köp görnüşli ulag hyzmatlary"
-    },
-    "dashoguz": {
-      "name": "Daşoguz Demirgazyk Terminaly",
-      "city": "Daşoguz",
-      "address": "M37 ýoly, Daşoguz 746800, Türkmenistan",
-      "hours": "Duş-Şen: 7:00 - 21:00",
-      "capacity": "7,000 kw.m desgasy",
-      "spec1": "Demirgazyk sebit derwezesi",
-      "spec2": "Pagta we dokma logistikasy",
-      "spec3": "Çalt eltip berme hyzmatlary"
     }
   }
 }

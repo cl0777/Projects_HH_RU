@@ -10,9 +10,9 @@
     "dashboard": "Kontrol Paneli",
     "logout": "Çıkış Yap",
     "getQuote": "Teklif Al",
-    "support": "info@halkara.com",
-    "email": "info@halkara.com",
-    "phone": "+993 65 555 55 55"
+    "support": "info@htl-tm.com",
+    "email": "info@htl-tm.com",
+    "phone": "+99364108586"
   },
   "component": {
     "getQuote": "Teklif Al"
@@ -172,6 +172,10 @@
       "innovation": {
         "title": "Yenilik",
         "description": "Lojistiği iyileştirmek ve optimize etmek için sürekli yeni yollar aramak."
+      },
+      "customerCentric": {
+        "title": "Müşteri Odaklılık",
+        "description": "Önce dinliyor, sonra her müşterinin hedeflerine göre lojistik çözümler tasarlıyoruz."
       }
     },
     "story": {
@@ -213,7 +217,23 @@
     },
     "warehousing": {
       "title": "Depolama ve Dağıtım",
-      "description": "Güvenli depolama, envanter yönetimi ve müşterilerinize verimli dağıtım için modern depolama tesisleri."
+      "description": "Güvenli depolama, envanter yönetimi ve müşterilerinize verimli dağıtım için modern depolama tesisleri.",
+      "features": {
+        "climateControl": "İklim kontrollü depolama",
+        "inventoryManagement": "Envanter yönetimi",
+        "pickPack": "Toplama ve paketleme operasyonları",
+        "crossDocking": "Çapraz dağıtım (cross-docking)"
+      }
+    },
+    "packageTracking": {
+      "title": "Gönderi Takibi",
+      "description": "Gönderilerinizi dünya çapında gerçek zamanlı olarak izleyin.",
+      "features": {
+        "realTimeUpdates": "Gerçek zamanlı güncellemeler",
+        "smsAlerts": "SMS/e-posta bildirimleri",
+        "onlinePortal": "Çevrimiçi takip portalı",
+        "mobileApp": "Mobil uygulama desteği"
+      }
     },
     "customs": {
       "title": "Gümrük Brokerliği",
@@ -227,21 +247,79 @@
       "title": "Deniz Taşımacılığı",
       "description": "Tam konteyner yükü (FCL) ve kısmi konteyner yükü (LCL) gönderileri için esnek ve ekonomik deniz taşımacılığı seçenekleri."
     },
-    "howWeWork": {
-      "title": "Nasıl Çalışıyoruz",
-      "subtitle": "Akıcı Sürecimiz",
-      "consultation": "Danışmanlık: Lojistik ihtiyaçlarınızı ve zorluklarınızı anlama.",
-      "planning": "Planlama: Özelleştirilmiş, verimli ve uygun maliyetli bir çözüm geliştirme.",
-      "execution": "Uygulama: Gerçek zamanlı izleme ve iletişim ile kusursuz implementasyon.",
-      "delivery": "Teslimat: Mallarınızın güvenli ve zamanında gelmesini sağlama.",
-      "support": "Destek: Sürekli iyileştirme için devam eden yardım ve optimizasyon."
+    "secureTransport": {
+      "title": "Güvenli Taşımacılık",
+      "description": "Kargonuzu korumak için ileri güvenlik protokolleri.",
+      "features": {
+        "insuranceCoverage": "Sigorta kapsamı",
+        "securityProtocols": "Güvenlik protokolleri",
+        "chainOfCustody": "Teslim zinciri yönetimi",
+        "riskAssessment": "Risk değerlendirmesi"
+      }
+    },
+    "internationalLogistics": {
+      "title": "Uluslararası Lojistik",
+      "description": "Sınır ötesi lojistik için uçtan uca çözümler.",
+      "features": {
+        "customsClearance": "Gümrükten çekme",
+        "documentation": "Dokümantasyon",
+        "compliance": "Mevzuata uyumluluk",
+        "dutyManagement": "Vergi ve gümrük yönetimi"
+      }
+    },
+    "support24": {
+      "title": "7/24 Destek",
+      "description": "Lojistik operasyonlarınız için kesintisiz destek.",
+      "features": {
+        "hotline": "Özel çağrı hattı",
+        "onlineChat": "Çevrimiçi sohbet",
+        "emergencySupport": "Acil destek",
+        "dedicatedManager": "Özel hesap yöneticisi"
+      }
+    },
+    "industriesWeServe": "Hizmet Verdiğimiz Sektörler",
+    "industriesWeServeSubtitle": "Üretimden perakendeye, teknolojiden lojistiğe uzanan pek çok sektör için özel çözümler sunuyoruz.",
+    "howWeWork": "Nasıl Çalışıyoruz",
+    "howWeWorkSubtitle": "Yükünüzü aksatmadan ilerleten dört adımlı kanıtlanmış süreç.",
+    "howWeWorkSteps": {
+      "step1": {
+        "title": "Keşif ve Danışmanlık",
+        "description": "Tedarik zinciri hedeflerinizi, yük profillerinizi ve uyumluluk gereksinimlerinizi analiz ediyoruz."
+      },
+      "step2": {
+        "title": "Çözüm Tasarımı",
+        "description": "Uzmanlarımız rota, fiyat ve hizmet paketini verimlilik için özelleştiriyor."
+      },
+      "step3": {
+        "title": "Koordine Uygulama",
+        "description": "Ekiplerimiz taşıma, belge yönetimi ve gerçek zamanlı takibi tüm aşamalarda yönetiyor."
+      },
+      "step4": {
+        "title": "Performans Değerlendirmesi",
+        "description": "Analitik sunuyor, geri bildirim topluyor ve sürekli iyileştirme için operasyonları revize ediyoruz."
+      }
     },
     "cta": {
       "title": "Kişiselleştirilmiş Lojistik Çözümü Alın",
       "subtitle": "Spesifik gereksinimlerinizi görüşmek ve ücretsiz teklif almak için bugün bizimle iletişime geçin.",
       "button": "Teklif İsteyin",
       "contactUs": "İletişime Geçin"
+    },
+    "limitedAccess": {
+      "title": "Terminal detaylarının tamamına erişmek için giriş yapın.",
+      "preview": "Şu anda sınırlı bir önizleme görüyorsunuz. Tüm hizmetleri, uzmanlıkları ve bağlantı bilgilerini görüntülemek için giriş yapın.",
+      "button": "Devam etmek için giriş yapın"
     }
+  },
+  "industries": {
+    "ecommerceRetail": "E-Ticaret ve Perakende",
+    "manufacturing": "Üretim",
+    "healthcarePharmaceuticals": "Sağlık ve İlaç",
+    "automotive": "Otomotiv",
+    "technology": "Teknoloji",
+    "foodBeverage": "Gıda ve İçecek",
+    "retail": "Perakende",
+    "textiles": "Tekstil"
   },
   "contact": {
     "title": "İletişime Geçin",
@@ -253,12 +331,12 @@
     "addressLine1": "Begler,744400",
     "addressLine2": "G.Kulyýew, Aşgabat",
     "addressCountry": "Türkmenistan",
-    "emailInfo": "info@halkara.com",
-    "emailSupport": "support@halkara.com",
-    "emailSales": "sales@halkara.com",
-    "phoneMain1": "+993 65 55 55 55",
-    "phoneMain2": "+993 65 55 55 54",
-    "phoneEmergency": "Acil Durum: +993 65 55 55 53",
+    "emailInfo": "info@htl-tm.com",
+    "emailSupport": "md@htl-tm.com",
+    "emailSales": "sales@htl-tm.com",
+    "phoneMain1": "+99364108586",
+    "phoneMain2": "+99371713777",
+    "phoneEmergency": "Acil Durum: +99364949363",
     "businessHours": "Çalışma Saatleri",
     "hoursWeekdays": "Pazartesi - Cuma: 8:00 - 18:00",
     "hoursSaturday": "Cumartesi: 9:00 - 16:00",
@@ -394,9 +472,9 @@
       "country": "Ülke",
       "countryPlaceholder": "Ülke adını girin",
       "phone1": "Birincil Telefon",
-      "phone1Placeholder": "+993 65 55 55 55",
+      "phone1Placeholder": "+99364108586",
       "phone2": "İkincil Telefon",
-      "phone2Placeholder": "+993 65 55 55 54"
+      "phone2Placeholder": "+99371713777"
     },
     "validation": {
       "nameRequired": "Tam ad gerekli",

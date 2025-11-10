@@ -20,6 +20,7 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import DashboardPage from "./pages/DashboardPage";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -28,18 +29,12 @@ function App() {
         <Router>
           <div className="min-h-screen bg-transparent">
             <Navbar />
+            <ScrollToTop />
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/services" element={<ServicesPage />} />
-              <Route
-                path="/terminals"
-                element={
-                  <ProtectedRoute>
-                    <TerminalsPage />
-                  </ProtectedRoute>
-                }
-              />
+              <Route path="/terminals" element={<TerminalsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route
                 path="/quote"

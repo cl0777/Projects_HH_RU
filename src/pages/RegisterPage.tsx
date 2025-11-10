@@ -628,6 +628,7 @@ const RegisterPage: React.FC = () => {
                 <Link
                   to="/login"
                   className="font-medium text-[#264D88] hover:text-[#1e3a8a]"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 >
                   {t("auth.signIn")}
                 </Link>

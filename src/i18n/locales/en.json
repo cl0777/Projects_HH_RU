@@ -10,9 +10,9 @@
     "dashboard": "Dashboard",
     "logout": "Logout",
     "getQuote": "Get Quote",
-    "support": "info@htl.com",
-    "email": "info@htl.com",
-    "phone": "+993 65 555 55 55"
+    "support": "info@htl-tm.com",
+    "email": "info@htl-tm.com",
+    "phone": "+99364108586"
   },
   "hero": {
     "title": "Halkara Turkmen Logistics Logistics Art",
@@ -169,6 +169,10 @@
       "innovation": {
         "title": "Innovation",
         "description": "Continuously seeking new ways to improve and optimize logistics."
+      },
+      "customerCentric": {
+        "title": "Customer-Centric",
+        "description": "We listen first, then tailor logistics solutions around every client's goals."
       }
     },
     "story": {
@@ -270,14 +274,27 @@
         "dedicatedManager": "Dedicated account manager"
       }
     },
-    "howWeWork": {
-      "title": "How We Work",
-      "subtitle": "Our Streamlined Process",
-      "consultation": "Consultation: Understanding your logistics needs and challenges.",
-      "planning": "Planning: Developing a customized, efficient, and cost-effective solution.",
-      "execution": "Execution: Flawless implementation with real-time monitoring and communication.",
-      "delivery": "Delivery: Ensuring your goods arrive safely and on schedule.",
-      "support": "Support: Ongoing assistance and optimization for continuous improvement."
+    "industriesWeServe": "Industries We Serve",
+    "industriesWeServeSubtitle": "Tailored logistics expertise for companies across manufacturing, retail, technology, and beyond.",
+    "howWeWork": "How We Work",
+    "howWeWorkSubtitle": "A proven four-step process that keeps your cargo moving without surprises.",
+    "howWeWorkSteps": {
+      "step1": {
+        "title": "Discovery & Consultation",
+        "description": "We evaluate your supply chain goals, cargo profiles, and compliance requirements."
+      },
+      "step2": {
+        "title": "Solution Design",
+        "description": "Our specialists craft a custom routing, pricing, and service plan optimized for efficiency."
+      },
+      "step3": {
+        "title": "Coordinated Execution",
+        "description": "Dedicated teams oversee transport, documentation, and real-time tracking across every leg."
+      },
+      "step4": {
+        "title": "Performance Review",
+        "description": "We deliver analytics, gather feedback, and refine operations for continuous improvement."
+      }
     },
     "cta": {
       "title": "Get a Personalized Logistics Solution",
@@ -309,12 +326,12 @@
     "addressLine1": "Begler,744400",
     "addressLine2": "G.Kulyýew, Aşgabat",
     "addressCountry": "Turkmenistan",
-    "emailInfo": "info@halkara.com",
-    "emailSupport": "support@halkara.com",
-    "emailSales": "sales@halkara.com",
-    "phoneMain1": "+993 65 55 55 55",
-    "phoneMain2": "+993 65 55 55 54",
-    "phoneEmergency": "Emergency: +993 65 55 55 53",
+    "emailInfo": "info@htl-tm.com",
+    "emailSupport": "md@htl-tm.com",
+    "emailSales": "sales@htl-tm.com",
+    "phoneMain1": "+99364108586",
+    "phoneMain2": "+99371713777",
+    "phoneEmergency": "Emergency: +99364949363",
     "businessHours": "Business Hours",
     "hoursWeekdays": "Monday - Friday: 8:00 AM - 6:00 PM",
     "hoursSaturday": "Saturday: 9:00 AM - 4:00 PM",
@@ -450,9 +467,9 @@
       "country": "Country",
       "countryPlaceholder": "Enter country name",
       "phone1": "Primary Phone",
-      "phone1Placeholder": "+1-234-567-8900",
+      "phone1Placeholder": "+99364108586",
       "phone2": "Secondary Phone",
-      "phone2Placeholder": "+1-987-654-3210"
+      "phone2Placeholder": "+99371713777"
     },
     "validation": {
       "nameRequired": "Full name is required",
@@ -572,10 +589,15 @@
       "getQuote": "Get a Quote",
       "contact": "Contact Us"
     },
+    "limitedAccess": {
+      "title": "Log in to unlock full terminal details.",
+      "preview": "You’re viewing a limited preview. Sign in to see full services, specializations, and contact details.",
+      "button": "Login to Continue"
+    },
     "ashgabat": {
-      "name": "Ashgabat Central Terminal",
-      "city": "Ashgabat",
-      "address": "Archabil Avenue 56, Ashgabat 744000, Turkmenistan",
+      "name": "Artyk Terminal",
+      "city": "Ahal",
+      "address": "Artyk Terminal,Ahal region, Turkmenistan",
       "hours": "24/7 Operations",
       "capacity": "20,000 sqm facility",
       "spec1": "International cargo hub",
@@ -583,44 +605,24 @@
       "spec3": "Advanced security systems"
     },
     "turkmenbashi": {
-      "name": "Turkmenbashi Port Terminal",
-      "city": "Turkmenbashi",
-      "address": "Port Area, Turkmenbashi 745000, Turkmenistan",
+      "name": "Sarahs Terminal",
+      "city": "Mary",
+      "address": "Sarahs Terminal,Mary region, Turkmenistan",
       "hours": "24/7 Operations",
       "capacity": "15,000 sqm facility",
-      "spec1": "Caspian Sea port access",
-      "spec2": "Container handling",
-      "spec3": "Intermodal transport hub"
-    },
-    "mary": {
-      "name": "Mary Regional Terminal",
-      "city": "Mary",
-      "address": "Industrial Zone, Mary 745400, Turkmenistan",
-      "hours": "Mon-Sat: 8:00 AM - 8:00 PM",
-      "capacity": "8,000 sqm facility",
       "spec1": "Agricultural products specialist",
       "spec2": "Cross-border trucking",
       "spec3": "Regional distribution center"
     },
-    "turkmenabat": {
-      "name": "Turkmenabat Border Terminal",
-      "city": "Turkmenabat",
-      "address": "Border Crossing Zone, Turkmenabat 746000, Turkmenistan",
+    "mary": {
+      "name": "Etrek Terminal",
+      "city": "Balkan",
+      "address": "Etrek Terminal,Balka region, Turkmenistan",
       "hours": "24/7 Operations",
-      "capacity": "10,000 sqm facility",
+      "capacity": "8,000 sqm facility",
       "spec1": "Border crossing facilitation",
       "spec2": "Transit cargo handling",
       "spec3": "Multi-modal transport services"
-    },
-    "dashoguz": {
-      "name": "Dashoguz Northern Terminal",
-      "city": "Dashoguz",
-      "address": "Highway M37, Dashoguz 746800, Turkmenistan",
-      "hours": "Mon-Sat: 7:00 AM - 9:00 PM",
-      "capacity": "7,000 sqm facility",
-      "spec1": "Northern region gateway",
-      "spec2": "Cotton and textile logistics",
-      "spec3": "Express delivery services"
     }
   }
 }

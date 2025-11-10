@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   MapPin,
   Phone,
@@ -14,6 +15,7 @@ import {
   ChevronRight,
   Search,
 } from "lucide-react";
+import { useAuth } from "../contexts/AuthContext";
 
 interface Terminal {
   id: string;
@@ -32,8 +34,12 @@ interface Terminal {
 
 const TerminalsPage: React.FC = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { user } = useAuth();
   const [searchQuery, setSearchQuery] = useState("");
   const [modalTerminal, setModalTerminal] = useState<Terminal | null>(null);
+  const isAuthenticated = Boolean(user);
 
   const terminals: Terminal[] = [
     {
@@ -41,8 +47,8 @@ const TerminalsPage: React.FC = () => {
       name: t("terminals.ashgabat.name"),
       city: t("terminals.ashgabat.city"),
       address: t("terminals.ashgabat.address"),
-      phone: "+993 12 44-55-66",
-      email: "ashgabat@htl.tm",
+      phone: "+99371713777",
+      email: "info@htl-tm.com",
       hours: t("terminals.ashgabat.hours"),
       capacity: t("terminals.ashgabat.capacity"),
       coordinates: { lat: 37.9601, lng: 58.3261 },
@@ -70,22 +76,22 @@ const TerminalsPage: React.FC = () => {
       name: t("terminals.turkmenbashi.name"),
       city: t("terminals.turkmenbashi.city"),
       address: t("terminals.turkmenbashi.address"),
-      phone: "+993 243 2-22-33",
-      email: "turkmenbashi@htl.tm",
+      phone: "+99371713777",
+      email: "info@htl-tm.com",
       hours: t("terminals.turkmenbashi.hours"),
       capacity: t("terminals.turkmenbashi.capacity"),
       coordinates: { lat: 40.0225, lng: 52.9553 },
       images: [
-        "/images/sarahs/sarahs_1.jpg",
-        "/images/sarahs/sarahs_2.jpg",
-        "/images/sarahs/sarahs_3.jpg",
-        "/images/sarahs/sarahs_4.jpg",
-        "/images/sarahs/sarahs_5.jpg",
-        "/images/sarahs/sarahs_6.jpg",
-        "/images/sarahs/sarahs_7.jpg",
-        "/images/sarahs/sarahs_8.jpg",
-        "/images/sarahs/sarahs_9.jpg",
-        "/images/sarahs/sarahs_10.jpg",
+        "/images/artyk/artyk_1.jpeg",
+        "/images/artyk/artyk_2.jpeg",
+        "/images/artyk/artyk_3.jpeg",
+        "/images/artyk/artyk_4.jpeg",
+        "/images/artyk/artyk_5.jpeg",
+        "/images/artyk/artyk_6.jpeg",
+        "/images/artyk/artyk_7.jpeg",
+        "/images/artyk/artyk_8.jpeg",
+        "/images/artyk/artyk_9.jpeg",
+        "/images/artyk/artyk_10.jpeg",
       ],
       services: [
         "freight",
@@ -106,86 +112,27 @@ const TerminalsPage: React.FC = () => {
       name: t("terminals.mary.name"),
       city: t("terminals.mary.city"),
       address: t("terminals.mary.address"),
-      phone: "+993 522 5-11-22",
-      email: "mary@htl.tm",
+      phone: "+99371713777",
+      email: "info@htl-tm.com",
       hours: t("terminals.mary.hours"),
       capacity: t("terminals.mary.capacity"),
       coordinates: { lat: 37.5942, lng: 61.8306 },
       images: [
-        "/images/sarahs/sarahs_1.jpg",
-        "/images/sarahs/sarahs_2.jpg",
-        "/images/sarahs/sarahs_3.jpg",
-        "/images/sarahs/sarahs_4.jpg",
-        "/images/sarahs/sarahs_5.jpg",
-        "/images/sarahs/sarahs_6.jpg",
-        "/images/sarahs/sarahs_7.jpg",
-        "/images/sarahs/sarahs_8.jpg",
-        "/images/sarahs/sarahs_9.jpg",
-        "/images/sarahs/sarahs_10.jpg",
+        "/images/etrek/etrek_1.jpeg",
+        "/images/etrek/etrek_2.jpeg",
+        "/images/etrek/etrek_3.jpeg",
+        "/images/etrek/etrek_4.jpeg",
+        "/images/etrek/etrek_5.jpeg",
+        "/images/etrek/etrek_6.jpeg",
+        "/images/etrek/etrek_7.jpeg",
+        "/images/etrek/etrek_8.jpeg",
+        "/images/etrek/etrek_9.jpeg",
       ],
       services: ["freight", "warehousing", "road", "security"],
       specializations: [
         t("terminals.mary.spec1"),
         t("terminals.mary.spec2"),
         t("terminals.mary.spec3"),
-      ],
-    },
-    {
-      id: "turkmenabat",
-      name: t("terminals.turkmenabat.name"),
-      city: t("terminals.turkmenabat.city"),
-      address: t("terminals.turkmenabat.address"),
-      phone: "+993 422 4-33-44",
-      email: "turkmenabat@htl.tm",
-      hours: t("terminals.turkmenabat.hours"),
-      capacity: t("terminals.turkmenabat.capacity"),
-      coordinates: { lat: 39.0933, lng: 63.5784 },
-      images: [
-        "/images/sarahs/sarahs_1.jpg",
-        "/images/sarahs/sarahs_2.jpg",
-        "/images/sarahs/sarahs_3.jpg",
-        "/images/sarahs/sarahs_4.jpg",
-        "/images/sarahs/sarahs_5.jpg",
-        "/images/sarahs/sarahs_6.jpg",
-        "/images/sarahs/sarahs_7.jpg",
-        "/images/sarahs/sarahs_8.jpg",
-        "/images/sarahs/sarahs_9.jpg",
-        "/images/sarahs/sarahs_10.jpg",
-      ],
-      services: ["freight", "warehousing", "customs", "road", "security"],
-      specializations: [
-        t("terminals.turkmenabat.spec1"),
-        t("terminals.turkmenabat.spec2"),
-        t("terminals.turkmenabat.spec3"),
-      ],
-    },
-    {
-      id: "dashoguz",
-      name: t("terminals.dashoguz.name"),
-      city: t("terminals.dashoguz.city"),
-      address: t("terminals.dashoguz.address"),
-      phone: "+993 322 6-55-77",
-      email: "dashoguz@htl.tm",
-      hours: t("terminals.dashoguz.hours"),
-      capacity: t("terminals.dashoguz.capacity"),
-      coordinates: { lat: 41.8369, lng: 59.9659 },
-      images: [
-        "/images/sarahs/sarahs_1.jpg",
-        "/images/sarahs/sarahs_2.jpg",
-        "/images/sarahs/sarahs_3.jpg",
-        "/images/sarahs/sarahs_4.jpg",
-        "/images/sarahs/sarahs_5.jpg",
-        "/images/sarahs/sarahs_6.jpg",
-        "/images/sarahs/sarahs_7.jpg",
-        "/images/sarahs/sarahs_8.jpg",
-        "/images/sarahs/sarahs_9.jpg",
-        "/images/sarahs/sarahs_10.jpg",
-      ],
-      services: ["freight", "warehousing", "road", "security"],
-      specializations: [
-        t("terminals.dashoguz.spec1"),
-        t("terminals.dashoguz.spec2"),
-        t("terminals.dashoguz.spec3"),
       ],
     },
   ];
@@ -200,12 +147,20 @@ const TerminalsPage: React.FC = () => {
     security: <Shield className="w-5 h-5" />,
   };
 
+  const previewIds = useMemo(
+    () => new Set(terminals.slice(0, 2).map((terminal) => terminal.id)),
+    [terminals]
+  );
+
   const filteredTerminals = terminals.filter(
     (terminal) =>
       terminal.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       terminal.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
       terminal.address.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  const maskValue = (value: string, fallback: string = "******") =>
+    isAuthenticated ? value : fallback;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
@@ -288,122 +243,245 @@ const TerminalsPage: React.FC = () => {
       {/* Terminals Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {filteredTerminals.map((terminal) => (
-            <div
-              key={terminal.id}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-700 ease-in-out overflow-hidden border-2 border-gray-100 hover:border-[#264D88]/50"
-            >
-              {/* Terminal Header */}
-              <div className="bg-gradient-to-r from-[#264D88] to-[#1e3a8a] p-6 relative overflow-hidden">
-                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
-                <div className="relative z-10">
-                  <div className="flex items-start justify-between mb-4">
+          {filteredTerminals.map((terminal) => {
+            const isPreviewTerm = previewIds.has(terminal.id);
+            const isLockedTerm = !isAuthenticated && !isPreviewTerm;
+            const showPreviewDetails = !isAuthenticated && isPreviewTerm;
+
+            const handleRestrictedRedirect = () => {
+              window.scrollTo({ top: 0, behavior: "auto" });
+              navigate("/login", { state: { from: location } });
+            };
+
+            const handleViewDetails = (event: React.MouseEvent) => {
+              event.stopPropagation();
+              if (!isAuthenticated) {
+                handleRestrictedRedirect();
+                return;
+              }
+              setModalTerminal(terminal);
+            };
+
+            const phoneDisplay = maskValue(terminal.phone);
+            const addressDisplay = terminal.address;
+            const emailDisplay = maskValue(terminal.email ?? "");
+            const hoursDisplay = maskValue(terminal.hours ?? "");
+            const capacityDisplay = terminal.capacity;
+
+            return (
+              <div
+                key={terminal.id}
+                className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-700 ease-in-out overflow-hidden border-2 border-gray-100 hover:border-[#264D88]/50 ${
+                  isLockedTerm ? "cursor-pointer" : ""
+                }`}
+                onClick={() => {
+                  if (!isAuthenticated) {
+                    handleRestrictedRedirect();
+                    return;
+                  }
+                  if (isLockedTerm) {
+                    return;
+                  }
+                  setModalTerminal(terminal);
+                }}
+              >
+                {/* Terminal Header */}
+                <div className="bg-gradient-to-r from-[#264D88] to-[#1e3a8a] p-6 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white mb-2">
+                          {terminal.name}
+                        </h3>
+                        <div className="flex items-center space-x-2 text-blue-100">
+                          <MapPin className="w-4 h-4" />
+                          <span className="text-sm">{terminal.city}</span>
+                        </div>
+                      </div>
+                      <div className="bg-white/20 backdrop-blur-lg rounded-full p-3">
+                        <Warehouse className="w-6 h-6 text-white" />
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2 text-yellow-300 text-sm">
+                      <Package className="w-4 h-4" />
+                      <span>{capacityDisplay}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Terminal Details */}
+                <div className="p-6 relative">
+                  {isLockedTerm && (
+                    <div className="absolute inset-0 z-30 flex flex-col items-center justify-center gap-4 bg-white/80 backdrop-blur-sm text-center p-6">
+                      <p className="text-gray-800 font-semibold">
+                        {t("terminals.limitedAccess.title")}
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        {t("terminals.limitedAccess.preview")}
+                      </p>
+                      <Link
+                        to="/login"
+                        className="px-5 py-2 rounded-lg bg-[#264D88] text-white font-semibold hover:bg-[#1e3a8a] transition-colors"
+                        onClick={(event) => event.stopPropagation()}
+                      >
+                        {t("terminals.limitedAccess.button")}
+                      </Link>
+                    </div>
+                  )}
+                  <div
+                    className={
+                      isLockedTerm
+                        ? "select-none blur-md pointer-events-none"
+                        : showPreviewDetails
+                        ? "select-none blur-sm"
+                        : ""
+                    }
+                  >
+                    {/* Contact Information */}
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-start space-x-3 text-gray-700">
+                        <MapPin className="w-5 h-5 text-[#264D88] mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">{addressDisplay}</span>
+                      </div>
+                      <div className="flex items-center space-x-3 text-gray-700">
+                        <Phone className="w-5 h-5 text-[#264D88] flex-shrink-0" />
+                        {isAuthenticated ? (
+                          <a
+                            href={`tel:${terminal.phone}`}
+                            className="text-sm hover:text-[#264D88] transition-colors"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            {terminal.phone}
+                          </a>
+                        ) : (
+                          <span className="text-sm text-gray-500">
+                            {phoneDisplay}
+                          </span>
+                        )}
+                      </div>
+                      {isAuthenticated && (
+                        <>
+                          <div className="flex items-center space-x-3 text-gray-700">
+                            <Mail className="w-5 h-5 text-[#264D88] flex-shrink-0" />
+                            <a
+                              href={`mailto:${terminal.email}`}
+                              className="text-sm hover:text-[#264D88] transition-colors"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              {terminal.email}
+                            </a>
+                          </div>
+                          <div className="flex items-center space-x-3 text-gray-700">
+                            <Clock className="w-5 h-5 text-[#264D88] flex-shrink-0" />
+                            <span className="text-sm">{terminal.hours}</span>
+                          </div>
+                        </>
+                      )}
+                      {!isAuthenticated && (
+                        <>
+                          <div className="flex items-center space-x-3 text-gray-700">
+                            <Mail className="w-5 h-5 text-[#264D88] flex-shrink-0" />
+                            <span className="text-sm text-gray-500">
+                              {emailDisplay}
+                            </span>
+                          </div>
+                          <div className="flex items-center space-x-3 text-gray-700">
+                            <Clock className="w-5 h-5 text-[#264D88] flex-shrink-0" />
+                            <span className="text-sm text-gray-500">
+                              {hoursDisplay}
+                            </span>
+                          </div>
+                        </>
+                      )}
+                    </div>
+
+                    {/* Services */}
+                    <div className="mb-6">
+                      <h4 className="text-sm font-bold text-gray-900 mb-3 flex items-center">
+                        <span className="w-2 h-2 bg-[#264D88] rounded-full mr-2"></span>
+                        {t("terminals.services")}
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {(showPreviewDetails
+                          ? terminal.services.slice(0, 1)
+                          : terminal.services
+                        ).map((service) => {
+                          const label = isAuthenticated
+                            ? t(`terminals.serviceTypes.${service}`)
+                            : "******";
+                          return (
+                            <div
+                              key={service}
+                              className="flex items-center space-x-2 bg-gradient-to-r from-[#264D88]/10 to-[#1e3a8a]/10 text-[#264D88] px-3 py-2 rounded-lg text-xs font-semibold border border-[#264D88]/20"
+                            >
+                              {serviceIcons[service]}
+                              <span>{label}</span>
+                            </div>
+                          );
+                        })}
+                        {showPreviewDetails &&
+                          terminal.services.slice(1).map((service, index) => (
+                            <div
+                              key={`hidden-${service}-${index}`}
+                              className="flex items-center space-x-2 bg-gray-100 px-3 py-2 rounded-lg text-xs font-semibold text-gray-400 border border-dashed border-gray-300"
+                            >
+                              {serviceIcons[service]}
+                              <span>******</span>
+                            </div>
+                          ))}
+                      </div>
+                    </div>
+
+                    {/* Specializations */}
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-2">
-                        {terminal.name}
-                      </h3>
-                      <div className="flex items-center space-x-2 text-blue-100">
-                        <MapPin className="w-4 h-4" />
-                        <span className="text-sm">{terminal.city}</span>
-                      </div>
+                      <h4 className="text-sm font-bold text-gray-900 mb-3 flex items-center">
+                        <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                        {t("terminals.specializations")}
+                      </h4>
+                      <ul className="space-y-2">
+                        {(showPreviewDetails
+                          ? terminal.specializations.slice(0, 1)
+                          : terminal.specializations
+                        ).map((spec, index) => (
+                          <li
+                            key={index}
+                            className="flex items-start space-x-2 text-sm text-gray-600"
+                          >
+                            <ChevronRight className="w-4 h-4 text-[#264D88] mt-0.5 flex-shrink-0" />
+                            <span>{isAuthenticated ? spec : "******"}</span>
+                          </li>
+                        ))}
+                        {showPreviewDetails &&
+                          terminal.specializations.slice(1).map((_, index) => (
+                            <li
+                              key={`hidden-spec-${index}`}
+                              className="flex items-start space-x-2 text-sm text-gray-400"
+                            >
+                              <ChevronRight className="w-4 h-4 text-[#264D88] mt-0.5 flex-shrink-0" />
+                              <span>******</span>
+                            </li>
+                          ))}
+                      </ul>
                     </div>
-                    <div className="bg-white/20 backdrop-blur-lg rounded-full p-3">
-                      <Warehouse className="w-6 h-6 text-white" />
-                    </div>
+
+                    {/* Expand Button */}
                   </div>
-                  <div className="flex items-center space-x-2 text-yellow-300 text-sm">
-                    <Package className="w-4 h-4" />
-                    <span>{terminal.capacity}</span>
-                  </div>
+                  <button
+                    onClick={handleViewDetails}
+                    className="mt-6 pt-4 w-full flex items-center justify-center text-sm transition-all duration-300 cursor-pointer group/btn bg-gradient-to-r from-[#264D88] to-[#1e3a8a] hover:from-[#1e3a8a] hover:to-[#264D88] text-white py-4 rounded-b-2xl font-bold shadow-lg hover:shadow-xl"
+                  >
+                    <span>
+                      {isAuthenticated || isPreviewTerm
+                        ? t("terminals.viewDetails")
+                        : t("terminals.limitedAccess.button")}
+                    </span>
+                    <ChevronRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover/btn:translate-x-1" />
+                  </button>
                 </div>
               </div>
-
-              {/* Terminal Details */}
-              <div className="p-6">
-                {/* Contact Information */}
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-start space-x-3 text-gray-700">
-                    <MapPin className="w-5 h-5 text-[#264D88] mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">{terminal.address}</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-700">
-                    <Phone className="w-5 h-5 text-[#264D88] flex-shrink-0" />
-                    <a
-                      href={`tel:${terminal.phone}`}
-                      className="text-sm hover:text-[#264D88] transition-colors"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      {terminal.phone}
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-700">
-                    <Mail className="w-5 h-5 text-[#264D88] flex-shrink-0" />
-                    <a
-                      href={`mailto:${terminal.email}`}
-                      className="text-sm hover:text-[#264D88] transition-colors"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      {terminal.email}
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-3 text-gray-700">
-                    <Clock className="w-5 h-5 text-[#264D88] flex-shrink-0" />
-                    <span className="text-sm">{terminal.hours}</span>
-                  </div>
-                </div>
-
-                {/* Services */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-bold text-gray-900 mb-3 flex items-center">
-                    <span className="w-2 h-2 bg-[#264D88] rounded-full mr-2"></span>
-                    {t("terminals.services")}
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {terminal.services.map((service) => (
-                      <div
-                        key={service}
-                        className="flex items-center space-x-2 bg-gradient-to-r from-[#264D88]/10 to-[#1e3a8a]/10 text-[#264D88] px-3 py-2 rounded-lg text-xs font-semibold border border-[#264D88]/20"
-                      >
-                        {serviceIcons[service]}
-                        <span>{t(`terminals.serviceTypes.${service}`)}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Specializations */}
-                <div>
-                  <h4 className="text-sm font-bold text-gray-900 mb-3 flex items-center">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                    {t("terminals.specializations")}
-                  </h4>
-                  <ul className="space-y-2">
-                    {terminal.specializations.map((spec, index) => (
-                      <li
-                        key={index}
-                        className="flex items-start space-x-2 text-sm text-gray-600"
-                      >
-                        <ChevronRight className="w-4 h-4 text-[#264D88] mt-0.5 flex-shrink-0" />
-                        <span>{spec}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Expand Button */}
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setModalTerminal(terminal);
-                  }}
-                  className="mt-6 pt-4 w-full flex items-center justify-center text-sm transition-all duration-300 cursor-pointer group/btn bg-gradient-to-r from-[#264D88] to-[#1e3a8a] hover:from-[#1e3a8a] hover:to-[#264D88] text-white py-4 rounded-b-2xl font-bold shadow-lg hover:shadow-xl"
-                >
-                  <span>{t("terminals.viewDetails")}</span>
-                  <ChevronRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover/btn:translate-x-1" />
-                </button>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* No Results */}

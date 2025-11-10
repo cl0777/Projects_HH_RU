@@ -11,7 +11,7 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
-
+import logo from "../../public/logo.jpg";
 const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation();
   const { user, logout } = useAuth();
@@ -96,7 +96,23 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNavigate = (path: string) => {
+    scrollToTop();
+    navigate(path);
+    setIsMenuOpen(false);
+  };
+
+  const handleNavLinkClick = (path: string) => {
+    scrollToTop();
+    setIsMenuOpen(false);
+  };
+
   const handleLogout = () => {
+    scrollToTop();
     logout();
     navigate("/");
     setIsMenuOpen(false);
@@ -191,7 +207,11 @@ const Navbar: React.FC = () => {
                 <div className="relative">
                   {/* Main Logo Container */}
                   <div className="w-16 h-16 bg-gradient-to-br from-[#264D88] via-[#1e3a8a] to-[#264D88] rounded-2xl flex items-center justify-center transform group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-2xl">
-                    <Truck className="w-8 h-8 text-white group-hover:animate-bounce" />
+                    <img
+                      src={logo}
+                      alt="logo"
+                      className="w-10 h-10 object-contain"
+                    />
                   </div>
 
                   {/* Rotating Ring */}
@@ -452,8 +472,12 @@ const Navbar: React.FC = () => {
                   <Link
                     key={item.key}
                     to={item.path}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      handleNavLinkClick(item.path);
+                      navigate(item.path);
+                    }}
                     className="flex items-center space-x-4 text-gray-700 hover:text-[#264D88] hover:bg-gradient-to-r hover:from-[#264D88]/10 hover:to-[#1e3a8a]/10 px-5 py-4 rounded-2xl text-base font-semibold transition-all duration-500 group border border-transparent hover:border-[#264D88]/20 shadow-lg hover:shadow-xl"
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     <div className="relative">
                       <div className="w-3 h-3 bg-gradient-to-r from-[#264D88] to-[#1e3a8a] rounded-full group-hover:scale-150 transition-transform duration-300"></div>
@@ -542,7 +566,11 @@ const Navbar: React.FC = () => {
                       <Link
                         to="/login"
                         className="flex items-center justify-center text-gray-700 hover:text-[#264D88] px-5 py-4 rounded-2xl text-base font-semibold transition-all duration-500 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 border border-transparent hover:border-gray-200 shadow-lg hover:shadow-xl group"
-                        onClick={() => setIsMenuOpen(false)}
+                        onClick={(event) => {
+                          event.preventDefault();
+                          handleNavLinkClick("/login");
+                          navigate("/login");
+                        }}
                       >
                         <span className="group-hover:translate-x-1 transition-transform duration-300">
                           {t("nav.login")}
@@ -551,7 +579,11 @@ const Navbar: React.FC = () => {
                       <Link
                         to="/quote"
                         className="flex items-center justify-center space-x-3 bg-gradient-to-r from-[#264D88] via-[#1e3a8a] to-[#264D88] text-white px-5 py-4 rounded-2xl text-base font-bold transition-all duration-500 hover:shadow-2xl group border border-[#264D88]/20"
-                        onClick={() => setIsMenuOpen(false)}
+                        onClick={(event) => {
+                          event.preventDefault();
+                          handleNavLinkClick("/quote");
+                          navigate("/quote");
+                        }}
                       >
                         <span className="group-hover:translate-x-1 transition-transform duration-300">
                           {t("nav.getQuote")}

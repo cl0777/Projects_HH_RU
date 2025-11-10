@@ -181,6 +181,7 @@ const LoginPage: React.FC = () => {
                 <Link
                   to="/register"
                   className="font-medium text-[#264D88] hover:text-[#1e3a8a]"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 >
                   {t("auth.signUp")}
                 </Link>

@@ -46,18 +46,18 @@ const ContactPage: React.FC = () => {
       icon: <Phone className="w-6 h-6 text-[#264D88]" />,
       title: t("contact.phone"),
       details: [
-        t("contact.phoneMain1", "+1 (555) 123-4567"),
-        t("contact.phoneMain2", "+1 (555) 987-6543"),
-        t("contact.phoneEmergency", "Emergency: +1 (555) 911-0000"),
+        t("contact.phoneMain1", "+99364108586"),
+        t("contact.phoneMain2", "+99371713777"),
+        t("contact.phoneEmergency", "Emergency: +99364949363"),
       ],
     },
     {
       icon: <Mail className="w-6 h-6 text-[#264D88]" />,
       title: t("contact.email"),
       details: [
-        t("contact.emailInfo", "info@htl.com"),
-        t("contact.emailSupport", "support@htl.com"),
-        t("contact.emailSales", "sales@htl.com"),
+        t("contact.emailInfo", "info@htl-tm.com"),
+        t("contact.emailSupport", "md@htl-tm.com"),
+        t("contact.emailSales", "sales@htl-tm.com"),
       ],
     },
     {
@@ -304,7 +304,7 @@ const ContactPage: React.FC = () => {
                   <div className="flex items-center space-x-3">
                     <Mail className="w-4 h-4 text-[#264D88]" />
                     <span className="text-gray-600">
-                      {t("contact.emailInfo", "info@htl.com")}
+                      {t("contact.emailInfo", "info@htl-tm.com")}
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">

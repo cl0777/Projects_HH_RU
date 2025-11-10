@@ -100,6 +100,8 @@ const ServicesPage: React.FC = () => {
     t("industries.automotive"),
     t("industries.technology"),
     t("industries.foodBeverage"),
+    t("industries.retail"),
+    t("industries.textiles"),
   ];
 
   return (
@@ -221,23 +223,23 @@ const ServicesPage: React.FC = () => {
             {[
               {
                 step: "01",
-                title: t("services.howWeWork.steps.step1"),
-                desc: t("services.howWeWork.steps.step1Description"),
+                title: t("services.howWeWorkSteps.step1.title"),
+                desc: t("services.howWeWorkSteps.step1.description"),
               },
               {
                 step: "02",
-                title: t("services.howWeWork.steps.step2"),
-                desc: t("services.howWeWork.steps.step2Description"),
+                title: t("services.howWeWorkSteps.step2.title"),
+                desc: t("services.howWeWorkSteps.step2.description"),
               },
               {
                 step: "03",
-                title: t("services.howWeWork.steps.step3"),
-                desc: t("services.howWeWork.steps.step3Description"),
+                title: t("services.howWeWorkSteps.step3.title"),
+                desc: t("services.howWeWorkSteps.step3.description"),
               },
               {
                 step: "04",
-                title: t("services.howWeWork.steps.step4"),
-                desc: t("services.howWeWork.steps.step4Description"),
+                title: t("services.howWeWorkSteps.step4.title"),
+                desc: t("services.howWeWorkSteps.step4.description"),
               },
             ].map((process, index) => (
               <div key={index} className="text-center">
