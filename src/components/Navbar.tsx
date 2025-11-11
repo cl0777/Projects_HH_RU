@@ -11,7 +11,7 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
-import logo from "../../public/logo.jpg";
+import logo from "../../public/logo.png";
 const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation();
   const { user, logout } = useAuth();
