@@ -298,7 +298,7 @@ const ContactPage: React.FC = () => {
                   <div className="flex items-center space-x-3">
                     <Phone className="w-4 h-4 text-[#264D88]" />
                     <span className="text-gray-600">
-                      {t("contact.phoneMain1", "+1 (555) 123-4567")}
+                      {t("contact.phoneMain2", "+1 (555) 123-4567")}
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">

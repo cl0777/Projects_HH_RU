@@ -2,15 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "../contexts/AuthContext";
-import {
-  Globe,
-  User,
-  LogOut,
-  Truck,
-  ArrowRight,
-  Phone,
-  Mail,
-} from "lucide-react";
+import { Globe, User, LogOut, ArrowRight, Phone, Mail } from "lucide-react";
 import logo from "../../public/logo.png";
 const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -27,7 +19,6 @@ const Navbar: React.FC = () => {
     { code: "en", name: "English", flag: "🇺🇸" },
     { code: "ru", name: "Русский", flag: "🇷🇺" },
     { code: "tm", name: "Türkmen", flag: "🇹🇲" },
-    { code: "tr", name: "Türkçe", flag: "🇹🇷" },
   ];
 
   const currentLanguage =
@@ -100,13 +91,7 @@ const Navbar: React.FC = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleNavigate = (path: string) => {
-    scrollToTop();
-    navigate(path);
-    setIsMenuOpen(false);
-  };
-
-  const handleNavLinkClick = (path: string) => {
+  const handleNavLinkClick = () => {
     scrollToTop();
     setIsMenuOpen(false);
   };
@@ -207,11 +192,7 @@ const Navbar: React.FC = () => {
                 <div className="relative">
                   {/* Main Logo Container */}
                   <div className="w-16 h-16 bg-gradient-to-br from-[#264D88] via-[#1e3a8a] to-[#264D88] rounded-2xl flex items-center justify-center transform group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-2xl">
-                    <img
-                      src={logo}
-                      alt="logo"
-                      className="w-10 h-10 object-contain"
-                    />
+                    <img src={logo} alt="logo" className="" />
                   </div>
 
                   {/* Rotating Ring */}
@@ -220,23 +201,6 @@ const Navbar: React.FC = () => {
                   {/* Corner Accents */}
                   <div className="absolute -top-1 -left-1 w-3 h-3 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-pink-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-
-                <div className="relative">
-                  <span
-                    className={`text-3xl font-black transition-colors duration-500 ${"text-[#264D88] group-hover:text-gray-200"}`}
-                  >
-                    {t("footer.company")}
-                  </span>
-
-                  {/* Underline Animation */}
-                  <div
-                    className={`absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-500 ${
-                      isScrolled
-                        ? "bg-gradient-to-r from-white to-gray-200"
-                        : "bg-gradient-to-r from-[#264D88] to-[#1e3a8a]"
-                    }`}
-                  ></div>
                 </div>
               </Link>
             </div>
@@ -474,7 +438,7 @@ const Navbar: React.FC = () => {
                     to={item.path}
                     onClick={(event) => {
                       event.preventDefault();
-                      handleNavLinkClick(item.path);
+                      handleNavLinkClick();
                       navigate(item.path);
                     }}
                     className="flex items-center space-x-4 text-gray-700 hover:text-[#264D88] hover:bg-gradient-to-r hover:from-[#264D88]/10 hover:to-[#1e3a8a]/10 px-5 py-4 rounded-2xl text-base font-semibold transition-all duration-500 group border border-transparent hover:border-[#264D88]/20 shadow-lg hover:shadow-xl"
@@ -568,7 +532,7 @@ const Navbar: React.FC = () => {
                         className="flex items-center justify-center text-gray-700 hover:text-[#264D88] px-5 py-4 rounded-2xl text-base font-semibold transition-all duration-500 hover:bg-gradient-to-r hover:from-gray-50 hover:to-blue-50 border border-transparent hover:border-gray-200 shadow-lg hover:shadow-xl group"
                         onClick={(event) => {
                           event.preventDefault();
-                          handleNavLinkClick("/login");
+                          handleNavLinkClick();
                           navigate("/login");
                         }}
                       >
@@ -581,7 +545,7 @@ const Navbar: React.FC = () => {
                         className="flex items-center justify-center space-x-3 bg-gradient-to-r from-[#264D88] via-[#1e3a8a] to-[#264D88] text-white px-5 py-4 rounded-2xl text-base font-bold transition-all duration-500 hover:shadow-2xl group border border-[#264D88]/20"
                         onClick={(event) => {
                           event.preventDefault();
-                          handleNavLinkClick("/quote");
+                          handleNavLinkClick();
                           navigate("/quote");
                         }}
                       >

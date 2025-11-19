@@ -2,14 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useAuth } from "../contexts/AuthContext";
 import { useTranslation } from "react-i18next";
-import {
-  Truck,
-  Package,
-  MapPin,
-  Calculator,
-  CheckCircle,
-  ArrowRight,
-} from "lucide-react";
+import { Calculator, CheckCircle, ArrowRight } from "lucide-react";
 import { getApiUrl } from "../config/api";
 
 const QuotePage: React.FC = () => {
@@ -17,7 +10,7 @@ const QuotePage: React.FC = () => {
   const { token } = useAuth();
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
-    // Shipment Details mapped to backend schema
+    // Step 1 fields
     originCity: "",
     originCountry: "",
     destinationCity: "",
@@ -29,11 +22,22 @@ const QuotePage: React.FC = () => {
     shipmentType: "",
     declaredValueUsd: "",
     description: "",
-    totalAmount: 0,
     timeline: "",
+    // Step 2 fields
+    origin: "",
+    destination: "",
+    weight: "",
+    value: "",
+    dimensions: {
+      length: "",
+      width: "",
+      height: "",
+    },
+    services: [] as string[],
+    specialRequirements: "",
+    totalAmount: 0,
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [error, setError] = useState("");
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -41,6 +45,19 @@ const QuotePage: React.FC = () => {
     >
   ) => {
     const { name, value } = e.target;
+
+    if (name.startsWith("dimensions.")) {
+      const [, key] = name.split(".");
+      setFormData((prev) => ({
+        ...prev,
+        dimensions: {
+          ...prev.dimensions,
+          [key as "length" | "width" | "height"]: value,
+        },
+      }));
+      return;
+    }
+
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -70,7 +87,6 @@ const QuotePage: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError("");
     try {
       const payload = {
         originCity: formData.originCity,
@@ -86,6 +102,19 @@ const QuotePage: React.FC = () => {
         description: formData.description,
         totalAmount: 0,
         timeline: formData.timeline,
+        additionalDetails: {
+          origin: formData.origin,
+          destination: formData.destination,
+          weight: formData.weight,
+          dimensions: {
+            length: formData.dimensions.length,
+            width: formData.dimensions.width,
+            height: formData.dimensions.height,
+          },
+          declaredValue: formData.value,
+          services: formData.services,
+          specialRequirements: formData.specialRequirements,
+        },
       };
 
       await axios.post(getApiUrl("orders"), payload, {
@@ -94,9 +123,7 @@ const QuotePage: React.FC = () => {
       });
       setIsSubmitted(true);
     } catch (err: any) {
-      setError(
-        err?.response?.data?.message || err?.message || "Failed to submit quote"
-      );
+      console.error("Failed to submit quote", err);
     }
   };
 

@@ -3,15 +3,15 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import {
   Truck,
-  Globe,
   Package,
   Warehouse,
-  Clock,
   Shield,
+  Globe,
+  Clock,
   ArrowRight,
-  MapPin,
   Phone,
-  Mail,
+  TrainTrack,
+  User,
 } from "lucide-react";
 
 const ServicesPage: React.FC = () => {
@@ -31,6 +31,18 @@ const ServicesPage: React.FC = () => {
       imagePath: "/images/shipping.jpg",
     },
     {
+      icon: <TrainTrack className="w-12 h-12 text-[#264D88]" />,
+      title: t("services.railwayTransport.title"),
+      description: t("services.railwayTransport.description"),
+      features: [
+        t("services.railwayTransport.features.realTimeTracking"),
+        t("services.railwayTransport.features.deliveryGuarantees"),
+        t("services.railwayTransport.features.flexibleSchedules"),
+        t("services.railwayTransport.features.fastDelivery"),
+      ],
+      imagePath: "/images/railway_freight.jpg",
+    },
+    {
       icon: <Warehouse className="w-12 h-12 text-[#264D88]" />,
       title: t("services.warehousing.title"),
       description: t("services.warehousing.description"),
@@ -40,7 +52,7 @@ const ServicesPage: React.FC = () => {
         t("services.warehousing.features.pickPack"),
         t("services.warehousing.features.crossDocking"),
       ],
-      imagePath: "/images/warehouse.svg",
+      imagePath: "/images/warehouse.jpeg",
     },
     {
       icon: <Package className="w-12 h-12 text-[#264D88]" />,
@@ -52,7 +64,7 @@ const ServicesPage: React.FC = () => {
         t("services.packageTracking.features.onlinePortal"),
         t("services.packageTracking.features.mobileApp"),
       ],
-      imagePath: "/images/tracking.svg",
+      imagePath: "/images/package_tracking.jpeg",
     },
     {
       icon: <Shield className="w-12 h-12 text-[#264D88]" />,
@@ -64,7 +76,7 @@ const ServicesPage: React.FC = () => {
         t("services.secureTransport.features.chainOfCustody"),
         t("services.secureTransport.features.riskAssessment"),
       ],
-      imagePath: "/images/security.svg",
+      imagePath: "/images/secure_transport.jpeg",
     },
     {
       icon: <Globe className="w-12 h-12 text-[#264D88]" />,
@@ -77,7 +89,19 @@ const ServicesPage: React.FC = () => {
         t("services.internationalLogistics.features.dutyManagement"),
       ],
 
-      imagePath: "/images/international.svg",
+      imagePath: "/images/international_logistics.jpeg",
+    },
+    {
+      icon: <User className="w-12 h-12 text-[#264D88]" />,
+      title: t("services.customsBrokerage.title"),
+      description: t("services.customsBrokerage.description"),
+      features: [
+        t("services.customsBrokerage.features.customsClearance"),
+        t("services.customsBrokerage.features.documentation"),
+        t("services.customsBrokerage.features.compliance"),
+        t("services.customsBrokerage.features.dutyManagement"),
+      ],
+      imagePath: "/images/customers_brokerage.jpg",
     },
     {
       icon: <Clock className="w-12 h-12 text-[#264D88]" />,
@@ -89,7 +113,7 @@ const ServicesPage: React.FC = () => {
         t("services.support24.features.emergencySupport"),
         t("services.support24.features.dedicatedManager"),
       ],
-      imagePath: "/images/support.svg",
+      imagePath: "/images/support.jpeg",
     },
   ];
 

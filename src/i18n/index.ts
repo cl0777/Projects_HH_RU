@@ -17,6 +17,9 @@ const resources = {
   tm: {
     translation: tm,
   },
+  tk: {
+    translation: tm,
+  },
   tr: {
     translation: tr,
   },

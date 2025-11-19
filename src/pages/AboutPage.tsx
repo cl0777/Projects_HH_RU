@@ -65,13 +65,13 @@ const AboutPage: React.FC = () => {
   }, []);
 
   const stats = [
-    { value: 10000, suffix: "+", label: t("about.stats.happyCustomers") },
-    { value: 150, suffix: "+", label: t("about.stats.countriesServed") },
+    { value: 5000, suffix: "+", label: t("about.stats.happyCustomers") },
+    { value: 15, suffix: "+", label: t("about.stats.countriesServed") },
     {
-      value: 99.8,
-      suffix: "%",
+      value: 93,
+      suffix: ".7%",
       label: t("about.stats.onTimeDelivery"),
-      decimals: 1,
+      decimals: 0,
     },
     { value: 24, suffix: "/7", label: t("about.stats.customerSupport") },
   ];
@@ -184,12 +184,12 @@ const AboutPage: React.FC = () => {
                 {t("about.story.content3")}
               </p>
             </div>
-            <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+            <div className="bg-gray-200 rounded-3xl h-96 flex items-center justify-center">
               <div className="text-center text-gray-500 w-full h-full">
                 <img
-                  src="/images/about-story.svg"
+                  src="/about.jpg"
                   alt={t("about.story.imageAlt")}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-3xl"
                 />
               </div>
             </div>
@@ -224,7 +224,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Leadership Team Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -235,7 +235,7 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Mission Statement */}
       <section className="py-20 bg-[#264D88] text-white">

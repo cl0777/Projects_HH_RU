@@ -12,21 +12,33 @@
     "getQuote": "Get Quote",
     "support": "info@htl-tm.com",
     "email": "info@htl-tm.com",
-    "phone": "+99364108586"
+    "phone": "+993 71 713777"
   },
   "hero": {
-    "title": "Halkara Turkmen Logistics Logistics Art",
-    "subtitle": "",
-    "subtitleMobile": "Global logistics solutions trusted by 10,000+ companies worldwide.",
+    "title": "Halkara Turkmen Logistik ",
+    "subtitle": "Art of Logistics",
+    "subtitleMobile": "Art of Logistics",
     "cta": "Get Free Quote",
     "learnMore": "Our Services"
   },
   "features": {
     "title": "Why Choose us?",
     "subtitle": "We provide comprehensive logistics solutions to streamline your supply chain and accelerate your business growth",
+    "railwayTransport": {
+      "title": "Railway Transport",
+      "description": "Seamless cross-border rail solutions with end-to-end monitoring, flexible schedules, and fast delivery for every shipment."
+    },
+    "multiModalTransport": {
+      "title": "Multimodal Transportation",
+      "description": "Seamlessly connect transport modes for faster, safer, and more efficient global shipments."
+    },
+    "transshipment": {
+      "title": "Cargo Yards",
+      "description": "Effective transshipment solutions with real-time tracking and delivery guarantees"
+    },
     "globalShipping": {
       "title": "Global Shipping",
-      "description": "Worldwide logistics solutions with real-time tracking and delivery guarantees"
+      "description": "Ship anywhere with our end-to-end global freight solutions and advanced delivery tracking."
     },
     "secureTransport": {
       "title": "Secure Transport",
@@ -94,8 +106,8 @@
       "yearsExperience": "Years Experience"
     },
     "why": {
-      "title": "Why Businesses Trust Halkara Turkmen Logistics",
-      "subtitle": "We combine cutting-edge technology with personalized service to deliver logistics solutions that drive your business forward.",
+      "title": "Why Businesses Trust Halkara Turkmen Logistik",
+      "subtitle": "Trust is built through performance, reliability, and commitment. Businesses across the region and beyond choose us because we deliver logistics solutions that combine efficiency, transparency, and deep industry expertise. ",
       "bullets": {
         "tracking": "Real-time tracking for all shipments",
         "pricing": "Competitive pricing with no hidden fees",
@@ -129,11 +141,11 @@
     }
   },
   "about": {
-    "title": "About Halkara Turkmen Logistics",
+    "title": "About Halkara Turkmen Logistik",
     "subtitle": "Your Trusted Partner in Global Logistics",
     "mission": {
       "title": "Our Mission",
-      "content1": "At Halkara Turkmen Logistics, our mission is to revolutionize the logistics industry by providing seamless, efficient, and reliable supply chain solutions worldwide. We are committed to leveraging cutting-edge technology and a dedicated team to ensure your cargo reaches its destination safely and on time, every time.",
+      "content1": "At Halkara Turkmen Logistik, our mission is to revolutionize the logistics industry by providing seamless, efficient, and reliable supply chain solutions worldwide. We are committed to leveraging cutting-edge technology and a dedicated team to ensure your cargo reaches its destination safely and on time, every time.",
       "content2": "We believe in building strong, lasting partnerships with our clients, understanding their unique needs, and delivering tailored services that exceed expectations."
     },
     "whyChoose": {
@@ -177,8 +189,8 @@
     },
     "story": {
       "title": "Our Story",
-      "content1": "Founded with a vision to transform global logistics, Halkara Turkmen Logistics has grown from a local shipping company into a trusted international logistics partner. Our journey began with a simple belief: that logistics should be seamless, transparent, and reliable.",
-      "content2": "Over the years, we've expanded our network across continents, invested in cutting-edge technology, and built a team of dedicated professionals who share our commitment to excellence. Today, we serve thousands of businesses worldwide, helping them navigate the complexities of global trade.",
+      "content1": "Established in 2020 with a vision to transform global logistics, Halkara Turkmen Logistik has grown from a local railway logistics company into a trusted international logistics partner. Our journey began with a simple belief: that logistics should be seamless, transparent, and reliable.",
+      "content2": "Over the years, we've expanded our network from Middle East to CIS countries, invested in cutting-edge technology, and built a team of dedicated professionals who share our commitment to excellence. Today, we serve thousands of businesses worldwide, helping them navigate the complexities of global trade.",
       "content3": "Our success is built on the trust of our clients and the dedication of our team. We continue to innovate and adapt, ensuring that we remain at the forefront of the logistics industry while maintaining the personal touch that sets us apart.",
       "imageAlt": "About Our Story"
     },
@@ -209,27 +221,56 @@
         "airFreight": "Air freight options",
         "seaFreight": "Sea freight (FCL/LCL)",
         "roadTransport": "Road transport integration",
-        "expressDelivery": "Express delivery"
+        "expressDelivery": "Railway delivery"
       }
+    },
+
+    "railwayTransport": {
+      "title": "Railway Freight",
+      "description": "Railway transport solutions with real-time tracking and delivery guarantees. We offer flexible schedules and fast delivery for every shipment.",
+      "features": {
+        "realTimeTracking": "Real-time tracking",
+        "deliveryGuarantees": "Delivery guarantees",
+        "flexibleSchedules": "Flexible schedules",
+        "fastDelivery": "Global delivery"
+      }
+    },
+    "multiModalTransport": {
+      "title": "Multimodal Transportation",
+      "description": "Multimodal transport solutions with real-time tracking and delivery guarantees"
+    },
+    "transshipment": {
+      "title": "Transshipment",
+      "description": "Transshipment solutions with real-time tracking and delivery guarantees"
     },
     "warehousing": {
       "title": "Warehousing & Distribution",
       "description": "State-of-the-art warehousing facilities for secure storage, inventory management, and efficient distribution to your customers.",
       "features": {
-        "climateControl": "Climate-controlled storage",
-        "inventoryManagement": "Inventory management",
-        "pickPack": "Pick & pack operations",
-        "crossDocking": "Cross-docking"
+        "climateControl": "Warehousing & Open Yard",
+        "inventoryManagement": "Inventory Management",
+        "pickPack": "Pick & Pack Operations",
+        "crossDocking": "Cross-Docking"
+      }
+    },
+    "customsBrokerage": {
+      "title": "Customs Brokerage",
+      "description": "Expert handling of all customs procedures, ensuring compliance and smooth clearance for your transit and  imports/exports.",
+      "features": {
+        "customsClearance": "Customs Clearance",
+        "documentation": "Documentation",
+        "compliance": "Regulatory Compliance",
+        "dutyManagement": "Duty and Tax Management"
       }
     },
     "packageTracking": {
       "title": "Package Tracking",
-      "description": "Track your shipments in real-time across the globe.",
+      "description": "Track your shipments in real-time across the globe. We offer real-time updates and SMS/email alerts for every shipment. We also offer a mobile app for tracking your shipments on the go.",
       "features": {
-        "realTimeUpdates": "Real-time updates",
-        "smsAlerts": "SMS/email alerts",
-        "onlinePortal": "Online tracking portal",
-        "mobileApp": "Mobile app support"
+        "realTimeUpdates": "Real-Time Updates",
+        "smsAlerts": "SMS/Email Alerts",
+        "onlinePortal": "Online Tracking Portal",
+        "mobileApp": "Mobile App Support"
       }
     },
     "customs": {
@@ -266,7 +307,7 @@
     },
     "support24": {
       "title": "24/7 Support",
-      "description": "Always-on support for your logistics operations.",
+      "description": "24/7 customer support to keep your logistics running smoothly. We offer a dedicated account manager for your needs.",
       "features": {
         "hotline": "Dedicated hotline",
         "onlineChat": "Online chat",
@@ -274,6 +315,7 @@
         "dedicatedManager": "Dedicated account manager"
       }
     },
+
     "industriesWeServe": "Industries We Serve",
     "industriesWeServeSubtitle": "Tailored logistics expertise for companies across manufacturing, retail, technology, and beyond.",
     "howWeWork": "How We Work",
@@ -304,7 +346,7 @@
     }
   },
   "industries": {
-    "ecommerceRetail": "E-Commerce & Retail",
+    "ecommerceRetail": "Oil & Gas",
     "manufacturing": "Manufacturing",
     "healthcarePharmaceuticals": "Healthcare & Pharmaceuticals",
     "automotive": "Automotive",
@@ -323,15 +365,15 @@
     "phone": "Phone",
     "email": "Email",
     "address": "Address",
-    "addressLine1": "Begler,744400",
+    "addressLine1": "\"Begler Yoly\" Building, 3rd floor",
     "addressLine2": "G.Kulyýew, Aşgabat",
     "addressCountry": "Turkmenistan",
     "emailInfo": "info@htl-tm.com",
     "emailSupport": "md@htl-tm.com",
     "emailSales": "sales@htl-tm.com",
-    "phoneMain1": "+99364108586",
-    "phoneMain2": "+99371713777",
-    "phoneEmergency": "Emergency: +99364949363",
+    "phoneMain1": "+993 64108586",
+    "phoneMain2": "+993 71713777",
+    "phoneEmergency": "+993 64949363",
     "businessHours": "Business Hours",
     "hoursWeekdays": "Monday - Friday: 8:00 AM - 6:00 PM",
     "hoursSaturday": "Saturday: 9:00 AM - 4:00 PM",
@@ -447,7 +489,8 @@
     "steps": {
       "step1": "Account Information",
       "step2": "Company Information",
-      "step3": "Address & Contact"
+      "step3": "Address & Contact",
+      "step4": "Email Verification"
     },
     "fields": {
       "name": "Full Name",
@@ -485,6 +528,29 @@
     "errors": {
       "registrationFailed": "Registration failed. Please try again.",
       "genericError": "An error occurred. Please try again."
+    }
+  },
+  "otp": {
+    "title": "Verify Your Email",
+    "description": "We've sent a verification code to {{email}}. Please enter the 6-digit code below.",
+    "emailSent": "Verification code sent",
+    "enterCode": "Enter Verification Code",
+    "verify": "Verify",
+    "verifying": "Verifying...",
+    "resend": "Resend Code",
+    "sending": "Sending...",
+    "sentSuccess": "Verification code sent successfully!",
+    "timeRemaining": "Time remaining",
+    "expired": "The verification code has expired. Please request a new one.",
+    "changeEmail": "Change Email Address",
+    "attemptsRemaining": "{{count}} attempts remaining",
+    "validation": {
+      "incomplete": "Please enter the complete 6-digit code"
+    },
+    "errors": {
+      "sendFailed": "Failed to send verification code. Please try again.",
+      "verificationFailed": "Verification failed. Please check your code and try again.",
+      "notVerified": "Please verify your email before completing registration."
     }
   },
   "dashboard": {
@@ -546,7 +612,7 @@
     "hero": {
       "title": "Our Terminals Network",
       "subtitle": "Strategic locations across Turkmenistan for seamless logistics operations",
-      "stat1": "5 Active Terminals",
+      "stat1": "4 Active Terminals",
       "stat2": "24/7 Operations",
       "stat3": "50,000+ sqm Capacity"
     },
@@ -569,8 +635,9 @@
       "freight": "Freight Forwarding",
       "warehousing": "Warehousing",
       "customs": "Customs Clearance",
-      "ocean": "Ocean Freight",
+      "ocean": "Sea Freight",
       "road": "Road Transport",
+      "railway": "Railway Freight",
       "security": "Security Services"
     },
     "noResults": {
@@ -599,18 +666,18 @@
       "city": "Ahal",
       "address": "Artyk Terminal,Ahal region, Turkmenistan",
       "hours": "24/7 Operations",
-      "capacity": "20,000 sqm facility",
+      "capacity": "7,500 sqm facility",
       "spec1": "International cargo hub",
-      "spec2": "Temperature-controlled storage",
+      "spec2": "Warehousing and storage",
       "spec3": "Advanced security systems"
     },
-    "turkmenbashi": {
+    "sarahs": {
       "name": "Sarahs Terminal",
-      "city": "Mary",
-      "address": "Sarahs Terminal,Mary region, Turkmenistan",
+      "city": "Ahal",
+      "address": "Sarahs Terminal,Ahal region, Turkmenistan",
       "hours": "24/7 Operations",
-      "capacity": "15,000 sqm facility",
-      "spec1": "Agricultural products specialist",
+      "capacity": "25,000 sqm facility",
+      "spec1": "Gas and oil products specialist",
       "spec2": "Cross-border trucking",
       "spec3": "Regional distribution center"
     },
@@ -622,6 +689,16 @@
       "capacity": "8,000 sqm facility",
       "spec1": "Border crossing facilitation",
       "spec2": "Transit cargo handling",
+      "spec3": "Multi-modal transport services"
+    },
+    "turkmenbashi": {
+      "name": "Turkmenbashi Terminal",
+      "city": "Balkan",
+      "address": "Turkmenbashi Terminal,Balka region, Turkmenistan",
+      "hours": "24/7 Operations",
+      "capacity": "8,000 sqm facility",
+      "spec1": "Port terminal",
+      "spec2": "Container handling",
       "spec3": "Multi-modal transport services"
     }
   }

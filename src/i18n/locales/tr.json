@@ -452,7 +452,8 @@
     "steps": {
       "step1": "Hesap Bilgileri",
       "step2": "Şirket Bilgileri",
-      "step3": "Adres ve İletişim"
+      "step3": "Adres ve İletişim",
+      "step4": "E-posta Doğrulama"
     },
     "fields": {
       "name": "Tam Ad",
@@ -490,6 +491,29 @@
     "errors": {
       "registrationFailed": "Kayıt başarısız oldu. Lütfen tekrar deneyin.",
       "genericError": "Bir hata oluştu. Lütfen tekrar deneyin."
+    }
+  },
+  "otp": {
+    "title": "E-postanızı Doğrulayın",
+    "description": "{{email}} adresine bir doğrulama kodu gönderdik. Lütfen aşağıya 6 haneli kodu girin.",
+    "emailSent": "Doğrulama kodu gönderildi",
+    "enterCode": "Doğrulama Kodunu Girin",
+    "verify": "Doğrula",
+    "verifying": "Doğrulanıyor...",
+    "resend": "Kodu Yeniden Gönder",
+    "sending": "Gönderiliyor...",
+    "sentSuccess": "Doğrulama kodu başarıyla gönderildi!",
+    "timeRemaining": "Kalan süre",
+    "expired": "Doğrulama kodunun süresi doldu. Lütfen yeni bir kod isteyin.",
+    "changeEmail": "E-posta Adresini Değiştir",
+    "attemptsRemaining": "{{count}} deneme hakkı kaldı",
+    "validation": {
+      "incomplete": "Lütfen tam 6 haneli kodu girin"
+    },
+    "errors": {
+      "sendFailed": "Doğrulama kodu gönderilemedi. Lütfen tekrar deneyin.",
+      "verificationFailed": "Doğrulama başarısız oldu. Lütfen kodunuzu kontrol edin ve tekrar deneyin.",
+      "notVerified": "Kaydı tamamlamadan önce lütfen e-postanızı doğrulayın."
     }
   },
   "dashboard": {

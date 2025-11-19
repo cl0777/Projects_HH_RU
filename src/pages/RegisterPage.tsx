@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "../contexts/AuthContext";
+import OTPVerification from "../components/OTPVerification";
 import {
   Eye,
   EyeOff,
@@ -41,7 +42,8 @@ const RegisterPage: React.FC = () => {
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
-  const totalSteps = 3;
+  const [otpVerified, setOtpVerified] = useState(false);
+  const totalSteps = 4;
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -114,7 +116,13 @@ const RegisterPage: React.FC = () => {
 
   const handleNext = () => {
     if (validateStep(currentStep)) {
-      setCurrentStep((prev) => Math.min(prev + 1, totalSteps));
+      // If moving from step 3 to step 4, don't increment yet - OTP will handle it
+      if (currentStep === 3) {
+        // Step 4 is OTP verification, which will be shown automatically
+        setCurrentStep(4);
+      } else {
+        setCurrentStep((prev) => Math.min(prev + 1, totalSteps));
+      }
       setError("");
     }
   };
@@ -129,6 +137,54 @@ const RegisterPage: React.FC = () => {
 
     if (!validateStep(currentStep)) return;
 
+    // If on step 3, move to OTP verification instead of submitting
+    if (currentStep === 3) {
+      handleNext();
+      return;
+    }
+
+    // Only submit if OTP is verified
+    if (!otpVerified) {
+      setError(t("otp.errors.notVerified"));
+      return;
+    }
+
+    setIsSubmitting(true);
+    setError("");
+
+    try {
+      const registerData = {
+        name: formData.name,
+        email: formData.email,
+        password: formData.password,
+        customerId: 0,
+        partyName: formData.partyName,
+        shortname: formData.shortname,
+        address1: formData.address1,
+        address2: formData.address2 || "",
+        address3: formData.address3 || "",
+        city: formData.city,
+        country: formData.country,
+        phone1: formData.phone1,
+        phone2: formData.phone2 || "",
+      };
+
+      const success = await register(registerData);
+      if (success) {
+        navigate("/dashboard");
+      } else {
+        setError(t("register.errors.registrationFailed"));
+      }
+    } catch (err: any) {
+      setError(err.message || t("register.errors.genericError"));
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleOTPVerified = async () => {
+    setOtpVerified(true);
+    // Automatically submit registration after OTP verification
     setIsSubmitting(true);
     setError("");
 
@@ -187,12 +243,12 @@ const RegisterPage: React.FC = () => {
             </p>
 
             {/* Progress Steps */}
-            <div className="mt-6 flex items-center justify-center space-x-4">
-              {[1, 2, 3].map((step) => (
+            <div className="mt-6 flex items-center justify-center space-x-2 sm:space-x-4">
+              {[1, 2, 3, 4].map((step) => (
                 <React.Fragment key={step}>
                   <div className="flex items-center">
                     <div
-                      className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold transition-all ${
+                      className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-semibold transition-all text-xs sm:text-base ${
                         currentStep >= step
                           ? "bg-white text-[#264D88]"
                           : "bg-white/20 text-white"
@@ -200,13 +256,13 @@ const RegisterPage: React.FC = () => {
                     >
                       {currentStep > step ? "✓" : step}
                     </div>
-                    <span className="ml-2 text-sm hidden sm:inline">
+                    <span className="ml-1 sm:ml-2 text-xs sm:text-sm hidden sm:inline">
                       {t(`register.steps.step${step}`)}
                     </span>
                   </div>
-                  {step < 3 && (
+                  {step < 4 && (
                     <div
-                      className={`h-1 w-16 transition-all ${
+                      className={`h-1 w-8 sm:w-16 transition-all ${
                         currentStep > step ? "bg-white" : "bg-white/20"
                       }`}
                     />
@@ -414,6 +470,18 @@ const RegisterPage: React.FC = () => {
               </div>
             )}
 
+            {/* Step 4: OTP Verification */}
+            {currentStep === 4 && (
+              <div className="space-y-6 animate-fadeIn">
+                <OTPVerification
+                  email={formData.email}
+                  onVerified={handleOTPVerified}
+                  onError={(errorMessage) => setError(errorMessage)}
+                  onBack={() => setCurrentStep(3)}
+                />
+              </div>
+            )}
+
             {/* Step 3: Address & Contact */}
             {currentStep === 3 && (
               <div className="space-y-6 animate-fadeIn">
@@ -600,7 +668,7 @@ const RegisterPage: React.FC = () => {
                 )}
               </div>
               <div className="flex space-x-4">
-                {currentStep < totalSteps ? (
+                {currentStep < 3 ? (
                   <button
                     type="button"
                     onClick={handleNext}
@@ -608,17 +676,24 @@ const RegisterPage: React.FC = () => {
                   >
                     {t("common.next")}
                   </button>
-                ) : (
+                ) : currentStep === 3 ? (
                   <button
                     type="submit"
-                    disabled={isSubmitting}
+                    className="px-6 py-3 bg-gradient-to-r from-[#264D88] to-[#1e3a8a] text-white rounded-lg font-semibold hover:from-[#1e3a8a] hover:to-[#264D88] transition-all transform hover:scale-105"
+                  >
+                    {t("common.next")}
+                  </button>
+                ) : currentStep === 4 ? (
+                  <button
+                    type="submit"
+                    disabled={isSubmitting || !otpVerified}
                     className="px-8 py-3 bg-gradient-to-r from-[#264D88] to-[#1e3a8a] text-white rounded-lg font-semibold hover:from-[#1e3a8a] hover:to-[#264D88] transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting
                       ? t("common.loading")
                       : t("auth.signUp")}
                   </button>
-                )}
+                ) : null}
               </div>
             </div>
 

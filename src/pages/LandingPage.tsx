@@ -12,6 +12,13 @@ import {
   TrendingUp,
   Award,
   CheckCircle,
+  RailSymbol,
+  TrainTrack,
+  Container,
+  Anchor,
+  Ship,
+  Warehouse,
+  File,
 } from "lucide-react";
 
 // Counter animation hook
@@ -54,44 +61,60 @@ const LandingPage: React.FC = () => {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const statsRef = useRef<HTMLDivElement>(null);
+  const features = [
+    {
+      icon: <Truck className="w-8 h-8 text-[#264D88]" />,
+      title: t("features.globalShipping.title"),
+      subtitle: t("features.globalShipping.description"),
+    },
+    {
+      icon: <TrainTrack className="w-8 h-8 text-[#264D88]" />,
+      title: t("features.railwayTransport.title"),
+      subtitle: t("features.railwayTransport.description"),
+    },
+
+    {
+      icon: <Container className="w-8 h-8 text-[#264D88]" />,
+      title: t("features.multiModalTransport.title"),
+      subtitle: t("features.multiModalTransport.description"),
+    },
+    {
+      icon: <Anchor className="w-8 h-8 text-[#264D88]" />,
+      title: t("features.transshipment.title"),
+      subtitle: t("features.transshipment.description"),
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-[#264D88]" />,
+      title: t("features.secureTransport.title"),
+      subtitle: t("features.secureTransport.description"),
+    },
+    {
+      icon: <Clock className="w-8 h-8 text-[#264D88]" />,
+      title: t("features.support24.title"),
+      subtitle: t("features.support24.description"),
+    },
+  ];
 
   useEffect(() => {
+    const node = statsRef.current;
+    if (!node) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+          observer.disconnect();
         }
       },
       { threshold: 0.3 }
     );
 
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
-    }
+    observer.observe(node);
 
     return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current);
-      }
+      observer.disconnect();
     };
   }, []);
-  const features = [
-    {
-      icon: <Truck className="w-8 h-8 text-[#264D88]" />,
-      title: t("features.globalShipping.title"),
-      description: t("features.globalShipping.description"),
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-[#264D88]" />,
-      title: t("features.secureTransport.title"),
-      description: t("features.secureTransport.description"),
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-[#264D88]" />,
-      title: t("features.support24.title"),
-      description: t("features.support24.description"),
-    },
-  ];
 
   // Counter Component
   const StatCounter: React.FC<{
@@ -124,25 +147,25 @@ const LandingPage: React.FC = () => {
   const stats = [
     {
       icon: <Globe className="w-8 h-8" />,
-      value: 50,
+      value: 15,
       suffix: "+",
       label: t("landing.stats.countriesServed"),
     },
     {
       icon: <Package className="w-8 h-8" />,
-      value: 1000000,
-      suffix: "M+",
+      value: 1_500_000,
+      suffix: " MT",
       label: t("landing.stats.packagesDelivered"),
     },
     {
       icon: <Users className="w-8 h-8" />,
-      value: 10000,
+      value: 5_000,
       suffix: "K+",
       label: t("landing.stats.happyClients"),
     },
     {
       icon: <Award className="w-8 h-8" />,
-      value: 15,
+      value: 5,
       suffix: "+",
       label: t("landing.stats.yearsExperience"),
     },
@@ -153,27 +176,32 @@ const LandingPage: React.FC = () => {
     {
       title: t("services.oceanFreight.title"),
       description: "",
-      icon: "🚢",
+      icon: <Ship className="w-8 h-8 text-[#264D88]" />,
+    },
+    {
+      title: t("services.railwayTransport.title"),
+      description: "",
+      icon: <TrainTrack className="w-8 h-8 text-[#264D88]" />,
+    },
+    {
+      title: t("services.multiModalTransport.title"),
+      description: "",
+      icon: <Container className="w-8 h-8 text-[#264D88]" />,
     },
     {
       title: t("services.roadTransport.title"),
       description: "",
-      icon: "🚛",
+      icon: <Truck className="w-8 h-8 text-[#264D88]" />,
     },
     {
       title: t("services.warehousing.title"),
       description: "",
-      icon: "📦",
+      icon: <Warehouse className="w-8 h-8 text-[#264D88]" />,
     },
     {
       title: t("services.customs.title"),
       description: "",
-      icon: "📋",
-    },
-    {
-      title: t("services.airFreight.title"),
-      description: "",
-      icon: "✈️",
+      icon: <File className="w-8 h-8 text-[#264D88]" />,
     },
   ];
 
@@ -191,90 +219,27 @@ const LandingPage: React.FC = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-        {/* Video Background */}
-        <div className="absolute inset-0 w-full h-full">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            className="w-full h-full object-cover"
-            poster="/images/logistics-hero-poster.svg"
-          >
-            <source src="/videos/logistics-hero.webm" type="video/webm" />
-            {/* Fallback for browsers that don't support video */}
-            <div className="w-full h-full bg-gradient-to-br from-[#264D88] to-[#1e3a8a] flex items-center justify-center">
-              <p className="text-white/50 text-sm">
-                {t("landing.videoNotSupported")}
-              </p>
-            </div>
-          </video>
-          {/* Video Overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#264D88]/70 to-[#1e3a8a]/70"></div>
-          {/* Additional overlay for mobile optimization */}
-          <div className="absolute inset-0 bg-black/20 md:hidden"></div>
-        </div>
-
-        {/* Fallback Background (shows if video fails to load) */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#264D88] to-[#1e3a8a] video-fallback"></div>
-
-        {/* Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-black/10"></div>
-
-          {/* Background Elements */}
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-10 sm:top-20 left-4 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 rounded-full blur-3xl bg-blue-500/20 animate-pulse"></div>
-            <div
-              className="absolute top-20 sm:top-40 right-4 sm:right-20 w-64 h-64 sm:w-96 sm:h-96 rounded-full blur-3xl bg-purple-500/20 animate-pulse"
-              style={{ animationDelay: "1s" }}
-            ></div>
-            <div
-              className="absolute bottom-10 sm:bottom-20 left-1/4 sm:left-1/3 w-56 h-56 sm:w-80 sm:h-80 rounded-full blur-3xl bg-indigo-500/20 animate-pulse"
-              style={{ animationDelay: "2s" }}
-            ></div>
-            <div
-              className="absolute bottom-20 sm:bottom-40 right-1/4 sm:right-1/3 w-40 h-40 sm:w-64 sm:h-64 rounded-full blur-3xl bg-pink-500/20 animate-pulse"
-              style={{ animationDelay: "3s" }}
-            ></div>
-          </div>
-
-          {/* Floating Particles */}
-          <div className="absolute inset-0 hidden sm:block">
-            <div
-              className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-white/30 animate-bounce"
-              style={{ animationDelay: "0.1s" }}
-            ></div>
-            <div
-              className="absolute top-1/3 right-1/3 w-1 h-1 rounded-full bg-blue-400/50 animate-bounce"
-              style={{ animationDelay: "0.3s" }}
-            ></div>
-            <div
-              className="absolute bottom-1/3 left-1/2 w-1.5 h-1.5 rounded-full bg-purple-400/40 animate-bounce"
-              style={{ animationDelay: "0.5s" }}
-            ></div>
-            <div
-              className="absolute top-2/3 right-1/4 w-1 h-1 rounded-full bg-pink-400/50 animate-bounce"
-              style={{ animationDelay: "0.7s" }}
-            ></div>
-            <div
-              className="absolute bottom-1/4 right-1/2 w-2 h-2 rounded-full bg-indigo-400/30 animate-bounce"
-              style={{ animationDelay: "0.9s" }}
-            ></div>
-          </div>
+          <img
+            src="/hero.jpg"
+            alt={t("landing.images.logisticsAlt")}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#264D88]/80 via-[#1e3a8a]/70 to-[#264D88]/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
         </div>
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="space-y-4 sm:space-y-6 lg:space-y-8">
+          <div className="">
             {/* Main Heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl  lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight px-2">
-              <span className="block bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
-                {t("hero.title")}
-              </span>
-            </h1>
-
+            <div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-7xl font-bold text-white leading-snug sm:leading-normal text-center pt-10 pb-6">
+                <span className="block bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text ">
+                  {t("hero.title")}
+                </span>
+              </h1>
+            </div>
             {/* Subtitle */}
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white/80 max-w-xs sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed px-4">
               <span className="hidden sm:inline">{t("hero.subtitle")}</span>
@@ -282,7 +247,7 @@ const LandingPage: React.FC = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 justify-center items-center pt-4 sm:pt-6 lg:pt-8 px-4">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 lg:gap-6 justify-center items-center pt-4 sm:pt-6 lg:pt-8 px-4">
               <Link
                 to="/quote"
                 className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[#264D88] to-[#1e3a8a] hover:from-[#1e3a8a] hover:to-[#264D88] text-white rounded-lg sm:rounded-xl text-base sm:text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-[#264D88]/25 flex items-center justify-center min-w-[160px] sm:min-w-[200px]"
@@ -334,7 +299,10 @@ const LandingPage: React.FC = () => {
               >
                 <div className="flex justify-center mb-3">{stat.icon}</div>
                 <div className="text-4xl md:text-5xl font-bold mb-2">
-                  <StatCounter value={stat.value} suffix={stat.suffix} />
+                  <StatCounter
+                    value={Number(stat.value)}
+                    suffix={stat.suffix}
+                  />
                 </div>
                 <div className="text-blue-100 text-sm md:text-base">
                   {stat.label}
@@ -358,7 +326,7 @@ const LandingPage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features?.map((feature, index) => (
               <div
                 key={index}
                 className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow"
@@ -367,7 +335,7 @@ const LandingPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <p className="text-gray-600">{feature.subtitle}</p>
               </div>
             ))}
           </div>
@@ -428,12 +396,12 @@ const LandingPage: React.FC = () => {
                   </div>
                 ))}
               </div>
-              <Link
+              {/* <Link
                 to="/about"
                 className="mt-8 inline-flex items-center px-6 py-3 bg-[#264D88] text-white rounded-lg hover:bg-[#1e3a8a] transition-colors"
               >
                 {t("about.cta.button")} <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+              </Link> */}
             </div>
             <div className="relative">
               <img
@@ -446,7 +414,7 @@ const LandingPage: React.FC = () => {
                   <TrendingUp className="w-12 h-12 text-green-500" />
                   <div>
                     <div className="text-3xl font-bold text-gray-900">
-                      99.8%
+                      93.7%
                     </div>
                     <div className="text-sm text-gray-600">
                       {t("landing.metrics.onTimeDelivery")}
