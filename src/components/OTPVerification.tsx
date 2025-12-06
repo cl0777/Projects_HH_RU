@@ -34,6 +34,7 @@ const OTPVerification: React.FC<OTPVerificationProps> = ({
   const [timeRemaining, setTimeRemaining] = useState(600); // 10 minutes in seconds
   const [otpSent, setOtpSent] = useState(false);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+  const hasSentInitialOTP = useRef(false);
 
   // Timer countdown
   useEffect(() => {
@@ -52,13 +53,14 @@ const OTPVerification: React.FC<OTPVerificationProps> = ({
     }
   }, [otpSent, timeRemaining]);
 
-  // Auto-send OTP on mount
+  // Auto-send OTP on mount (only once)
   useEffect(() => {
-    if (email && !otpSent) {
+    if (email && !hasSentInitialOTP.current) {
+      hasSentInitialOTP.current = true;
       handleSendOTP();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [email]);
 
   const formatTime = (seconds: number): string => {
     const mins = Math.floor(seconds / 60);
@@ -67,6 +69,9 @@ const OTPVerification: React.FC<OTPVerificationProps> = ({
   };
 
   const handleSendOTP = async () => {
+    // Prevent multiple simultaneous sends
+    if (isSending) return;
+
     setIsSending(true);
     setError("");
     setSuccess(false);
@@ -84,6 +89,10 @@ const OTPVerification: React.FC<OTPVerificationProps> = ({
     } catch (err: any) {
       const errorMessage = err.message || t("otp.errors.sendFailed");
       setError(errorMessage);
+      // Reset the flag on error so user can retry
+      if (!hasSentInitialOTP.current) {
+        hasSentInitialOTP.current = false;
+      }
       if (onError) {
         onError(errorMessage);
       }
@@ -253,7 +262,9 @@ const OTPVerification: React.FC<OTPVerificationProps> = ({
           {otp.map((digit, index) => (
             <input
               key={index}
-              ref={(el) => (inputRefs.current[index] = el)}
+              ref={(el) => {
+                inputRefs.current[index] = el;
+              }}
               type="text"
               inputMode="numeric"
               maxLength={1}
@@ -272,7 +283,7 @@ const OTPVerification: React.FC<OTPVerificationProps> = ({
       <div className="flex flex-col sm:flex-row gap-3">
         <button
           type="button"
-          onClick={handleVerifyOTP}
+          onClick={() => handleVerifyOTP()}
           disabled={
             isLoading || otp.join("").length !== 6 || timeRemaining === 0
           }

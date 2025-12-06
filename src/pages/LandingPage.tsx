@@ -154,12 +154,12 @@ const LandingPage: React.FC = () => {
     {
       icon: <Package className="w-8 h-8" />,
       value: 1_500_000,
-      suffix: " MT",
+      suffix: "M MT",
       label: t("landing.stats.packagesDelivered"),
     },
     {
       icon: <Users className="w-8 h-8" />,
-      value: 5_000,
+      value: 1_500,
       suffix: "K+",
       label: t("landing.stats.happyClients"),
     },

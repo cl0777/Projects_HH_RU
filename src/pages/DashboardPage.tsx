@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "../contexts/AuthContext";
 import {
@@ -13,66 +13,62 @@ import {
   Mail,
   Building2,
   User,
+  Link,
 } from "lucide-react";
+import axios from "axios";
+import { getApiUrl } from "../config/api";
 
 const DashboardPage: React.FC = () => {
   const { t } = useTranslation();
-  const { user } = useAuth();
+  const { user, token } = useAuth();
 
+  const [recentShipments, setRecentShipments] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchRecentShipments = async () => {
+      try {
+        const { data } = await axios.get(getApiUrl("orders"), {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        setRecentShipments(data);
+      } catch (error: any) {
+        console.error("Error fetching recent shipments:", error);
+      }
+    };
+    fetchRecentShipments();
+  }, []);
   const stats = [
     {
       label: t("dashboard.stats.activeShipments"),
-      value: "3",
+      value: recentShipments.length,
       icon: <Truck className="w-6 h-6" />,
       color: "bg-blue-500",
     },
     {
       label: t("dashboard.stats.pendingQuotes"),
-      value: "2",
+      value: recentShipments.filter(
+        (shipment: any) => shipment.status === "pending"
+      ).length,
       icon: <FileText className="w-6 h-6" />,
       color: "bg-yellow-500",
     },
     {
       label: t("dashboard.stats.completedShipments"),
-      value: "5",
+      value: recentShipments.filter(
+        (shipment: any) => shipment.status === "delivered"
+      ).length,
       icon: <CheckCircle className="w-6 h-6" />,
       color: "bg-green-500",
     },
     {
       label: t("dashboard.stats.totalShipments"),
-      value: "20",
+      value: recentShipments.length,
       icon: <Package className="w-6 h-6" />,
       color: "bg-purple-500",
     },
   ];
-
-  const recentShipments = [
-    {
-      id: "SH001",
-      destination: "New York, USA",
-      status: "in_transit",
-      statusText: t("dashboard.shipmentStatus.inTransit"),
-      date: "2025-01-15",
-      estimatedDelivery: "2025-01-20",
-    },
-    {
-      id: "SH002",
-      destination: "London, UK",
-      status: "pending",
-      statusText: t("dashboard.shipmentStatus.pending"),
-      date: "2025-01-14",
-      estimatedDelivery: "2025-01-18",
-    },
-    {
-      id: "SH003",
-      destination: "Tokyo, Japan",
-      status: "delivered",
-      statusText: t("dashboard.shipmentStatus.delivered"),
-      date: "2025-01-10",
-      estimatedDelivery: "2025-01-12",
-    },
-  ];
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case "delivered":
@@ -218,52 +214,57 @@ const DashboardPage: React.FC = () => {
                 </a>
               </div>
               <div className="space-y-4">
-                {recentShipments.map((shipment) => (
-                  <div
-                    key={shipment.id}
-                    className="border border-gray-200 rounded-lg p-4 hover:border-[#264D88] transition-colors"
-                  >
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center space-x-3">
-                        <Package className="w-5 h-5 text-[#264D88]" />
+                {recentShipments.length === 0 && (
+                  <div className="text-center text-gray-500"></div>
+                )}
+                {recentShipments.length > 0 &&
+                  recentShipments.map((shipment: any) => (
+                    <div
+                      key={shipment.id}
+                      className="border border-gray-200 rounded-lg p-4 hover:border-[#264D88] transition-colors"
+                    >
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex items-center space-x-3">
+                          <Package className="w-5 h-5 text-[#264D88]" />
+                          <div>
+                            <p className="font-semibold text-gray-900">
+                              {shipment.originCity}, {shipment.originCountry}
+                            </p>
+                            <p className="text-sm text-gray-600">
+                              {shipment.destinationCity},{" "}
+                              {shipment.destinationCountry}
+                            </p>
+                          </div>
+                        </div>
+                        <span
+                          className={`px-3 py-1 rounded-full text-xs font-medium flex items-center space-x-1 ${getStatusColor(
+                            shipment.status
+                          )}`}
+                        >
+                          {getStatusIcon(shipment.status)}
+                          <span>{shipment.status.toUpperCase()}</span>
+                        </span>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4 text-sm">
                         <div>
-                          <p className="font-semibold text-gray-900">
-                            {shipment.id}
+                          <p className="text-gray-500">
+                            {t("dashboard.recentShipments.shippedDate")}
                           </p>
-                          <p className="text-sm text-gray-600">
-                            {shipment.destination}
+                          <p className="text-gray-900 font-medium">
+                            {shipment.createdAt.split("T")[0]}
+                          </p>
+                        </div>
+                        <div>
+                          <p className="text-gray-500">
+                            {t("dashboard.recentShipments.estimatedDelivery")}
+                          </p>
+                          <p className="text-gray-900 font-medium">
+                            {shipment.timeline.toUpperCase()}
                           </p>
                         </div>
                       </div>
-                      <span
-                        className={`px-3 py-1 rounded-full text-xs font-medium flex items-center space-x-1 ${getStatusColor(
-                          shipment.status
-                        )}`}
-                      >
-                        {getStatusIcon(shipment.status)}
-                        <span>{shipment.statusText}</span>
-                      </span>
                     </div>
-                    <div className="grid grid-cols-2 gap-4 text-sm">
-                      <div>
-                        <p className="text-gray-500">
-                          {t("dashboard.recentShipments.shippedDate")}
-                        </p>
-                        <p className="text-gray-900 font-medium">
-                          {shipment.date}
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-gray-500">
-                          {t("dashboard.recentShipments.estimatedDelivery")}
-                        </p>
-                        <p className="text-gray-900 font-medium">
-                          {shipment.estimatedDelivery}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
           </div>
